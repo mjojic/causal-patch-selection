@@ -1,0 +1,1 @@
+python test_vqa_loss.py --consensus_dir /mnt/arc/mjojic/causal-patch-selection/segment_patches/consensus_search/consensus_patches --n_samples 5

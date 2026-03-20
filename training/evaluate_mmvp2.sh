@@ -1,0 +1,13 @@
+python evaluate_mmvp.py \
+    --gpu 1 \
+    --base_model_dir "/mnt/shared/shared_hf_home/models--Qwen--Qwen3-VL-8B-Instruct" \
+    --lora_vqa_attn_dir "/mnt/arc/mjojic/causal-patch-selection/training/lora_v4_vqa_only_5_epoch" \
+    --mmvp_dir "/mnt/arc/mjojic/data/MMVP" \
+    --start_idx 0 \
+    --end_idx 300 \
+    --num_samples_sc 25 \
+    --max_tokens 1024 \
+    --gpu_memory_utilization 0.5 \
+    --max_model_len 8192 \
+    --output_json "./mmvp_eval_results/mmvp_results_${TIMESTAMP}.json" \
+    --eval_base
