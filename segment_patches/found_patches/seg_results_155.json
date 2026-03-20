@@ -1,0 +1,24 @@
+{
+  "image_idx": 155,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_orig": 0.391304347826087,
+  "final_sc_new": 0.6086956521739131,
+  "final_sc_gold": 0.391304347826087,
+  "selected_mask_indices": [
+    1
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 23,
+  "question": "Is there a boy in goal?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

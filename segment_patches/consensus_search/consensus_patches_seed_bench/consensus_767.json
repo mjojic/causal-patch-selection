@@ -1,0 +1,74 @@
+{
+  "image_idx": 767,
+  "stem": "1451065_4204204204",
+  "question_id": "33484",
+  "path": "seed_images/1451065_4204204204.jpg",
+  "consensus_mask_indices": [
+    0,
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    0,
+    3,
+    4
+  ],
+  "question": "What colors are the woman's shoes and what other object shares a similar color in the image? Select from the following options: (A) The sandals and the sidewalk. (B) The heels and the woman's clutch. (C) The sandals and a building in the background. (D) The heels and a flower in a planter.",
+  "gold_answer": "The sandals and a building in the background",
+  "gold_letter": "C",
+  "answer_choices": [
+    "The sandals and the sidewalk",
+    "The heels and the woman's clutch",
+    "The sandals and a building in the background",
+    "The heels and a flower in a planter"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.8,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 8,
+    "A": 2
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2222222222222222,
+  "final_sc_gold": 0.2222222222222222,
+  "final_num_extracted": 9,
+  "final_letter_counts": {
+    "A": 7,
+    "C": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "woman wearing black sandals, standing near a building with beige walls",
+    "negative_prompt": "sandals with any color other than black, building with non-beige walls"
+  },
+  "inpaint_prompt_used": "woman wearing black sandals, standing near a building with beige walls",
+  "negative_prompt_used": "sandals with any color other than black, building with non-beige walls",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_767.png",
+    "viz_png": "consensus_patches_seed_bench/viz_767.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_767.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_767.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "image_idx": 2829,
+  "stem": "2669443_3798706014",
+  "question_id": "81719",
+  "path": "seed_images/2669443_3798706014.jpg",
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    7,
+    4,
+    5,
+    8,
+    0
+  ],
+  "question": "What is the position of the boy on the truck relative to the position of the hill in the background? Select from the following options: (A) The boy is behind the hill. (B) The boy is between the truck and the hill. (C) The boy is in front of the hill. (D) The boy is on top of the hill.",
+  "gold_answer": "The boy is between the truck and the hill",
+  "gold_letter": "B",
+  "answer_choices": [
+    "The boy is behind the hill",
+    "The boy is between the truck and the hill",
+    "The boy is in front of the hill",
+    "The boy is on top of the hill"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 9,
+  "final_letter_counts": {
+    "B": 9
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large, detailed hill with trees and a house on top, filling the entire blacked-out region.",
+    "negative_prompt": "A silhouette of a boy jumping or standing on the truck."
+  },
+  "inpaint_prompt_used": "A large, detailed hill with trees and a house on top, filling the entire blacked-out region.",
+  "negative_prompt_used": "A silhouette of a boy jumping or standing on the truck.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2829.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2829.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2829.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2829.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

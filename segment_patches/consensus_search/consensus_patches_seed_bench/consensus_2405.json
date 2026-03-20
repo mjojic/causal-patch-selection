@@ -1,0 +1,73 @@
+{
+  "image_idx": 2405,
+  "stem": "242159_438000659",
+  "question_id": "49759",
+  "path": "seed_images/242159_438000659.jpg",
+  "consensus_mask_indices": [
+    0,
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    1
+  ],
+  "question": "How many objects are on the black stone background? Select from the following options: (A) Four: fresh octopus, lemon, some herbs, and spices. (B) Three: fresh octopus, lemon, and some herbs. (C) Two: fresh octopus and some herbs. (D) Five: fresh octopus, lemon, some herbs, spices, and a wooden box.",
+  "gold_answer": "Five: fresh octopus, lemon, some herbs, spices, and a wooden box",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Four: fresh octopus, lemon, some herbs, and spices",
+    "Three: fresh octopus, lemon, and some herbs",
+    "Two: fresh octopus and some herbs",
+    "Five: fresh octopus, lemon, some herbs, spices, and a wooden box"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "B": 3,
+    "A": 4,
+    "C": 1,
+    "D": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "fresh octopus tentacles, wooden box, and spices scattered on black stone",
+    "negative_prompt": "lemon wedge, herbs, or any other food items"
+  },
+  "inpaint_prompt_used": "fresh octopus tentacles, wooden box, and spices scattered on black stone",
+  "negative_prompt_used": "lemon wedge, herbs, or any other food items",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2405.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2405.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2405.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2405.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

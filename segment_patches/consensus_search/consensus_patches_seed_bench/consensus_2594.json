@@ -1,0 +1,78 @@
+{
+  "image_idx": 2594,
+  "stem": "2535688_2454984718",
+  "question_id": "98798",
+  "path": "seed_images/2535688_2454984718.jpg",
+  "consensus_mask_indices": [
+    2,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    5,
+    6,
+    15,
+    2,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    4,
+    2,
+    14,
+    9
+  ],
+  "question": "In the image, where is the man standing? Select from the following options: (A) In the bed of the truck. (B) Behind the truck. (C) On the road next to the truck. (D) In front of the truck.",
+  "gold_answer": "In front of the truck",
+  "gold_letter": "D",
+  "answer_choices": [
+    "In the bed of the truck",
+    "Behind the truck",
+    "On the road next to the truck",
+    "In front of the truck"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.1,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 9,
+    "D": 1
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.9,
+  "final_sc_gold": 0.1,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 9,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plausible object that contradicts the baseline answer.",
+    "negative_prompt": "blurry, watermark, distorted, artifacts, text"
+  },
+  "inpaint_prompt_used": "A plausible object that contradicts the baseline answer.",
+  "negative_prompt_used": "blurry, watermark, distorted, artifacts, text",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2594.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2594.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2594.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2594.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "image_idx": 3852,
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    9,
+    4,
+    2,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "Are all individuals involved in reviewing or discussing documents?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.2,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 3,
+    "B": 12
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.7333333333333333,
+  "final_sc_gold": 0.26666666666666666,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 4,
+    "B": 11
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a document being held and read by the central man, with others looking at papers",
+    "negative_prompt": "no documents, no reading, no discussion, empty hands, unrelated objects"
+  },
+  "inpaint_prompt_used": "a document being held and read by the central man, with others looking at papers",
+  "negative_prompt_used": "no documents, no reading, no discussion, empty hands, unrelated objects",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3852.png",
+    "viz_png": "consensus_patches/viz_3852.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3852.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_3852.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

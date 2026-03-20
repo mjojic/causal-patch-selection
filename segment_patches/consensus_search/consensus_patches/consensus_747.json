@@ -1,0 +1,63 @@
+{
+  "image_idx": 747,
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    3
+  ],
+  "question": "Describe the action of the sand in the image.",
+  "gold_answer": "The sand is undisturbed",
+  "gold_letter": "A",
+  "answer_choices": [
+    "The sand is undisturbed",
+    "The sand is being kicked up"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 23,
+  "baseline_letter_counts": {
+    "B": 23
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 25
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Smooth, undisturbed sand with no footprints or motion trails",
+    "negative_prompt": "Kicked-up sand, footprints, motion blur, or disturbed surface texture"
+  },
+  "inpaint_prompt_used": "Smooth, undisturbed sand with no footprints or motion trails",
+  "negative_prompt_used": "Kicked-up sand, footprints, motion blur, or disturbed surface texture",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_747.png",
+    "viz_png": "consensus_patches/viz_747.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_747.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_747.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

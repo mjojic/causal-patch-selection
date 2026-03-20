@@ -1,0 +1,73 @@
+{
+  "image_idx": 999,
+  "stem": "1584415_664863593",
+  "question_id": "61716",
+  "path": "seed_images/1584415_664863593.jpg",
+  "consensus_mask_indices": [
+    0,
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    1
+  ],
+  "question": "Is the piano described as black in the attribute detections? Select from the following options: (A) No. (B) Yes. (C) It is not mentioned. (D) There is no reference to the piano in the attribute detections..",
+  "gold_answer": "No",
+  "gold_letter": "A",
+  "answer_choices": [
+    "No",
+    "Yes",
+    "It is not mentioned",
+    "There is no reference to the piano in the attribute detections"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 6,
+    "D": 1,
+    "C": 3
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 8,
+    "A": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a white piano with gold trim and wooden legs",
+    "negative_prompt": "black piano, dark finish, black keys, black surface"
+  },
+  "inpaint_prompt_used": "a white piano with gold trim and wooden legs",
+  "negative_prompt_used": "black piano, dark finish, black keys, black surface",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_999.png",
+    "viz_png": "consensus_patches_seed_bench/viz_999.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_999.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_999.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

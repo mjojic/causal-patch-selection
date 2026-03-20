@@ -1,0 +1,25 @@
+{
+  "image_idx": 59,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_orig": 0.16,
+  "final_sc_new": 0.84,
+  "final_sc_gold": 0.16,
+  "selected_mask_indices": [
+    1,
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is the water in the image partially clear and reflecting an image of trees and a cloudy sky?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

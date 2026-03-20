@@ -1,0 +1,67 @@
+{
+  "image_idx": 2799,
+  "stem": "265581_1753629807",
+  "question_id": "30000",
+  "path": "seed_images/265581_1753629807.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What can be observed about the water in the image? Select from the following options: (A) It is calm and dark blue in color.. (B) It is clear and turquoise in color.. (C) It is choppy and deep blue in color.. (D) It is clear and light blue in color..",
+  "gold_answer": "It is calm and dark blue in color",
+  "gold_letter": "A",
+  "answer_choices": [
+    "It is calm and dark blue in color",
+    "It is clear and turquoise in color",
+    "It is choppy and deep blue in color",
+    "It is clear and light blue in color"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "calm dark blue water with gentle ripples and no waves",
+    "negative_prompt": "choppy water, deep blue waves, rough sea surface"
+  },
+  "inpaint_prompt_used": "calm dark blue water with gentle ripples and no waves",
+  "negative_prompt_used": "choppy water, deep blue waves, rough sea surface",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2799.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2799.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2799.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2799.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

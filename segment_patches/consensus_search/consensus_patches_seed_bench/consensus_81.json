@@ -1,0 +1,72 @@
+{
+  "image_idx": 81,
+  "stem": "1046766_1134304920",
+  "question_id": "27908",
+  "path": "seed_images/1046766_1134304920.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    6,
+    0,
+    1,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    2
+  ],
+  "question": "What is common among the detected windshields? Select from the following options: (A) They are all shattered. (B) They are all dirty. (C) They are all large and clear. (D) They are all small and tinted.",
+  "gold_answer": "They are all large and clear",
+  "gold_letter": "C",
+  "answer_choices": [
+    "They are all shattered",
+    "They are all dirty",
+    "They are all large and clear",
+    "They are all small and tinted"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.4,
+  "final_sc_gold": 0.4,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 4,
+    "B": 6
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A shattered windshield with visible cracks and broken glass.",
+    "negative_prompt": "A large, clear, unbroken windshield with no damage or dirt."
+  },
+  "inpaint_prompt_used": "A shattered windshield with visible cracks and broken glass.",
+  "negative_prompt_used": "A large, clear, unbroken windshield with no damage or dirt.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_81.png",
+    "viz_png": "consensus_patches_seed_bench/viz_81.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_81.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_81.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "image_idx": 1809,
+  "stem": "2081255_2544834293",
+  "question_id": "49632",
+  "path": "seed_images/2081255_2544834293.jpg",
+  "consensus_mask_indices": [
+    3,
+    11
+  ],
+  "qwen3_selected_mask_indices": [
+    11,
+    9,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    3,
+    11,
+    0
+  ],
+  "question": "What is the relation between the soccer player and the soccer ball? Select from the following options: (A) The soccer ball is on the ground and the soccer player is standing. (B) The soccer player is kicking the soccer ball. (C) The soccer player is holding the soccer ball. (D) The soccer ball is near the soccer player, but they are not interacting.",
+  "gold_answer": "The soccer ball is on the ground and the soccer player is standing",
+  "gold_letter": "A",
+  "answer_choices": [
+    "The soccer ball is on the ground and the soccer player is standing",
+    "The soccer player is kicking the soccer ball",
+    "The soccer player is holding the soccer ball",
+    "The soccer ball is near the soccer player, but they are not interacting"
+  ],
+  "spurious_attribute": 6,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.2,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 8,
+    "A": 2
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.7,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 7,
+    "D": 2,
+    "B": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A soccer player actively kicking a soccer ball near the pile of balls.",
+    "negative_prompt": "No interaction between the soccer player and the soccer balls; player standing still, balls untouched."
+  },
+  "inpaint_prompt_used": "A soccer player actively kicking a soccer ball near the pile of balls.",
+  "negative_prompt_used": "No interaction between the soccer player and the soccer balls; player standing still, balls untouched.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1809.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1809.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1809.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1809.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

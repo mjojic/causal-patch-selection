@@ -1,0 +1,24 @@
+{
+  "image_idx": 85,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.8,
+  "baseline_sc_new": 0.8,
+  "baseline_sc_gold": 0.8,
+  "final_sc_orig": 0.08,
+  "final_sc_new": 0.92,
+  "final_sc_gold": 0.08,
+  "selected_mask_indices": [
+    2
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "What's happening on the second floor?",
+  "gold_answer": "Something is being moved through the window by someone.",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Nothing noticeable is happening on the second floor.",
+    "Something is being moved through the window by someone."
+  ],
+  "spurious_attribute": "multiple_choice"
+}

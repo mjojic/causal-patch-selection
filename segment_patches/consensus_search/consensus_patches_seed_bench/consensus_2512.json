@@ -1,0 +1,70 @@
+{
+  "image_idx": 2512,
+  "stem": "2489959_2140104458",
+  "question_id": "86899",
+  "path": "seed_images/2489959_2140104458.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    9
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    6,
+    8
+  ],
+  "question": "What is the dominant feature of the image? Select from the following options: (A) A sunset over a body of water with palm trees. (B) A beach with palm trees and people. (C) A full moon at night over a lake. (D) A blue sky with clouds and a palm tree on grass.",
+  "gold_answer": "A sunset over a body of water with palm trees",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A sunset over a body of water with palm trees",
+    "A beach with palm trees and people",
+    "A full moon at night over a lake",
+    "A blue sky with clouds and a palm tree on grass"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "bright full moon, dark night sky, calm lake, no palm trees",
+    "negative_prompt": "sunset, body of water, palm trees, warm light, horizon glow"
+  },
+  "inpaint_prompt_used": "bright full moon, dark night sky, calm lake, no palm trees",
+  "negative_prompt_used": "sunset, body of water, palm trees, warm light, horizon glow",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2512.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2512.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2512.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2512.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

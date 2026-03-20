@@ -1,0 +1,28 @@
+{
+  "image_idx": 8,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_orig": 0.6190476190476191,
+  "final_sc_new": 0.6190476190476191,
+  "final_sc_gold": 0.6190476190476191,
+  "selected_mask_indices": [
+    3,
+    5,
+    4,
+    2,
+    1
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 21,
+  "question": "What is the direction the sphinx sculpture is facing?",
+  "gold_answer": "To the right",
+  "gold_letter": "A",
+  "answer_choices": [
+    "To the right",
+    ""
+  ],
+  "spurious_attribute": "multiple_choice"
+}

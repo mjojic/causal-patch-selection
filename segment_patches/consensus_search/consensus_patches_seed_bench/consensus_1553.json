@@ -1,0 +1,77 @@
+{
+  "image_idx": 1553,
+  "stem": "192478_1417092029",
+  "question_id": "17287",
+  "path": "seed_images/192478_1417092029.jpg",
+  "consensus_mask_indices": [
+    0,
+    7,
+    8
+  ],
+  "qwen3_selected_mask_indices": [
+    8,
+    0,
+    13,
+    2,
+    7
+  ],
+  "qwen25_selected_mask_indices": [
+    7,
+    0,
+    8
+  ],
+  "question": "What is the primary feature outside of the glass wall? Select from the following options: (A) The pool. (B) The ocean. (C) The dining room. (D) A garden.",
+  "gold_answer": "The ocean",
+  "gold_letter": "B",
+  "answer_choices": [
+    "The pool",
+    "The ocean",
+    "The dining room",
+    "A garden"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.4,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 6,
+    "B": 4
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.3,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 7,
+    "A": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A lush green garden with tropical plants and trees extending beyond the glass wall.",
+    "negative_prompt": "The pool, ocean, dining room, or any water feature or indoor space."
+  },
+  "inpaint_prompt_used": "A lush green garden with tropical plants and trees extending beyond the glass wall.",
+  "negative_prompt_used": "The pool, ocean, dining room, or any water feature or indoor space.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1553.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1553.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1553.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1553.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

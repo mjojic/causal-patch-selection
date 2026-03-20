@@ -1,0 +1,63 @@
+{
+  "image_idx": 3012,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    0
+  ],
+  "question": "How many concrete blocks or brick stacks are in the image?",
+  "gold_answer": "Five concrete blocks",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Five concrete blocks",
+    "Two stacks of bricks"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Three stacked bricks, each with visible mortar lines and weathered texture",
+    "negative_prompt": "Five separate concrete blocks, no bricks, no stacks"
+  },
+  "inpaint_prompt_used": "Three stacked bricks, each with visible mortar lines and weathered texture",
+  "negative_prompt_used": "Five separate concrete blocks, no bricks, no stacks",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3012.png",
+    "viz_png": "consensus_patches/viz_3012.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_3012.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3012.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

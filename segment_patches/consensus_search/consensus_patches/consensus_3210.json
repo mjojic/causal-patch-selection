@@ -1,0 +1,71 @@
+{
+  "image_idx": 3210,
+  "consensus_mask_indices": [
+    3,
+    6,
+    10
+  ],
+  "qwen3_selected_mask_indices": [
+    10,
+    6,
+    3,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    10,
+    4,
+    8,
+    3,
+    6
+  ],
+  "question": "What is the primary action taking place in the image?",
+  "gold_answer": "A player in red is holding the ball while a player in white is trying to block him.",
+  "gold_letter": "B",
+  "answer_choices": [
+    "The player in red is challenging the player in white for the ball.",
+    "A player in red is holding the ball while a player in white is trying to block him."
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 8,
+  "final_letter_counts": {
+    "A": 8
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A player in red holding the ball, facing away from the player in white.",
+    "negative_prompt": "Player in white blocking or defending against the player in red."
+  },
+  "inpaint_prompt_used": "A player in red holding the ball, facing away from the player in white.",
+  "negative_prompt_used": "Player in white blocking or defending against the player in red.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3210.png",
+    "viz_png": "consensus_patches/viz_3210.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_3210.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3210.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

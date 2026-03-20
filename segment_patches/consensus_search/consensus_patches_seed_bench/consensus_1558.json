@@ -1,0 +1,72 @@
+{
+  "image_idx": 1558,
+  "stem": "1928138_806682217",
+  "question_id": "81222",
+  "path": "seed_images/1928138_806682217.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    6,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    2,
+    5,
+    0,
+    1
+  ],
+  "question": "What is the shape of the container holding the wine bottles? Select from the following options: (A) Circular. (B) Square. (C) Oval. (D) Rectangular.",
+  "gold_answer": "Circular",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Circular",
+    "Square",
+    "Oval",
+    "Rectangular"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "rectangular wooden crate with visible slats holding the bottles",
+    "negative_prompt": "circular or oval container, curved edges, round shape"
+  },
+  "inpaint_prompt_used": "rectangular wooden crate with visible slats holding the bottles",
+  "negative_prompt_used": "circular or oval container, curved edges, round shape",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1558.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1558.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1558.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1558.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

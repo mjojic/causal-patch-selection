@@ -1,0 +1,63 @@
+{
+  "image_idx": 5641,
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "How does the woman appear to be feeling?",
+  "gold_answer": "She appears to be sleepy.",
+  "gold_letter": "B",
+  "answer_choices": [
+    "She appears to be happy and smiling.",
+    "She appears to be sleepy."
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 14,
+  "baseline_letter_counts": {
+    "A": 14
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.5833333333333334,
+  "final_sc_gold": 0.4166666666666667,
+  "final_num_extracted": 12,
+  "final_letter_counts": {
+    "B": 5,
+    "A": 7
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "woman with downturned mouth, tired eyes, and furrowed brow",
+    "negative_prompt": "woman smiling, bright eyes, cheerful expression"
+  },
+  "inpaint_prompt_used": "woman with downturned mouth, tired eyes, and furrowed brow",
+  "negative_prompt_used": "woman smiling, bright eyes, cheerful expression",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5641.png",
+    "viz_png": "consensus_patches/viz_5641.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5641.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5641.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

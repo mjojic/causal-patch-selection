@@ -1,0 +1,24 @@
+{
+  "image_idx": 38,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.8181818181818182,
+  "baseline_sc_new": 0.8181818181818182,
+  "baseline_sc_gold": 0.18181818181818182,
+  "final_sc_orig": 0.04,
+  "final_sc_new": 0.96,
+  "final_sc_gold": 0.96,
+  "selected_mask_indices": [
+    1
+  ],
+  "baseline_num_extracted": 22,
+  "final_num_extracted": 25,
+  "question": "What symbols are illustrated in the images?",
+  "gold_answer": "",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A heart and a hexagram",
+    ""
+  ],
+  "spurious_attribute": "multiple_choice"
+}

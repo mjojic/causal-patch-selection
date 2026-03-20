@@ -1,0 +1,63 @@
+{
+  "image_idx": 1297,
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    4
+  ],
+  "question": "What type of object is the dog trying to catch?",
+  "gold_answer": "An orange and blue ball",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A frisbee",
+    "An orange and blue ball"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "B": 15
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A frisbee in mid-air, colorful and spinning, with blurred edges",
+    "negative_prompt": "An orange and blue ball, round and stationary"
+  },
+  "inpaint_prompt_used": "A frisbee in mid-air, colorful and spinning, with blurred edges",
+  "negative_prompt_used": "An orange and blue ball, round and stationary",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_1297.png",
+    "viz_png": "consensus_patches/viz_1297.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1297.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1297.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

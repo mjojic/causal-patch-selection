@@ -1,0 +1,74 @@
+{
+  "image_idx": 5,
+  "stem": "1003839_1527943520",
+  "question_id": "106371",
+  "path": "seed_images/1003839_1527943520.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    6,
+    5,
+    9,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    7
+  ],
+  "question": "Where are the people in the foreground located relative to the jet landing on the field? Select from the following options: (A) In front of the jet. (B) Above the jet. (C) Behind the jet. (D) To the side of the jet.",
+  "gold_answer": "In front of the jet",
+  "gold_letter": "A",
+  "answer_choices": [
+    "In front of the jet",
+    "Above the jet",
+    "Behind the jet",
+    "To the side of the jet"
+  ],
+  "spurious_attribute": 6,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 1,
+    "A": 9
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.9,
+  "final_sc_gold": 0.9,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 9,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large jet aircraft landing on a snowy field with people walking behind it.",
+    "negative_prompt": "People in front of the jet, no aircraft visible in the foreground."
+  },
+  "inpaint_prompt_used": "A large jet aircraft landing on a snowy field with people walking behind it.",
+  "negative_prompt_used": "People in front of the jet, no aircraft visible in the foreground.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_5.png",
+    "viz_png": "consensus_patches_seed_bench/viz_5.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_5.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

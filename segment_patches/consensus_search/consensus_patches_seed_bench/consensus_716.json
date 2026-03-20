@@ -1,0 +1,67 @@
+{
+  "image_idx": 716,
+  "stem": "1417002_4139547584",
+  "question_id": "13483",
+  "path": "seed_images/1417002_4139547584.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What type of cake decoration appears both on the cricket decorations and the stars in the image? Select from the following options: (A) bats. (B) balls. (C) stars. (D) grass.",
+  "gold_answer": "grass",
+  "gold_letter": "D",
+  "answer_choices": [
+    "bats",
+    "balls",
+    "stars",
+    "grass"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 8,
+  "baseline_letter_counts": {
+    "D": 8
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a colorful birthday cake with frosting, candles, and star decorations",
+    "negative_prompt": "grass, green lawn, outdoor scenery, or any plant-like texture"
+  },
+  "inpaint_prompt_used": "a colorful birthday cake with frosting, candles, and star decorations",
+  "negative_prompt_used": "grass, green lawn, outdoor scenery, or any plant-like texture",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_716.png",
+    "viz_png": "consensus_patches_seed_bench/viz_716.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_716.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_716.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

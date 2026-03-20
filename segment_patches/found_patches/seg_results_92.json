@@ -1,0 +1,24 @@
+{
+  "image_idx": 92,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.96,
+  "baseline_sc_new": 0.96,
+  "baseline_sc_gold": 0.04,
+  "final_sc_orig": 0.043478260869565216,
+  "final_sc_new": 0.9565217391304348,
+  "final_sc_gold": 0.9565217391304348,
+  "selected_mask_indices": [
+    3
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 23,
+  "question": "What color is the wall that the mural/painting is on?",
+  "gold_answer": "Gray",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Gray",
+    "Blue"
+  ],
+  "spurious_attribute": "multiple_choice"
+}

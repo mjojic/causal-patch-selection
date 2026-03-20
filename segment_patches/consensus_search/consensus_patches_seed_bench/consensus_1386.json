@@ -1,0 +1,69 @@
+{
+  "image_idx": 1386,
+  "stem": "182697_3883853782",
+  "question_id": "49711",
+  "path": "seed_images/182697_3883853782.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is the atmosphere of the moment in the image? Select from the following options: (A) Energetic and lively. (B) Calm and serene. (C) Sad and melancholic. (D) Intense and dramatic.",
+  "gold_answer": "Intense and dramatic",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Energetic and lively",
+    "Calm and serene",
+    "Sad and melancholic",
+    "Intense and dramatic"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.9,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 1,
+    "D": 9
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a person sitting still, holding a drink, looking relaxed and calm",
+    "negative_prompt": "a person dancing, jumping, or moving energetically"
+  },
+  "inpaint_prompt_used": "a person sitting still, holding a drink, looking relaxed and calm",
+  "negative_prompt_used": "a person dancing, jumping, or moving energetically",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1386.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1386.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1386.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1386.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

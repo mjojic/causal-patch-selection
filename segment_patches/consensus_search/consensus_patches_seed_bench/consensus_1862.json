@@ -1,0 +1,70 @@
+{
+  "image_idx": 1862,
+  "stem": "2107225_1667373302",
+  "question_id": "93082",
+  "path": "seed_images/2107225_1667373302.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    6
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    6,
+    3,
+    7
+  ],
+  "question": "What is the position of the window in the room? Select from the following options: (A) At the center of the wall. (B) Near the ceiling. (C) Close to the floor. (D) Next to the dresser.",
+  "gold_answer": "Next to the dresser",
+  "gold_letter": "D",
+  "answer_choices": [
+    "At the center of the wall",
+    "Near the ceiling",
+    "Close to the floor",
+    "Next to the dresser"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large wooden wardrobe occupies the center of the wall, blocking the window.",
+    "negative_prompt": "No window, no glass, no light source, no opening in the wall."
+  },
+  "inpaint_prompt_used": "A large wooden wardrobe occupies the center of the wall, blocking the window.",
+  "negative_prompt_used": "No window, no glass, no light source, no opening in the wall.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1862.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1862.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1862.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1862.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

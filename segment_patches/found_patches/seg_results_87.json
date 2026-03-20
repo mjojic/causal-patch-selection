@@ -1,0 +1,25 @@
+{
+  "image_idx": 87,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.8333333333333334,
+  "baseline_sc_new": 0.8333333333333334,
+  "baseline_sc_gold": 0.16666666666666666,
+  "final_sc_orig": 0.0,
+  "final_sc_new": 1.0,
+  "final_sc_gold": 1.0,
+  "selected_mask_indices": [
+    8,
+    0
+  ],
+  "baseline_num_extracted": 24,
+  "final_num_extracted": 25,
+  "question": "What is the specific activity taking place?",
+  "gold_answer": "Getting something through a window while holding onto ropes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Getting something through a window while holding onto ropes",
+    "Painting a window"
+  ],
+  "spurious_attribute": "multiple_choice"
+}

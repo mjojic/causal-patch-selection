@@ -1,0 +1,70 @@
+{
+  "image_idx": 2439,
+  "consensus_mask_indices": [
+    0,
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    7,
+    9,
+    13,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    12,
+    0,
+    20,
+    7
+  ],
+  "question": "Are people facing towards or away from the camera?",
+  "gold_answer": "The orientation of the people isn't clear, with some sitting and standing around.",
+  "gold_letter": "A",
+  "answer_choices": [
+    "The orientation of the people isn't clear, with some sitting and standing around.",
+    "The people, including two notable ladies, have their backs to the camera."
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.7,
+  "baseline_sc_gold": 0.7,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 7,
+    "B": 3
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Clear view of people facing the camera, including two ladies smiling directly forward.",
+    "negative_prompt": "Blurred or obscured faces, people with backs turned, indistinct orientations."
+  },
+  "inpaint_prompt_used": "Clear view of people facing the camera, including two ladies smiling directly forward.",
+  "negative_prompt_used": "Blurred or obscured faces, people with backs turned, indistinct orientations.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_2439.png",
+    "viz_png": "consensus_patches/viz_2439.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2439.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2439.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

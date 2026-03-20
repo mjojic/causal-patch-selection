@@ -1,0 +1,67 @@
+{
+  "image_idx": 1,
+  "stem": "1000816_3783239740",
+  "question_id": "52557",
+  "path": "seed_images/1000816_3783239740.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "How many objects are there on the table in the image? Select from the following options: (A) One. (B) Two. (C) Four. (D) Three.",
+  "gold_answer": "One",
+  "gold_letter": "A",
+  "answer_choices": [
+    "One",
+    "Two",
+    "Four",
+    "Three"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a second golden coin partially visible, similar to the first, near the edge",
+    "negative_prompt": "no additional objects, only the existing coin and dark surface"
+  },
+  "inpaint_prompt_used": "a second golden coin partially visible, similar to the first, near the edge",
+  "negative_prompt_used": "no additional objects, only the existing coin and dark surface",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

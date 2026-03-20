@@ -1,0 +1,63 @@
+{
+  "image_idx": 5822,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "Are the climbing pegs colorful, including blue, orange, and purple?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "B": 15
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "colorful climbing pegs in blue, orange, and purple embedded in rock",
+    "negative_prompt": "no climbing pegs, plain rock surface, no colors"
+  },
+  "inpaint_prompt_used": "colorful climbing pegs in blue, orange, and purple embedded in rock",
+  "negative_prompt_used": "no climbing pegs, plain rock surface, no colors",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5822.png",
+    "viz_png": "consensus_patches/viz_5822.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5822.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5822.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

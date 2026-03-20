@@ -1,0 +1,71 @@
+{
+  "image_idx": 2992,
+  "stem": "2751907_2346584282",
+  "question_id": "36341",
+  "path": "seed_images/2751907_2346584282.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    3,
+    4,
+    6
+  ],
+  "question": "How many people are in the image? Select from the following options: (A) Two people are in the image.. (B) One person is in the image.. (C) Three people are in the image.. (D) Four people are in the image..",
+  "gold_answer": "Three people are in the image",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Two people are in the image",
+    "One person is in the image",
+    "Three people are in the image",
+    "Four people are in the image"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 1,
+    "C": 9
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.8,
+  "final_sc_gold": 0.8,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 8,
+    "D": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A fourth person standing near the car, wearing a suit and smiling.",
+    "negative_prompt": "No additional people, only the existing three individuals visible."
+  },
+  "inpaint_prompt_used": "A fourth person standing near the car, wearing a suit and smiling.",
+  "negative_prompt_used": "No additional people, only the existing three individuals visible.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2992.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2992.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2992.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2992.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

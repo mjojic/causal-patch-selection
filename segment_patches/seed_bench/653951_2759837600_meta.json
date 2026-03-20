@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.999639,
+    "isthing": false,
+    "area": 270949
+  },
+  {
+    "id": 2,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.9991,
+    "isthing": false,
+    "area": 67368
+  },
+  {
+    "id": 3,
+    "label_id": 129,
+    "label": "129",
+    "score": 0.989419,
+    "isthing": false,
+    "area": 156897
+  },
+  {
+    "id": 4,
+    "label_id": 125,
+    "label": "125",
+    "score": 0.991418,
+    "isthing": false,
+    "area": 53954
+  },
+  {
+    "id": 5,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.972001,
+    "isthing": false,
+    "area": 13838
+  },
+  {
+    "id": 6,
+    "label_id": 117,
+    "label": "117",
+    "score": 0.988911,
+    "isthing": false,
+    "area": 93508
+  },
+  {
+    "id": 7,
+    "label_id": 127,
+    "label": "127",
+    "score": 0.691759,
+    "isthing": false,
+    "area": 11605
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999685,
+    "isthing": false,
+    "area": 109872
+  }
+]

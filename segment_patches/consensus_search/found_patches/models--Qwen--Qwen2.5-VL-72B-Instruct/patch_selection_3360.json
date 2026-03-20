@@ -1,0 +1,48 @@
+{
+  "image_idx": 3360,
+  "model_dir": "/mnt/shared/shared_hf_home/hub/models--Qwen--Qwen2.5-VL-72B-Instruct",
+  "model_snapshot": "/mnt/shared/shared_hf_home/hub/models--Qwen--Qwen2.5-VL-72B-Instruct/snapshots/89c86200743eec961a297729e7990e8f2ddbc4c5",
+  "model_tag": "models--Qwen--Qwen2.5-VL-72B-Instruct",
+  "question": "Is the glowing orange pumpkin illuminated by neon pink light?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "target_letter": "A",
+  "baseline_sc_target": 1.0,
+  "final_sc_target": 0.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_gold": 0.0,
+  "baseline_num_extracted": 15,
+  "final_num_extracted": 15,
+  "selected_mask_indices": [
+    0
+  ],
+  "search_num_patches": 5,
+  "num_samples_sc": 15,
+  "min_sc_drop": 0.1,
+  "require_monotonic_improvement": false,
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_prompt": "Fill the masked region naturally, removing whatever objects appear there. Preserve the rest of the image exactly.",
+  "inpaint_negative_prompt": "text, watermark, logo, artifacts, distortion, blur",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "image_size": null,
+  "cuda_visible_devices": "3,1",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 1,
+  "vllm_settings": {
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.85,
+    "max_model_len": 9000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 0,
+    "qwen25_forced_fp8_quantization": true,
+    "calculate_kv_scales_for_qwen25": true
+  }
+}

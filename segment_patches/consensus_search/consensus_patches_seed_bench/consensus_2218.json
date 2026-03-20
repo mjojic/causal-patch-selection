@@ -1,0 +1,79 @@
+{
+  "image_idx": 2218,
+  "stem": "2313308_2124292519",
+  "question_id": "57200",
+  "path": "seed_images/2313308_2124292519.jpg",
+  "consensus_mask_indices": [
+    0,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    7,
+    0,
+    3,
+    9,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    4,
+    1,
+    5
+  ],
+  "question": "How many people are in the image? Select from the following options: (A) 5. (B) 4. (C) 3. (D) 6.",
+  "gold_answer": "3",
+  "gold_letter": "C",
+  "answer_choices": [
+    "5",
+    "4",
+    "3",
+    "6"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.5,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 8,
+  "baseline_letter_counts": {
+    "A": 3,
+    "D": 1,
+    "B": 4
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.4,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 4,
+    "C": 4,
+    "B": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "two additional people standing near the baseball player",
+    "negative_prompt": "no extra people in the blacked-out region"
+  },
+  "inpaint_prompt_used": "two additional people standing near the baseball player",
+  "negative_prompt_used": "no extra people in the blacked-out region",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2218.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2218.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2218.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2218.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "image_idx": 199,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.92,
+  "baseline_sc_new": 0.92,
+  "baseline_sc_gold": 0.08,
+  "final_sc_orig": 0.96,
+  "final_sc_new": 0.96,
+  "final_sc_gold": 0.04,
+  "selected_mask_indices": [
+    13
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are all the audience members focused on the stage?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

@@ -1,0 +1,24 @@
+{
+  "image_idx": 89,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.72,
+  "baseline_sc_new": 0.72,
+  "baseline_sc_gold": 0.72,
+  "final_sc_orig": 0.2,
+  "final_sc_new": 0.8,
+  "final_sc_gold": 0.2,
+  "selected_mask_indices": [
+    3
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is there someone holding a tennis racket?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

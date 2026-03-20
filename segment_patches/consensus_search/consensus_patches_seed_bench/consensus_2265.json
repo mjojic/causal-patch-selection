@@ -1,0 +1,72 @@
+{
+  "image_idx": 2265,
+  "stem": "2343899_3036238438",
+  "question_id": "71656",
+  "path": "seed_images/2343899_3036238438.jpg",
+  "consensus_mask_indices": [
+    14
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    14,
+    4,
+    3,
+    7
+  ],
+  "qwen25_selected_mask_indices": [
+    14,
+    10
+  ],
+  "question": "How many people are holding an umbrella in this image? Select from the following options: (A) 1. (B) 4. (C) 3. (D) 2.",
+  "gold_answer": "3",
+  "gold_letter": "C",
+  "answer_choices": [
+    "1",
+    "4",
+    "3",
+    "2"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A small child holding a pink parasol with floral patterns",
+    "negative_prompt": "No umbrella, no hand holding, no visible parasol"
+  },
+  "inpaint_prompt_used": "A small child holding a pink parasol with floral patterns",
+  "negative_prompt_used": "No umbrella, no hand holding, no visible parasol",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2265.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2265.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2265.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2265.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

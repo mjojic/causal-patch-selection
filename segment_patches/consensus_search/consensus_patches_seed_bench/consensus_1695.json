@@ -1,0 +1,71 @@
+{
+  "image_idx": 1695,
+  "stem": "2015086_3569149329",
+  "question_id": "19816",
+  "path": "seed_images/2015086_3569149329.jpg",
+  "consensus_mask_indices": [
+    3,
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    6,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    3
+  ],
+  "question": "How many football players are present on the field in the image? Select from the following options: (A) 7. (B) Can't be determined from the given information.. (C) 15. (D) 10.",
+  "gold_answer": "7",
+  "gold_letter": "A",
+  "answer_choices": [
+    "7",
+    "Can't be determined from the given information",
+    "15",
+    "10"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.25,
+  "final_sc_gold": 0.25,
+  "final_num_extracted": 8,
+  "final_letter_counts": {
+    "A": 2,
+    "B": 6
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a football player in a green and yellow uniform, number 95, standing on the field",
+    "negative_prompt": "no additional players, no crowd, no other uniforms, empty space"
+  },
+  "inpaint_prompt_used": "a football player in a green and yellow uniform, number 95, standing on the field",
+  "negative_prompt_used": "no additional players, no crowd, no other uniforms, empty space",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1695.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1695.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1695.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1695.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

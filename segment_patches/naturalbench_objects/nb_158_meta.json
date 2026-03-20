@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "label_id": 1,
+    "label": "1",
+    "score": 0.929174,
+    "isthing": false,
+    "area": 4795,
+    "area_frac": 0.0288855421686747
+  },
+  {
+    "id": 2,
+    "label_id": 1,
+    "label": "1",
+    "score": 0.992916,
+    "isthing": false,
+    "area": 6025,
+    "area_frac": 0.03629518072289157
+  },
+  {
+    "id": 3,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.981708,
+    "isthing": false,
+    "area": 347,
+    "area_frac": 0.0020903614457831324
+  },
+  {
+    "id": 4,
+    "label_id": 129,
+    "label": "129",
+    "score": 0.844991,
+    "isthing": false,
+    "area": 9567,
+    "area_frac": 0.057632530120481924
+  },
+  {
+    "id": 5,
+    "label_id": 115,
+    "label": "115",
+    "score": 0.936744,
+    "isthing": false,
+    "area": 9496,
+    "area_frac": 0.05720481927710843
+  },
+  {
+    "id": 6,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999725,
+    "isthing": false,
+    "area": 6463,
+    "area_frac": 0.03893373493975904
+  },
+  {
+    "id": 7,
+    "label_id": 121,
+    "label": "121",
+    "score": 0.705906,
+    "isthing": false,
+    "area": 10087,
+    "area_frac": 0.060765060240963856
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.936368,
+    "isthing": false,
+    "area": 538,
+    "area_frac": 0.003240963855421687
+  },
+  {
+    "id": 9,
+    "label_id": 109,
+    "label": "109",
+    "score": 0.867752,
+    "isthing": false,
+    "area": 5278,
+    "area_frac": 0.031795180722891565
+  },
+  {
+    "id": 10,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.945856,
+    "isthing": false,
+    "area": 39793,
+    "area_frac": 0.23971686746987952
+  },
+  {
+    "id": 11,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.889087,
+    "isthing": false,
+    "area": 3066,
+    "area_frac": 0.018469879518072288
+  },
+  {
+    "id": 12,
+    "label_id": 123,
+    "label": "123",
+    "score": 0.903023,
+    "isthing": false,
+    "area": 37596,
+    "area_frac": 0.22648192771084338
+  }
+]

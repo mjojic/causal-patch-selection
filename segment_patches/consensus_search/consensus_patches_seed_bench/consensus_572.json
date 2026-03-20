@@ -1,0 +1,68 @@
+{
+  "image_idx": 572,
+  "stem": "1335534_1099598797",
+  "question_id": "68795",
+  "path": "seed_images/1335534_1099598797.jpg",
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "What is the position of the sliced tomato in the image? Select from the following options: (A) At the center of the image. (B) On the left side of the image. (C) On the right side of the image. (D) At the bottom of the image.",
+  "gold_answer": "At the bottom of the image",
+  "gold_letter": "D",
+  "answer_choices": [
+    "At the center of the image",
+    "On the left side of the image",
+    "On the right side of the image",
+    "At the bottom of the image"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Sliced tomato clearly visible at the center of the glass, above the liquid level.",
+    "negative_prompt": "No tomato slices at the bottom of the image, only liquid and glass base."
+  },
+  "inpaint_prompt_used": "Sliced tomato clearly visible at the center of the glass, above the liquid level.",
+  "negative_prompt_used": "No tomato slices at the bottom of the image, only liquid and glass base.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_572.png",
+    "viz_png": "consensus_patches_seed_bench/viz_572.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_572.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_572.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

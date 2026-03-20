@@ -1,0 +1,72 @@
+{
+  "image_idx": 295,
+  "stem": "116524_747216726",
+  "question_id": "29868",
+  "path": "seed_images/116524_747216726.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    6,
+    16,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    9,
+    10,
+    18
+  ],
+  "question": "Based on the image, which event is most likely occurring in the shopping mall? Select from the following options: (A) A protest. (B) A holiday event. (C) A concert. (D) A political rally.",
+  "gold_answer": "A holiday event",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A protest",
+    "A holiday event",
+    "A concert",
+    "A political rally"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A stage with musical instruments and performers under bright lights",
+    "negative_prompt": "Crowd holding signs, banners, or flags; no stage or musical equipment"
+  },
+  "inpaint_prompt_used": "A stage with musical instruments and performers under bright lights",
+  "negative_prompt_used": "Crowd holding signs, banners, or flags; no stage or musical equipment",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_295.png",
+    "viz_png": "consensus_patches_seed_bench/viz_295.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_295.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_295.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "image_idx": 2898,
+  "stem": "2703036_1399424730",
+  "question_id": "71828",
+  "path": "seed_images/2703036_1399424730.jpg",
+  "consensus_mask_indices": [
+    2,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    5
+  ],
+  "question": "What is the material of the building in the image? Select from the following options: (A) Wood. (B) Stone. (C) Concrete. (D) Brick.",
+  "gold_answer": "Concrete",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Wood",
+    "Stone",
+    "Concrete",
+    "Brick"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 9,
+    "B": 1
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.1,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 9,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "smooth wooden planks with visible grain and weathered texture",
+    "negative_prompt": "brick, stone, concrete, tiled patterns, or any non-wood material"
+  },
+  "inpaint_prompt_used": "smooth wooden planks with visible grain and weathered texture",
+  "negative_prompt_used": "brick, stone, concrete, tiled patterns, or any non-wood material",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2898.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2898.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2898.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2898.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

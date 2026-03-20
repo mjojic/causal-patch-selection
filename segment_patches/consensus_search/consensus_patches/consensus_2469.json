@@ -1,0 +1,72 @@
+{
+  "image_idx": 2469,
+  "consensus_mask_indices": [
+    2,
+    3,
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4,
+    2,
+    3,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    3,
+    2,
+    4,
+    0,
+    1
+  ],
+  "question": "Does the staircase lead up to a street?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.6,
+  "final_sc_gold": 0.6,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "B": 6,
+    "A": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "staircase leading up to a busy city street with buildings, cars, and pedestrians",
+    "negative_prompt": "staircase leading down into darkness or subway, no street visible"
+  },
+  "inpaint_prompt_used": "staircase leading up to a busy city street with buildings, cars, and pedestrians",
+  "negative_prompt_used": "staircase leading down into darkness or subway, no street visible",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_2469.png",
+    "viz_png": "consensus_patches/viz_2469.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2469.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2469.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

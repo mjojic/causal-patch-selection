@@ -1,0 +1,73 @@
+{
+  "image_idx": 1982,
+  "stem": "2173192_2395184581",
+  "question_id": "105238",
+  "path": "seed_images/2173192_2395184581.jpg",
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    3,
+    4,
+    0,
+    2
+  ],
+  "question": "What is the relation between the person and the blue shirt in the background? Select from the following options: (A) They are performing together. (B) They are friends. (C) They are ignoring each other. (D) They are strangers.",
+  "gold_answer": "They are performing together",
+  "gold_letter": "A",
+  "answer_choices": [
+    "They are performing together",
+    "They are friends",
+    "They are ignoring each other",
+    "They are strangers"
+  ],
+  "spurious_attribute": 7,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 9,
+    "C": 1
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.1,
+  "final_sc_gold": 0.9,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 9,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "The person in the blue shirt is standing close, smiling, and clapping along to the music.",
+    "negative_prompt": "The person in the blue shirt is distant, facing away, or not interacting with the performer."
+  },
+  "inpaint_prompt_used": "The person in the blue shirt is standing close, smiling, and clapping along to the music.",
+  "negative_prompt_used": "The person in the blue shirt is distant, facing away, or not interacting with the performer.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1982.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1982.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1982.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1982.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

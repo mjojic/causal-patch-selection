@@ -1,0 +1,68 @@
+{
+  "image_idx": 1479,
+  "stem": "1885187_1714720378",
+  "question_id": "105097",
+  "path": "seed_images/1885187_1714720378.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is the position of the blue cake on the table? Select from the following options: (A) In the center. (B) On the left side. (C) On the right side. (D) In the corner.",
+  "gold_answer": "In the center",
+  "gold_letter": "A",
+  "answer_choices": [
+    "In the center",
+    "On the left side",
+    "On the right side",
+    "In the corner"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a pink cupcake with white frosting and a small flower on top",
+    "negative_prompt": "blue cake, blue frosting, any blue-colored dessert"
+  },
+  "inpaint_prompt_used": "a pink cupcake with white frosting and a small flower on top",
+  "negative_prompt_used": "blue cake, blue frosting, any blue-colored dessert",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1479.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1479.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1479.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1479.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

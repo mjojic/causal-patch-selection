@@ -1,0 +1,72 @@
+{
+  "image_idx": 2454,
+  "stem": "245064_153311859",
+  "question_id": "21282",
+  "path": "seed_images/245064_153311859.jpg",
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    4
+  ],
+  "question": "What is the position of the houses in this image? Select from the following options: (A) They are in the center of the image. (B) They are on the right side of the image. (C) They are on the left side of the image. (D) They are not visible in the image.",
+  "gold_answer": "They are on the left side of the image",
+  "gold_letter": "C",
+  "answer_choices": [
+    "They are in the center of the image",
+    "They are on the right side of the image",
+    "They are on the left side of the image",
+    "They are not visible in the image"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.5,
+  "baseline_sc_gold": 0.5,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 5,
+    "B": 2,
+    "A": 3
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.3,
+  "final_sc_gold": 0.3,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 3,
+    "A": 3,
+    "B": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a row of white houses with red roofs nestled among trees on the right side",
+    "negative_prompt": "no houses, only trees and rocks on the left side"
+  },
+  "inpaint_prompt_used": "a row of white houses with red roofs nestled among trees on the right side",
+  "negative_prompt_used": "no houses, only trees and rocks on the left side",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2454.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2454.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2454.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2454.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

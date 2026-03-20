@@ -1,0 +1,63 @@
+{
+  "image_idx": 1511,
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "Is the picture displaying four bricks, each gray and chipped, stacked unevenly on a ground of dry dirt and debris?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "four gray chipped bricks stacked unevenly on dry dirt",
+    "negative_prompt": "no bricks, smooth surface, single object, uniform texture"
+  },
+  "inpaint_prompt_used": "four gray chipped bricks stacked unevenly on dry dirt",
+  "negative_prompt_used": "no bricks, smooth surface, single object, uniform texture",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_1511.png",
+    "viz_png": "consensus_patches/viz_1511.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1511.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1511.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

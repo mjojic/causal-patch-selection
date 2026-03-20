@@ -1,0 +1,77 @@
+{
+  "image_idx": 570,
+  "stem": "1334255_2717830909",
+  "question_id": "71352",
+  "path": "seed_images/1334255_2717830909.jpg",
+  "consensus_mask_indices": [
+    1,
+    2,
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    4,
+    3,
+    0,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    1,
+    4
+  ],
+  "question": "What is the overall theme of this image? Select from the following options: (A) A city in chaos. (B) A sporting event. (C) An industrial area. (D) A celebration with balloons.",
+  "gold_answer": "A city in chaos",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A city in chaos",
+    "A sporting event",
+    "An industrial area",
+    "A celebration with balloons"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 9,
+    "C": 1
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.3,
+  "final_sc_gold": 0.3,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 3,
+    "C": 7
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A calm cityscape with orderly streets, green parks, and clear blue sky",
+    "negative_prompt": "chaos, destruction, smoke, fire, crowds, panic, debris"
+  },
+  "inpaint_prompt_used": "A calm cityscape with orderly streets, green parks, and clear blue sky",
+  "negative_prompt_used": "chaos, destruction, smoke, fire, crowds, panic, debris",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_570.png",
+    "viz_png": "consensus_patches_seed_bench/viz_570.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_570.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_570.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

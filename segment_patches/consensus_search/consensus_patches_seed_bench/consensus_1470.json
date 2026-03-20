@@ -1,0 +1,71 @@
+{
+  "image_idx": 1470,
+  "stem": "1878140_3246776666",
+  "question_id": "22344",
+  "path": "seed_images/1878140_3246776666.jpg",
+  "consensus_mask_indices": [
+    0,
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    1
+  ],
+  "question": "Which animal is more prevalent in the image, cows or sheep? Select from the following options: (A) Cows. (B) Both equally. (C) Sheep. (D) Neither.",
+  "gold_answer": "Cows",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Cows",
+    "Both equally",
+    "Sheep",
+    "Neither"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 9,
+    "C": 1
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a flock of sheep grazing on the hillside",
+    "negative_prompt": "cows, any large bovine animals"
+  },
+  "inpaint_prompt_used": "a flock of sheep grazing on the hillside",
+  "negative_prompt_used": "cows, any large bovine animals",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1470.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1470.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1470.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1470.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

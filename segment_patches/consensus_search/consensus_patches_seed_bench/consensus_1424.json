@@ -1,0 +1,71 @@
+{
+  "image_idx": 1424,
+  "stem": "184624_3420583845",
+  "question_id": "84860",
+  "path": "seed_images/184624_3420583845.jpg",
+  "consensus_mask_indices": [
+    12
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    12
+  ],
+  "qwen25_selected_mask_indices": [
+    12,
+    0
+  ],
+  "question": "What color is the bed canopy? Select from the following options: (A) Not mentioned. (B) Brown. (C) Tan. (D) White.",
+  "gold_answer": "White",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Not mentioned",
+    "Brown",
+    "Tan",
+    "White"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.4,
+  "final_sc_gold": 0.4,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 4,
+    "C": 3,
+    "A": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a dark brown, textured fabric canopy hanging from wooden beams",
+    "negative_prompt": "white fabric, light-colored material, sheer or translucent canopy"
+  },
+  "inpaint_prompt_used": "a dark brown, textured fabric canopy hanging from wooden beams",
+  "negative_prompt_used": "white fabric, light-colored material, sheer or translucent canopy",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1424.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1424.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1424.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1424.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "image_idx": 2729,
+  "stem": "261567_51492861",
+  "question_id": "83155",
+  "path": "seed_images/261567_51492861.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0,
+    7,
+    10,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What color is the backpack in the image? Select from the following options: (A) Black. (B) White. (C) Brown. (D) Gray.",
+  "gold_answer": "Black",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Black",
+    "White",
+    "Brown",
+    "Gray"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.6,
+  "final_sc_gold": 0.6,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 4,
+    "A": 6
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A bright white backpack with visible straps and zippers",
+    "negative_prompt": "Black, brown, or gray backpacks; any dark or neutral-colored bags"
+  },
+  "inpaint_prompt_used": "A bright white backpack with visible straps and zippers",
+  "negative_prompt_used": "Black, brown, or gray backpacks; any dark or neutral-colored bags",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2729.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2729.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2729.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2729.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

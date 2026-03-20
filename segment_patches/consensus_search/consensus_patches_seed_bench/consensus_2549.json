@@ -1,0 +1,72 @@
+{
+  "image_idx": 2549,
+  "stem": "2510028_2860779823",
+  "question_id": "26626",
+  "path": "seed_images/2510028_2860779823.jpg",
+  "consensus_mask_indices": [
+    11
+  ],
+  "qwen3_selected_mask_indices": [
+    11,
+    6,
+    2,
+    12,
+    8
+  ],
+  "qwen25_selected_mask_indices": [
+    4,
+    11
+  ],
+  "question": "Imagine that you are about to redecorate the living room. What color would you use to create a contrasting color scheme based on the predominant color in the room? Select from the following options: (A) Gray. (B) White. (C) Black. (D) Yellow.",
+  "gold_answer": "Black",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Gray",
+    "White",
+    "Black",
+    "Yellow"
+  ],
+  "spurious_attribute": 8,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A bright yellow armchair with a modern design and wooden legs.",
+    "negative_prompt": "A black armchair or any dark-colored furniture in the same style."
+  },
+  "inpaint_prompt_used": "A bright yellow armchair with a modern design and wooden legs.",
+  "negative_prompt_used": "A black armchair or any dark-colored furniture in the same style.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2549.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2549.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2549.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2549.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

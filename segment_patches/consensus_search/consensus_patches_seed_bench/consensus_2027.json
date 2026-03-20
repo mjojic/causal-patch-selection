@@ -1,0 +1,70 @@
+{
+  "image_idx": 2027,
+  "stem": "2200122_1510962239",
+  "question_id": "6883",
+  "path": "seed_images/2200122_1510962239.jpg",
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    4
+  ],
+  "question": "What is the primary color of the sand in the image? Select from the following options: (A) Black. (B) White. (C) Gray. (D) Brown.",
+  "gold_answer": "Gray",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Black",
+    "White",
+    "Gray",
+    "Brown"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.6,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 6,
+    "B": 2,
+    "D": 2
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 8,
+    "C": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "smooth, light gray sand with subtle beige tones and fine texture",
+    "negative_prompt": "black sand, dark patches, coarse gravel, or deep shadows"
+  },
+  "inpaint_prompt_used": "smooth, light gray sand with subtle beige tones and fine texture",
+  "negative_prompt_used": "black sand, dark patches, coarse gravel, or deep shadows",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2027.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2027.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2027.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2027.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

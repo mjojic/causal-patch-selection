@@ -1,0 +1,25 @@
+{
+  "image_idx": 76,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.68,
+  "baseline_sc_new": 0.68,
+  "baseline_sc_gold": 0.32,
+  "final_sc_orig": 0.32,
+  "final_sc_new": 0.68,
+  "final_sc_gold": 0.68,
+  "selected_mask_indices": [
+    3,
+    2
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are the apples arranged in a trapezoid shape?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

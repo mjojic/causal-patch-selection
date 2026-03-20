@@ -1,0 +1,25 @@
+{
+  "image_idx": 216,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.96,
+  "baseline_sc_new": 0.96,
+  "baseline_sc_gold": 0.96,
+  "final_sc_orig": 0.0,
+  "final_sc_new": 1.0,
+  "final_sc_gold": 0.0,
+  "selected_mask_indices": [
+    4,
+    3
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Does the image depict a horse statue with a blue and white sash around its neck, mounted on a cement platform surrounded by a small garden ?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

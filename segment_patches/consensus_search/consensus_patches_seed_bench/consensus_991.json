@@ -1,0 +1,75 @@
+{
+  "image_idx": 991,
+  "stem": "1579715_318777798",
+  "question_id": "27669",
+  "path": "seed_images/1579715_318777798.jpg",
+  "consensus_mask_indices": [
+    2,
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    0,
+    5,
+    1,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    4
+  ],
+  "question": "How many microphones are visible in the image? Select from the following options: (A) 1. (B) 2. (C) 4. (D) 3.",
+  "gold_answer": "1",
+  "gold_letter": "A",
+  "answer_choices": [
+    "1",
+    "2",
+    "4",
+    "3"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 9,
+    "D": 1
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 5,
+    "C": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "two microphones on stands, clearly visible in the foreground",
+    "negative_prompt": "no microphones, empty space, dark void, no equipment"
+  },
+  "inpaint_prompt_used": "two microphones on stands, clearly visible in the foreground",
+  "negative_prompt_used": "no microphones, empty space, dark void, no equipment",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_991.png",
+    "viz_png": "consensus_patches_seed_bench/viz_991.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_991.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_991.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

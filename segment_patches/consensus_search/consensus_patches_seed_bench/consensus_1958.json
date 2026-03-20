@@ -1,0 +1,73 @@
+{
+  "image_idx": 1958,
+  "stem": "216121_898579452",
+  "question_id": "81105",
+  "path": "seed_images/216121_898579452.jpg",
+  "consensus_mask_indices": [
+    0,
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    5,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    2,
+    1
+  ],
+  "question": "What is the pet in the image? Select from the following options: (A) A dog. (B) A bird. (C) A fish. (D) A cat.",
+  "gold_answer": "A cat",
+  "gold_letter": "D",
+  "answer_choices": [
+    "A dog",
+    "A bird",
+    "A fish",
+    "A cat"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.6,
+  "final_sc_gold": 0.6,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 4,
+    "D": 6
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A small fluffy white dog playing with children on the floor",
+    "negative_prompt": "A cat, any feline animal, or pet resembling a cat"
+  },
+  "inpaint_prompt_used": "A small fluffy white dog playing with children on the floor",
+  "negative_prompt_used": "A cat, any feline animal, or pet resembling a cat",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1958.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1958.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1958.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1958.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

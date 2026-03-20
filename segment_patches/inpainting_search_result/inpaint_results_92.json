@@ -1,0 +1,117 @@
+{
+  "image_idx": 92,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.96,
+  "baseline_sc_new": 0.96,
+  "baseline_sc_gold": 0.04,
+  "final_sc_orig": 0.0,
+  "final_sc_new": null,
+  "final_sc_gold": 1.0,
+  "selected_mask_indices": [
+    3
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "What color is the wall that the mural/painting is on?",
+  "gold_answer": "Gray",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Gray",
+    "Blue"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "inpaint_model_id": "Manojb/stable-diffusion-2-1-base",
+  "inpaint_prompt": "Fill the masked region naturally, removing whatever objects appear there. Preserve the rest of the image exactly.",
+  "inpaint_negative_prompt": "text, watermark, logo, artifacts, distortion, blur",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_temperature": 0.2,
+  "qwen_prompt_top_p": 0.9,
+  "qwen_prompt_max_tokens": 256,
+  "qwen_prompts_used": [
+    {
+      "step": 0,
+      "kind": "candidates",
+      "baseline_letter": "B",
+      "baseline_answer_text": "Blue",
+      "candidates": [
+        {
+          "mask_idx": 0,
+          "inpaint_prompt": "A section of the wall painted with a gray concrete texture, matching the upper ledge.",
+          "negative_prompt": "Blue paint or mural elements extending into the blacked-out region."
+        },
+        {
+          "mask_idx": 1,
+          "inpaint_prompt": "a large gray stone block with rough texture and cracks",
+          "negative_prompt": "blue paint, mural elements, flowers, clouds, stars"
+        },
+        {
+          "mask_idx": 2,
+          "inpaint_prompt": "A gray concrete wall with visible cracks and weathering, matching the upper structure.",
+          "negative_prompt": "Blue paint, mural elements, or any colorful artwork extending into the blacked-out area."
+        },
+        {
+          "mask_idx": 3,
+          "inpaint_prompt": "A large, textured gray concrete wall with subtle cracks and urban wear.",
+          "negative_prompt": "Any blue color, mural, painting, or decorative elements on the wall."
+        },
+        {
+          "mask_idx": 4,
+          "inpaint_prompt": "gray concrete sidewalk with cracks and small weeds growing through",
+          "negative_prompt": "blue paint, mural, lotus flowers, stars, clouds"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "kind": "current_global_mask",
+      "baseline_letter": "B",
+      "baseline_answer_text": "Blue",
+      "inpaint_prompt": "A large blue mural of butterfly wings on a gray concrete wall",
+      "negative_prompt": "A large blue mural of butterfly wings on a blue wall"
+    },
+    {
+      "step": 1,
+      "kind": "candidates",
+      "baseline_letter": "B",
+      "baseline_answer_text": "Blue",
+      "candidates": [
+        {
+          "mask_idx": 0,
+          "inpaint_prompt": "A large gray concrete wall with faint cracks and a weathered texture.",
+          "negative_prompt": "Blue wall, mural, painting, colorful design, artistic elements."
+        },
+        {
+          "mask_idx": 1,
+          "inpaint_prompt": "A large gray concrete wall with subtle texture and faint shadows.",
+          "negative_prompt": "Blue wall, mural, painting, bright colors, artistic design."
+        },
+        {
+          "mask_idx": 2,
+          "inpaint_prompt": "A large gray concrete wall with visible texture and cracks, partially covered by peeling paint.",
+          "negative_prompt": "Blue wall, mural, painting, colorful artwork, smooth surface, vibrant colors."
+        },
+        {
+          "mask_idx": 4,
+          "inpaint_prompt": "A large gray concrete wall with subtle texture and faint shadows.",
+          "negative_prompt": "Blue wall, mural, painting, artwork, or any colorful surface."
+        }
+      ]
+    },
+    {
+      "step": "final",
+      "kind": "final_global_mask",
+      "baseline_letter": "B",
+      "baseline_answer_text": "Blue",
+      "inpaint_prompt": "A large, textured gray concrete wall with subtle cracks and weathering.",
+      "negative_prompt": "Blue paint, mural, artwork, or any colorful design on the wall."
+    }
+  ],
+  "image_size": null,
+  "cuda_visible_devices": "1,3",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 3
+}

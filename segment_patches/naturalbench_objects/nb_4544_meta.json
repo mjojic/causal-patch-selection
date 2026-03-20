@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.999378,
+    "isthing": false,
+    "area": 24216
+  },
+  {
+    "id": 2,
+    "label_id": 16,
+    "label": "16",
+    "score": 0.999571,
+    "isthing": false,
+    "area": 7898
+  },
+  {
+    "id": 3,
+    "label_id": 102,
+    "label": "102",
+    "score": 0.639634,
+    "isthing": false,
+    "area": 84705
+  },
+  {
+    "id": 4,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.894252,
+    "isthing": false,
+    "area": 616
+  },
+  {
+    "id": 5,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.998422,
+    "isthing": false,
+    "area": 1289
+  },
+  {
+    "id": 6,
+    "label_id": 13,
+    "label": "13",
+    "score": 0.504103,
+    "isthing": false,
+    "area": 117
+  },
+  {
+    "id": 7,
+    "label_id": 91,
+    "label": "91",
+    "score": 0.943293,
+    "isthing": false,
+    "area": 7423
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.556374,
+    "isthing": false,
+    "area": 512
+  },
+  {
+    "id": 9,
+    "label_id": 124,
+    "label": "124",
+    "score": 0.835248,
+    "isthing": false,
+    "area": 2716
+  },
+  {
+    "id": 10,
+    "label_id": 117,
+    "label": "117",
+    "score": 0.800076,
+    "isthing": false,
+    "area": 7894
+  },
+  {
+    "id": 11,
+    "label_id": 126,
+    "label": "126",
+    "score": 0.69328,
+    "isthing": false,
+    "area": 7273
+  },
+  {
+    "id": 12,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.90811,
+    "isthing": false,
+    "area": 457
+  },
+  {
+    "id": 13,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.982454,
+    "isthing": false,
+    "area": 605
+  },
+  {
+    "id": 14,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.871364,
+    "isthing": false,
+    "area": 477
+  },
+  {
+    "id": 15,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.998881,
+    "isthing": false,
+    "area": 1115
+  },
+  {
+    "id": 16,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.992676,
+    "isthing": false,
+    "area": 1196
+  }
+]

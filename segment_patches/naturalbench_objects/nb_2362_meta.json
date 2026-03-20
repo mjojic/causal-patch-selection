@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "label_id": 56,
+    "label": "56",
+    "score": 0.875235,
+    "isthing": false,
+    "area": 638
+  },
+  {
+    "id": 2,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.993341,
+    "isthing": false,
+    "area": 2589
+  },
+  {
+    "id": 3,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.96051,
+    "isthing": false,
+    "area": 760
+  },
+  {
+    "id": 4,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.954277,
+    "isthing": false,
+    "area": 1574
+  },
+  {
+    "id": 5,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.534824,
+    "isthing": false,
+    "area": 499
+  },
+  {
+    "id": 6,
+    "label_id": 125,
+    "label": "125",
+    "score": 0.997708,
+    "isthing": false,
+    "area": 66951
+  },
+  {
+    "id": 7,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.998428,
+    "isthing": false,
+    "area": 97483
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.965118,
+    "isthing": false,
+    "area": 2111
+  },
+  {
+    "id": 9,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.998754,
+    "isthing": false,
+    "area": 2574
+  },
+  {
+    "id": 10,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.931705,
+    "isthing": false,
+    "area": 383
+  },
+  {
+    "id": 11,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.98103,
+    "isthing": false,
+    "area": 1234
+  },
+  {
+    "id": 12,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.993422,
+    "isthing": false,
+    "area": 2797
+  },
+  {
+    "id": 13,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.889931,
+    "isthing": false,
+    "area": 849
+  },
+  {
+    "id": 14,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.996329,
+    "isthing": false,
+    "area": 2314
+  },
+  {
+    "id": 15,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.99027,
+    "isthing": false,
+    "area": 3051
+  },
+  {
+    "id": 16,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.702925,
+    "isthing": false,
+    "area": 708
+  }
+]

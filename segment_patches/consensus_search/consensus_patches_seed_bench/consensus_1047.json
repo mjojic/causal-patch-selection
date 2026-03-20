@@ -1,0 +1,67 @@
+{
+  "image_idx": 1047,
+  "stem": "1613200_1020527893",
+  "question_id": "101377",
+  "path": "seed_images/1613200_1020527893.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    3
+  ],
+  "question": "What color is the woman's skirt? Select from the following options: (A) red. (B) black. (C) white. (D) pink.",
+  "gold_answer": "pink",
+  "gold_letter": "D",
+  "answer_choices": [
+    "red",
+    "black",
+    "white",
+    "pink"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a woman wearing a long pink skirt standing on stone steps by a river",
+    "negative_prompt": "black skirt, dark clothing, silhouette, no visible color"
+  },
+  "inpaint_prompt_used": "a woman wearing a long pink skirt standing on stone steps by a river",
+  "negative_prompt_used": "black skirt, dark clothing, silhouette, no visible color",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1047.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1047.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1047.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1047.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

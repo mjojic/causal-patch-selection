@@ -1,0 +1,24 @@
+{
+  "image_idx": 138,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 0.0,
+  "final_sc_orig": 0.32,
+  "final_sc_new": 0.68,
+  "final_sc_gold": 0.68,
+  "selected_mask_indices": [
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is the main dog in the image skinny?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

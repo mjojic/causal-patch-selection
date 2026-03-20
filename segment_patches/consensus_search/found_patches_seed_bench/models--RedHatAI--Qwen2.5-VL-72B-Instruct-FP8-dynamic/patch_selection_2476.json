@@ -1,0 +1,53 @@
+{
+  "image_idx": 2476,
+  "question_id": "52920",
+  "path": "seed_images/2465324_1483051205.jpg",
+  "stem": "2465324_1483051205",
+  "model_dir": "/mnt/shared/shared_hf_home/hub/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic",
+  "model_snapshot": "/mnt/shared/shared_hf_home/hub/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/snapshots/f8823f1615cfc3cf40c5a8f3da5a24ece52cc2b8",
+  "model_tag": "models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic",
+  "question": "How many people are visible in the image? Select from the following options: (A) 0. (B) 1. (C) 2. (D) 3.",
+  "gold_answer": "1",
+  "gold_letter": "B",
+  "answer_choices": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "spurious_attribute": 5,
+  "target_letter": "B",
+  "baseline_sc_target": 1.0,
+  "final_sc_target": 0.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_gold": 0.0,
+  "baseline_num_extracted": 15,
+  "final_num_extracted": 15,
+  "selected_mask_indices": [
+    0
+  ],
+  "search_num_patches": 5,
+  "num_samples_sc": 15,
+  "min_sc_drop": 0.1,
+  "require_monotonic_improvement": false,
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_prompt": "Fill the masked region naturally, removing whatever objects appear there. Preserve the rest of the image exactly.",
+  "inpaint_negative_prompt": "text, watermark, logo, artifacts, distortion, blur",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "image_size": null,
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "vllm_settings": {
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.7,
+    "max_model_len": 8000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 0,
+    "qwen25_forced_fp8_quantization": true,
+    "calculate_kv_scales_for_qwen25": true
+  }
+}

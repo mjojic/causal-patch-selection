@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.90076,
+    "isthing": false,
+    "area": 3435,
+    "area_frac": 0.0205688622754491
+  },
+  {
+    "id": 2,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.939476,
+    "isthing": false,
+    "area": 1529,
+    "area_frac": 0.00915568862275449
+  },
+  {
+    "id": 3,
+    "label_id": 122,
+    "label": "122",
+    "score": 0.950407,
+    "isthing": false,
+    "area": 21409,
+    "area_frac": 0.12819760479041917
+  },
+  {
+    "id": 4,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999843,
+    "isthing": false,
+    "area": 11534,
+    "area_frac": 0.06906586826347305
+  },
+  {
+    "id": 5,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.979379,
+    "isthing": false,
+    "area": 5376,
+    "area_frac": 0.03219161676646706
+  },
+  {
+    "id": 6,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.996872,
+    "isthing": false,
+    "area": 850,
+    "area_frac": 0.005089820359281437
+  },
+  {
+    "id": 7,
+    "label_id": 118,
+    "label": "118",
+    "score": 0.961786,
+    "isthing": false,
+    "area": 16724,
+    "area_frac": 0.1001437125748503
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.959051,
+    "isthing": false,
+    "area": 414,
+    "area_frac": 0.0024790419161676647
+  },
+  {
+    "id": 9,
+    "label_id": 25,
+    "label": "25",
+    "score": 0.902297,
+    "isthing": false,
+    "area": 1270,
+    "area_frac": 0.007604790419161677
+  },
+  {
+    "id": 10,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999606,
+    "isthing": false,
+    "area": 12041,
+    "area_frac": 0.07210179640718563
+  },
+  {
+    "id": 11,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.96689,
+    "isthing": false,
+    "area": 78267,
+    "area_frac": 0.4686646706586826
+  },
+  {
+    "id": 12,
+    "label_id": 56,
+    "label": "56",
+    "score": 0.988095,
+    "isthing": false,
+    "area": 9147,
+    "area_frac": 0.05477245508982036
+  }
+]

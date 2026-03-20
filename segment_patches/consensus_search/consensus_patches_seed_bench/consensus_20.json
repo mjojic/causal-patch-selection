@@ -1,0 +1,70 @@
+{
+  "image_idx": 20,
+  "stem": "1013076_2740175134",
+  "question_id": "48333",
+  "path": "seed_images/1013076_2740175134.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What is the overall theme of this image? Select from the following options: (A) Modern Art. (B) Black and White. (C) Minimalism. (D) Technology.",
+  "gold_answer": "Black and White",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Modern Art",
+    "Black and White",
+    "Minimalism",
+    "Technology"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 8,
+    "C": 2
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.8333333333333334,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 6,
+  "final_letter_counts": {
+    "A": 1,
+    "D": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A colorful abstract painting with vibrant brushstrokes and floral patterns",
+    "negative_prompt": "iPhone, Apple logo, technology, black background, minimalist design"
+  },
+  "inpaint_prompt_used": "A colorful abstract painting with vibrant brushstrokes and floral patterns",
+  "negative_prompt_used": "iPhone, Apple logo, technology, black background, minimalist design",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_20.png",
+    "viz_png": "consensus_patches_seed_bench/viz_20.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_20.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_20.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

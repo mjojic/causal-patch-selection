@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "label_id": 55,
+    "label": "55",
+    "score": 0.953409,
+    "isthing": false,
+    "area": 1942,
+    "area_frac": 0.01162874251497006
+  },
+  {
+    "id": 2,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999468,
+    "isthing": false,
+    "area": 15852,
+    "area_frac": 0.09492215568862275
+  },
+  {
+    "id": 3,
+    "label_id": 60,
+    "label": "60",
+    "score": 0.559217,
+    "isthing": false,
+    "area": 8665,
+    "area_frac": 0.05188622754491018
+  },
+  {
+    "id": 4,
+    "label_id": 128,
+    "label": "128",
+    "score": 0.917921,
+    "isthing": false,
+    "area": 5079,
+    "area_frac": 0.030413173652694612
+  },
+  {
+    "id": 5,
+    "label_id": 104,
+    "label": "104",
+    "score": 0.553502,
+    "isthing": false,
+    "area": 7266,
+    "area_frac": 0.043508982035928144
+  },
+  {
+    "id": 6,
+    "label_id": 83,
+    "label": "83",
+    "score": 0.961725,
+    "isthing": false,
+    "area": 32365,
+    "area_frac": 0.19380239520958084
+  },
+  {
+    "id": 7,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.998957,
+    "isthing": false,
+    "area": 6703,
+    "area_frac": 0.0401377245508982
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.997804,
+    "isthing": false,
+    "area": 24591,
+    "area_frac": 0.14725149700598802
+  },
+  {
+    "id": 9,
+    "label_id": 104,
+    "label": "104",
+    "score": 0.631121,
+    "isthing": false,
+    "area": 9598,
+    "area_frac": 0.05747305389221557
+  },
+  {
+    "id": 10,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.892272,
+    "isthing": false,
+    "area": 681,
+    "area_frac": 0.004077844311377246
+  },
+  {
+    "id": 11,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999398,
+    "isthing": false,
+    "area": 33303,
+    "area_frac": 0.1994191616766467
+  },
+  {
+    "id": 12,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999837,
+    "isthing": false,
+    "area": 18039,
+    "area_frac": 0.10801796407185629
+  },
+  {
+    "id": 13,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.75208,
+    "isthing": false,
+    "area": 2834,
+    "area_frac": 0.01697005988023952
+  }
+]

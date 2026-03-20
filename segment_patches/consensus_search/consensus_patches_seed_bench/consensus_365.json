@@ -1,0 +1,72 @@
+{
+  "image_idx": 365,
+  "stem": "12093_897525938",
+  "question_id": "19729",
+  "path": "seed_images/12093_897525938.jpg",
+  "consensus_mask_indices": [
+    13
+  ],
+  "qwen3_selected_mask_indices": [
+    7,
+    13,
+    3,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    13,
+    4
+  ],
+  "question": "What is happening in the image? Select from the following options: (A) A player is trying to score a goal.. (B) Two players are having an argument.. (C) A coach is giving instructions to a player.. (D) A player is receiving praise from their coach..",
+  "gold_answer": "A coach is giving instructions to a player",
+  "gold_letter": "C",
+  "answer_choices": [
+    "A player is trying to score a goal",
+    "Two players are having an argument",
+    "A coach is giving instructions to a player",
+    "A player is receiving praise from their coach"
+  ],
+  "spurious_attribute": 8,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.9,
+  "final_sc_gold": 0.1,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 9,
+    "C": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plausible object that contradicts the baseline answer.",
+    "negative_prompt": "blurry, watermark, distorted, artifacts, text"
+  },
+  "inpaint_prompt_used": "A plausible object that contradicts the baseline answer.",
+  "negative_prompt_used": "blurry, watermark, distorted, artifacts, text",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_365.png",
+    "viz_png": "consensus_patches_seed_bench/viz_365.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_365.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_365.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

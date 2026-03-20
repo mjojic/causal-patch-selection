@@ -1,0 +1,69 @@
+{
+  "image_idx": 1258,
+  "stem": "1750594_3288812643",
+  "question_id": "96404",
+  "path": "seed_images/1750594_3288812643.jpg",
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "What is the man wearing? Select from the following options: (A) A shirt. (B) A jacket. (C) A suit. (D) A tie.",
+  "gold_answer": "A suit",
+  "gold_letter": "C",
+  "answer_choices": [
+    "A shirt",
+    "A jacket",
+    "A suit",
+    "A tie"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 9,
+    "B": 1
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.5,
+  "final_sc_gold": 0.5,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 5,
+    "C": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A man wearing a casual t-shirt and jeans, sitting in a car",
+    "negative_prompt": "A suit, formal attire, business clothing, tie, jacket"
+  },
+  "inpaint_prompt_used": "A man wearing a casual t-shirt and jeans, sitting in a car",
+  "negative_prompt_used": "A suit, formal attire, business clothing, tie, jacket",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1258.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1258.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1258.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1258.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

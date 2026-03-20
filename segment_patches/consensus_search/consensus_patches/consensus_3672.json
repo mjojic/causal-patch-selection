@@ -1,0 +1,67 @@
+{
+  "image_idx": 3672,
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    0,
+    3,
+    6,
+    1
+  ],
+  "question": "What is the color of the sky in the image?",
+  "gold_answer": "Gloomy and covered in clouds",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Gloomy and covered in clouds",
+    "Blue and filled with large white clouds"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.8666666666666667,
+  "baseline_sc_gold": 0.8666666666666667,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 13,
+    "B": 2
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Bright blue sky with large, fluffy white clouds visible through the opening",
+    "negative_prompt": "Gloomy, overcast sky with dark clouds or gray tones"
+  },
+  "inpaint_prompt_used": "Bright blue sky with large, fluffy white clouds visible through the opening",
+  "negative_prompt_used": "Gloomy, overcast sky with dark clouds or gray tones",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3672.png",
+    "viz_png": "consensus_patches/viz_3672.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3672.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_3672.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

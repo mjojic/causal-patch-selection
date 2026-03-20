@@ -1,0 +1,76 @@
+{
+  "image_idx": 1585,
+  "stem": "1949080_3893461062",
+  "question_id": "17752",
+  "path": "seed_images/1949080_3893461062.jpg",
+  "consensus_mask_indices": [
+    1,
+    13
+  ],
+  "qwen3_selected_mask_indices": [
+    16,
+    13,
+    1,
+    9,
+    23
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    14,
+    1,
+    7,
+    13
+  ],
+  "question": "Based on the image, what could be an appropriate title for this scene? Select from the following options: (A) \"A Peaceful Countryside Gathering\". (B) \"A Bustling City Square\". (C) \"A Day at the Beach\". (D) \"A Mountain Adventure\".",
+  "gold_answer": "\"A Bustling City Square\"",
+  "gold_letter": "B",
+  "answer_choices": [
+    "\"A Peaceful Countryside Gathering\"",
+    "\"A Bustling City Square\"",
+    "\"A Day at the Beach\"",
+    "\"A Mountain Adventure\""
+  ],
+  "spurious_attribute": 8,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "calm rural landscape with green fields, trees, and a few scattered farmhouses",
+    "negative_prompt": "crowded city square, tall buildings, paved streets, bustling crowds, horse-drawn carriages, urban infrastructure"
+  },
+  "inpaint_prompt_used": "calm rural landscape with green fields, trees, and a few scattered farmhouses",
+  "negative_prompt_used": "crowded city square, tall buildings, paved streets, bustling crowds, horse-drawn carriages, urban infrastructure",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1585.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1585.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1585.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1585.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

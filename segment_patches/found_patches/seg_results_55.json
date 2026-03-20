@@ -1,0 +1,24 @@
+{
+  "image_idx": 55,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.76,
+  "baseline_sc_new": 0.76,
+  "baseline_sc_gold": 0.24,
+  "final_sc_orig": 0.84,
+  "final_sc_new": 0.84,
+  "final_sc_gold": 0.16,
+  "selected_mask_indices": [
+    7
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are there six motorcycles in two rows, at least one of which has neon yellow accents, on a parking lot with a grassy area, a black fence post, and orange cones in the distant background?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

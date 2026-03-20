@@ -1,0 +1,65 @@
+{
+  "image_idx": 4511,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What activity is the dog engaged in?",
+  "gold_answer": "Running between two gray poles that are very close together.",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Running between two gray poles that are very close together.",
+    "Performing a slalom-like obstacle"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.7333333333333333,
+  "baseline_sc_gold": 0.7333333333333333,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "B": 4,
+    "A": 11
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 12,
+    "A": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A dog running between two gray poles, with visible legs and body in motion",
+    "negative_prompt": "Black silhouette, no visible dog features, no motion details"
+  },
+  "inpaint_prompt_used": "A dog running between two gray poles, with visible legs and body in motion",
+  "negative_prompt_used": "Black silhouette, no visible dog features, no motion details",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_4511.png",
+    "viz_png": "consensus_patches/viz_4511.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_4511.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_4511.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

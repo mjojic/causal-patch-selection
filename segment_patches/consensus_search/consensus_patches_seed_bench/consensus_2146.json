@@ -1,0 +1,67 @@
+{
+  "image_idx": 2146,
+  "stem": "2281735_44396504",
+  "question_id": "33696",
+  "path": "seed_images/2281735_44396504.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is the main type of object in the image? Select from the following options: (A) Disney characters. (B) Stuffed toys. (C) Ducks. (D) Balloons.",
+  "gold_answer": "Disney characters",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Disney characters",
+    "Stuffed toys",
+    "Ducks",
+    "Balloons"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "B": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a group of colorful stuffed animals, including bears and rabbits, arranged on a shelf",
+    "negative_prompt": "Disney characters, Mickey Mouse, Minnie Mouse, or any recognizable animated figures"
+  },
+  "inpaint_prompt_used": "a group of colorful stuffed animals, including bears and rabbits, arranged on a shelf",
+  "negative_prompt_used": "Disney characters, Mickey Mouse, Minnie Mouse, or any recognizable animated figures",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2146.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2146.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2146.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2146.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

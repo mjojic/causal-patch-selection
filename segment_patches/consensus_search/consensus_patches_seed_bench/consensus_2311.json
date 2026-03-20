@@ -1,0 +1,67 @@
+{
+  "image_idx": 2311,
+  "stem": "2368867_3387150140",
+  "question_id": "60352",
+  "path": "seed_images/2368867_3387150140.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    3
+  ],
+  "question": "What is the color of the wall? Select from the following options: (A) White. (B) Grey. (C) Beige. (D) Brown.",
+  "gold_answer": "White",
+  "gold_letter": "A",
+  "answer_choices": [
+    "White",
+    "Grey",
+    "Beige",
+    "Brown"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A smooth, warm beige wall with soft lighting and subtle texture.",
+    "negative_prompt": "White, grey, or brown walls; any color other than beige; visible windows or ceiling elements."
+  },
+  "inpaint_prompt_used": "A smooth, warm beige wall with soft lighting and subtle texture.",
+  "negative_prompt_used": "White, grey, or brown walls; any color other than beige; visible windows or ceiling elements.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2311.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2311.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2311.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2311.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

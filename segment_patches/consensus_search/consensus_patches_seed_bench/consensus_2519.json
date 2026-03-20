@@ -1,0 +1,78 @@
+{
+  "image_idx": 2519,
+  "stem": "2493527_1617428770",
+  "question_id": "104538",
+  "path": "seed_images/2493527_1617428770.jpg",
+  "consensus_mask_indices": [
+    4,
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    3,
+    7,
+    4,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    8,
+    4,
+    7
+  ],
+  "question": "Which object is the farthest from the person playing the guitar? Select from the following options: (A) microphone. (B) amplifier. (C) drum set. (D) cannot be determined.",
+  "gold_answer": "cannot be determined",
+  "gold_letter": "D",
+  "answer_choices": [
+    "microphone",
+    "amplifier",
+    "drum set",
+    "cannot be determined"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 1,
+    "C": 9
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.4,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 4,
+    "D": 2,
+    "B": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a drum set clearly visible behind the guitarist, with cymbals and drums in focus",
+    "negative_prompt": "no drum set, only empty space or indistinct background behind the guitarist"
+  },
+  "inpaint_prompt_used": "a drum set clearly visible behind the guitarist, with cymbals and drums in focus",
+  "negative_prompt_used": "no drum set, only empty space or indistinct background behind the guitarist",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2519.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2519.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2519.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2519.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "image_idx": 4895,
+  "consensus_mask_indices": [
+    9
+  ],
+  "qwen3_selected_mask_indices": [
+    9
+  ],
+  "qwen25_selected_mask_indices": [
+    9
+  ],
+  "question": "How many women are involved in weaving activities?",
+  "gold_answer": "Two women are involved in weaving activities.",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Two women are involved in weaving activities.",
+    "One woman is weaving on a loom."
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A man sitting on the loom, operating it with hands, wearing a dark shirt.",
+    "negative_prompt": "Any woman, female figure, or person engaged in weaving."
+  },
+  "inpaint_prompt_used": "A man sitting on the loom, operating it with hands, wearing a dark shirt.",
+  "negative_prompt_used": "Any woman, female figure, or person engaged in weaving.",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_4895.png",
+    "viz_png": "consensus_patches/viz_4895.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_4895.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_4895.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

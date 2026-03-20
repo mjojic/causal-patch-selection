@@ -1,0 +1,74 @@
+{
+  "image_idx": 2156,
+  "stem": "2284749_2652054849",
+  "question_id": "84968",
+  "path": "seed_images/2284749_2652054849.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    2,
+    4,
+    1,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    14,
+    0
+  ],
+  "question": "What is the primary color of the chair in the image? Select from the following options: (A) Brown. (B) White. (C) Black. (D) Gray.",
+  "gold_answer": "Brown",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Brown",
+    "White",
+    "Black",
+    "Gray"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.4,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 6,
+    "A": 4
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.3,
+  "final_sc_gold": 0.7,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 7,
+    "C": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a chair with a bright brown leather surface and wooden legs",
+    "negative_prompt": "black chair, dark upholstery, or any dark-colored furniture"
+  },
+  "inpaint_prompt_used": "a chair with a bright brown leather surface and wooden legs",
+  "negative_prompt_used": "black chair, dark upholstery, or any dark-colored furniture",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2156.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2156.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2156.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2156.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

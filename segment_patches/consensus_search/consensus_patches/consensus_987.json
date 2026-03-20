@@ -1,0 +1,69 @@
+{
+  "image_idx": 987,
+  "consensus_mask_indices": [
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    9,
+    13,
+    2,
+    5,
+    12
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    1
+  ],
+  "question": "What notable feature is present regarding the passenger seating?",
+  "gold_answer": "The seats are solid-colored.",
+  "gold_letter": "A",
+  "answer_choices": [
+    "The seats are solid-colored.",
+    "Red headrests"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.52,
+  "baseline_sc_gold": 0.48,
+  "baseline_num_extracted": 25,
+  "baseline_letter_counts": {
+    "A": 12,
+    "B": 13
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.92,
+  "final_sc_gold": 0.08,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 23,
+    "A": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A person wearing a blue jacket sitting in a seat with a blue headrest",
+    "negative_prompt": "Red headrests or any red-colored seating elements"
+  },
+  "inpaint_prompt_used": "A person wearing a blue jacket sitting in a seat with a blue headrest",
+  "negative_prompt_used": "Red headrests or any red-colored seating elements",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_987.png",
+    "viz_png": "consensus_patches/viz_987.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_987.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_987.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

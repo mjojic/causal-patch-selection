@@ -1,0 +1,28 @@
+{
+  "image_idx": 28,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.8181818181818182,
+  "baseline_sc_new": 0.8181818181818182,
+  "baseline_sc_gold": 0.8181818181818182,
+  "final_sc_orig": 0.7083333333333334,
+  "final_sc_new": 0.7083333333333334,
+  "final_sc_gold": 0.7083333333333334,
+  "selected_mask_indices": [
+    11,
+    5,
+    9,
+    3,
+    7
+  ],
+  "baseline_num_extracted": 22,
+  "final_num_extracted": 24,
+  "question": "What is the woman or man in the yellow coat doing?",
+  "gold_answer": "She is looking for something she dropped.",
+  "gold_letter": "A",
+  "answer_choices": [
+    "She is looking for something she dropped.",
+    ""
+  ],
+  "spurious_attribute": "multiple_choice"
+}

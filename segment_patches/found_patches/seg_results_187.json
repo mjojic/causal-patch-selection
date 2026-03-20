@@ -1,0 +1,25 @@
+{
+  "image_idx": 187,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.8,
+  "baseline_sc_new": 0.8,
+  "baseline_sc_gold": 0.2,
+  "final_sc_orig": 0.52,
+  "final_sc_new": 0.52,
+  "final_sc_gold": 0.48,
+  "selected_mask_indices": [
+    3,
+    5
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is the pitcher left-handed?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

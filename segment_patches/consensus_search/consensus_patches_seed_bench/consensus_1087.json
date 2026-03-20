@@ -1,0 +1,69 @@
+{
+  "image_idx": 1087,
+  "stem": "1648762_681136787",
+  "question_id": "20951",
+  "path": "seed_images/1648762_681136787.jpg",
+  "consensus_mask_indices": [
+    8
+  ],
+  "qwen3_selected_mask_indices": [
+    8
+  ],
+  "qwen25_selected_mask_indices": [
+    3,
+    8
+  ],
+  "question": "What is the color of the railing on the balcony? Select from the following options: (A) Gray. (B) Black. (C) Brown. (D) White.",
+  "gold_answer": "White",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Gray",
+    "Black",
+    "Brown",
+    "White"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.4,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 6,
+    "D": 4
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A gray metal railing running along the edge of the balcony, matching the concrete floor.",
+    "negative_prompt": "No railing, or any structure resembling a railing, in the blacked-out area."
+  },
+  "inpaint_prompt_used": "A gray metal railing running along the edge of the balcony, matching the concrete floor.",
+  "negative_prompt_used": "No railing, or any structure resembling a railing, in the blacked-out area.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1087.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1087.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1087.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1087.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

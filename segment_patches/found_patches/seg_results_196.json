@@ -1,0 +1,24 @@
+{
+  "image_idx": 196,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.6,
+  "baseline_sc_new": 0.6,
+  "baseline_sc_gold": 0.6,
+  "final_sc_orig": 0.0,
+  "final_sc_new": 1.0,
+  "final_sc_gold": 0.0,
+  "selected_mask_indices": [
+    3
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is anyone in the crowd also holding a musical instrument?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

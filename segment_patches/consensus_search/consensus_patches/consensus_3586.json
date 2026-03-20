@@ -1,0 +1,63 @@
+{
+  "image_idx": 3586,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    4
+  ],
+  "question": "Is the window stained glass?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "clear glass panes with no color or leaded design, simple rectangular window",
+    "negative_prompt": "stained glass with colorful patterns, leaded glass, decorative glass artwork"
+  },
+  "inpaint_prompt_used": "clear glass panes with no color or leaded design, simple rectangular window",
+  "negative_prompt_used": "stained glass with colorful patterns, leaded glass, decorative glass artwork",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3586.png",
+    "viz_png": "consensus_patches/viz_3586.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3586.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_3586.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

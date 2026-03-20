@@ -1,0 +1,69 @@
+{
+  "image_idx": 2866,
+  "stem": "2690529_2748852069",
+  "question_id": "48395",
+  "path": "seed_images/2690529_2748852069.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "Which object is closest to the bottom right corner of the image? Select from the following options: (A) The silver bow. (B) The letter k wreath. (C) The lavender wreath. (D) The purple and silver balls of yarn.",
+  "gold_answer": "The purple and silver balls of yarn",
+  "gold_letter": "D",
+  "answer_choices": [
+    "The silver bow",
+    "The letter k wreath",
+    "The lavender wreath",
+    "The purple and silver balls of yarn"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.5,
+  "baseline_sc_gold": 0.5,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 5,
+    "D": 5
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 7,
+    "B": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large lavender wreath with silver mesh accents and purple trim, occupying the central area.",
+    "negative_prompt": "The silver bow, letter k wreath, or purple and silver balls of yarn inside the blacked-out region."
+  },
+  "inpaint_prompt_used": "A large lavender wreath with silver mesh accents and purple trim, occupying the central area.",
+  "negative_prompt_used": "The silver bow, letter k wreath, or purple and silver balls of yarn inside the blacked-out region.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2866.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2866.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2866.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2866.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

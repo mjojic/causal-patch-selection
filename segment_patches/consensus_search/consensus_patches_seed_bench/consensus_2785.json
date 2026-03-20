@@ -1,0 +1,79 @@
+{
+  "image_idx": 2785,
+  "stem": "2648147_327831914",
+  "question_id": "28785",
+  "path": "seed_images/2648147_327831914.jpg",
+  "consensus_mask_indices": [
+    1,
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    15,
+    1,
+    16,
+    6,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    8,
+    2,
+    1,
+    0
+  ],
+  "question": "Among the detected objects, what can be seen in both blue and white colors? Select from the following options: (A) Shirt and helmet. (B) Fence and glove. (C) Pole and glove. (D) Fence and banner.",
+  "gold_answer": "Shirt and helmet",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Shirt and helmet",
+    "Fence and glove",
+    "Pole and glove",
+    "Fence and banner"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.8333333333333334,
+  "baseline_sc_gold": 0.8333333333333334,
+  "baseline_num_extracted": 6,
+  "baseline_letter_counts": {
+    "A": 5,
+    "D": 1
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.4,
+  "final_sc_gold": 0.4,
+  "final_num_extracted": 5,
+  "final_letter_counts": {
+    "B": 2,
+    "A": 2,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A black hockey jersey with white stripes and number 77",
+    "negative_prompt": "Blue and white shirt or helmet"
+  },
+  "inpaint_prompt_used": "A black hockey jersey with white stripes and number 77",
+  "negative_prompt_used": "Blue and white shirt or helmet",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2785.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2785.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2785.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2785.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

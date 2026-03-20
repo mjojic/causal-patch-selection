@@ -1,0 +1,70 @@
+{
+  "image_idx": 4,
+  "stem": "100168_4024760235",
+  "question_id": "10367",
+  "path": "seed_images/100168_4024760235.jpg",
+  "consensus_mask_indices": [
+    0,
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    0
+  ],
+  "question": "What color is the trophy? Select from the following options: (A) Silver. (B) Gold. (C) Bronze. (D) Blue.",
+  "gold_answer": "Silver",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Silver",
+    "Gold",
+    "Bronze",
+    "Blue"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "B": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A shiny golden trophy with intricate engravings and a reflective surface.",
+    "negative_prompt": "Silver trophy, metallic gray, dull finish, no golden hue."
+  },
+  "inpaint_prompt_used": "A shiny golden trophy with intricate engravings and a reflective surface.",
+  "negative_prompt_used": "Silver trophy, metallic gray, dull finish, no golden hue.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_4.png",
+    "viz_png": "consensus_patches_seed_bench/viz_4.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_4.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_4.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

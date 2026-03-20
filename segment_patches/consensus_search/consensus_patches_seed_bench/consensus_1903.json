@@ -1,0 +1,73 @@
+{
+  "image_idx": 1903,
+  "stem": "2126181_3577670906",
+  "question_id": "39578",
+  "path": "seed_images/2126181_3577670906.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    9,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    20,
+    0,
+    3,
+    17,
+    4
+  ],
+  "question": "How many hockey players are in the huddle on the ice? Select from the following options: (A) 4. (B) 8. (C) 6. (D) 10.",
+  "gold_answer": "10",
+  "gold_letter": "D",
+  "answer_choices": [
+    "4",
+    "8",
+    "6",
+    "10"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 8,
+  "baseline_letter_counts": {
+    "B": 8
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.8571428571428571,
+  "final_sc_gold": 0.14285714285714285,
+  "final_num_extracted": 7,
+  "final_letter_counts": {
+    "B": 6,
+    "D": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Two additional hockey players in black jerseys joining the huddle, increasing total to 10.",
+    "negative_prompt": "No extra players in the blacked-out region, only the original group visible."
+  },
+  "inpaint_prompt_used": "Two additional hockey players in black jerseys joining the huddle, increasing total to 10.",
+  "negative_prompt_used": "No extra players in the blacked-out region, only the original group visible.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1903.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1903.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1903.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1903.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

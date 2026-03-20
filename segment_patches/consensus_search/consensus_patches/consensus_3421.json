@@ -1,0 +1,63 @@
+{
+  "image_idx": 3421,
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    3
+  ],
+  "question": "What shape is the light fixture?",
+  "gold_answer": "Round globe pendant",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Low-profile dome",
+    "Round globe pendant"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "B": 15
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A flat, disc-shaped light fixture with a shallow dome and wide base.",
+    "negative_prompt": "Round globe pendant, spherical, hanging, bulbous, curved surface."
+  },
+  "inpaint_prompt_used": "A flat, disc-shaped light fixture with a shallow dome and wide base.",
+  "negative_prompt_used": "Round globe pendant, spherical, hanging, bulbous, curved surface.",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_3421.png",
+    "viz_png": "consensus_patches/viz_3421.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_3421.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_3421.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

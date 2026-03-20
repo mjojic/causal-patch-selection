@@ -1,0 +1,74 @@
+{
+  "image_idx": 730,
+  "stem": "1426920_573538654",
+  "question_id": "93921",
+  "path": "seed_images/1426920_573538654.jpg",
+  "consensus_mask_indices": [
+    0,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    5,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    2,
+    1,
+    4,
+    5
+  ],
+  "question": "What is the relative spatial relation between the person on stage and the microphone? Select from the following options: (A) The person is holding the microphone. (B) The person is sitting on the microphone. (C) The person is far away from the microphone. (D) The person is standing next to the microphone.",
+  "gold_answer": "The person is standing next to the microphone",
+  "gold_letter": "D",
+  "answer_choices": [
+    "The person is holding the microphone",
+    "The person is sitting on the microphone",
+    "The person is far away from the microphone",
+    "The person is standing next to the microphone"
+  ],
+  "spurious_attribute": 6,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.5,
+  "final_sc_gold": 0.5,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 5,
+    "D": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A microphone stand with a microphone positioned directly in front of the person on stage.",
+    "negative_prompt": "The person holding the microphone or sitting on it, or the microphone being far away from the person."
+  },
+  "inpaint_prompt_used": "A microphone stand with a microphone positioned directly in front of the person on stage.",
+  "negative_prompt_used": "The person holding the microphone or sitting on it, or the microphone being far away from the person.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_730.png",
+    "viz_png": "consensus_patches_seed_bench/viz_730.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_730.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_730.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

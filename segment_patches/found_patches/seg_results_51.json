@@ -1,0 +1,25 @@
+{
+  "image_idx": 51,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 0.0,
+  "final_sc_orig": 0.24,
+  "final_sc_new": 0.76,
+  "final_sc_gold": 0.76,
+  "selected_mask_indices": [
+    9,
+    7
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is the large sculpture a paper airplane situated between two shady trees?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

@@ -1,0 +1,63 @@
+{
+  "image_idx": 5796,
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "Are the deer standing behind a rusted, leaf-covered gate?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a clear, metal gate with no rust or leaves, showing the deer directly behind it",
+    "negative_prompt": "rusted, leaf-covered gate, overgrown vegetation, obscured view"
+  },
+  "inpaint_prompt_used": "a clear, metal gate with no rust or leaves, showing the deer directly behind it",
+  "negative_prompt_used": "rusted, leaf-covered gate, overgrown vegetation, obscured view",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5796.png",
+    "viz_png": "consensus_patches/viz_5796.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5796.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5796.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

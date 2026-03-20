@@ -1,0 +1,74 @@
+{
+  "image_idx": 1079,
+  "stem": "1644518_299562300",
+  "question_id": "376",
+  "path": "seed_images/1644518_299562300.jpg",
+  "consensus_mask_indices": [
+    13
+  ],
+  "qwen3_selected_mask_indices": [
+    5,
+    10,
+    13,
+    16,
+    12
+  ],
+  "qwen25_selected_mask_indices": [
+    13,
+    0
+  ],
+  "question": "How many people are holding up a picture of a man's head in the image? Select from the following options: (A) 3. (B) 2. (C) 1. (D) 4.",
+  "gold_answer": "1",
+  "gold_letter": "C",
+  "answer_choices": [
+    "3",
+    "2",
+    "1",
+    "4"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.5,
+  "baseline_sc_gold": 0.5,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 4,
+    "A": 1,
+    "C": 5
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 4,
+  "final_letter_counts": {
+    "C": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plausible object that contradicts the baseline answer.",
+    "negative_prompt": "blurry, watermark, distorted, artifacts, text"
+  },
+  "inpaint_prompt_used": "A plausible object that contradicts the baseline answer.",
+  "negative_prompt_used": "blurry, watermark, distorted, artifacts, text",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1079.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1079.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1079.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1079.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

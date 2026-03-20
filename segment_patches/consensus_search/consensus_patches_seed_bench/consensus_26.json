@@ -1,0 +1,73 @@
+{
+  "image_idx": 26,
+  "stem": "1016570_82737261",
+  "question_id": "21931",
+  "path": "seed_images/1016570_82737261.jpg",
+  "consensus_mask_indices": [
+    8
+  ],
+  "qwen3_selected_mask_indices": [
+    7,
+    0,
+    2,
+    8
+  ],
+  "qwen25_selected_mask_indices": [
+    8,
+    1
+  ],
+  "question": "What is the gender of the person playing drums in the image? Select from the following options: (A) Male. (B) There is no person playing drums in the image. (C) Cannot be determined. (D) Female.",
+  "gold_answer": "Male",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Male",
+    "There is no person playing drums in the image",
+    "Cannot be determined",
+    "Female"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 9,
+    "C": 1
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.8,
+  "final_sc_gold": 0.8,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 2,
+    "A": 8
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A person with long curly hair wearing a black top, playing drums with visible drumsticks.",
+    "negative_prompt": "A male person with short hair, wearing a light-colored jacket, standing near the drums."
+  },
+  "inpaint_prompt_used": "A person with long curly hair wearing a black top, playing drums with visible drumsticks.",
+  "negative_prompt_used": "A male person with short hair, wearing a light-colored jacket, standing near the drums.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_26.png",
+    "viz_png": "consensus_patches_seed_bench/viz_26.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_26.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_26.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

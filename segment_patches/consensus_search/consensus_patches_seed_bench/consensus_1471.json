@@ -1,0 +1,71 @@
+{
+  "image_idx": 1471,
+  "stem": "1878954_1782080129",
+  "question_id": "103559",
+  "path": "seed_images/1878954_1782080129.jpg",
+  "consensus_mask_indices": [
+    0,
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    2,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    1
+  ],
+  "question": "What color is the fairy's dress? Select from the following options: (A) White. (B) Does not have a dress. (C) Yellow. (D) Blue.",
+  "gold_answer": "White",
+  "gold_letter": "A",
+  "answer_choices": [
+    "White",
+    "Does not have a dress",
+    "Yellow",
+    "Blue"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A fairy wearing a bright yellow dress with floral patterns",
+    "negative_prompt": "Blue dress, no dress, white dress, fairy without clothing"
+  },
+  "inpaint_prompt_used": "A fairy wearing a bright yellow dress with floral patterns",
+  "negative_prompt_used": "Blue dress, no dress, white dress, fairy without clothing",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1471.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1471.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1471.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1471.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

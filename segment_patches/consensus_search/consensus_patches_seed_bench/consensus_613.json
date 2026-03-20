@@ -1,0 +1,71 @@
+{
+  "image_idx": 613,
+  "stem": "1363633_764136463",
+  "question_id": "65926",
+  "path": "seed_images/1363633_764136463.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    1,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    3
+  ],
+  "question": "What is the color of the buckle in the image? Select from the following options: (A) Gold. (B) Brown. (C) Silver. (D) Black.",
+  "gold_answer": "Brown",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Gold",
+    "Brown",
+    "Silver",
+    "Black"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.3,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 1,
+    "A": 6,
+    "B": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a shiny gold buckle on a dark belt, reflecting light",
+    "negative_prompt": "silver buckle, metallic gray, dull finish"
+  },
+  "inpaint_prompt_used": "a shiny gold buckle on a dark belt, reflecting light",
+  "negative_prompt_used": "silver buckle, metallic gray, dull finish",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_613.png",
+    "viz_png": "consensus_patches_seed_bench/viz_613.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_613.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_613.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

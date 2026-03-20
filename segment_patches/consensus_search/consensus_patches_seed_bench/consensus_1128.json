@@ -1,0 +1,77 @@
+{
+  "image_idx": 1128,
+  "stem": "167302_925272419",
+  "question_id": "11130",
+  "path": "seed_images/167302_925272419.jpg",
+  "consensus_mask_indices": [
+    0,
+    2,
+    4,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    4,
+    5,
+    0,
+    6
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    5,
+    4,
+    0
+  ],
+  "question": "What is the general atmosphere of the scene in this image? Select from the following options: (A) Tense and mysterious. (B) Calm and peaceful. (C) Busy and crowded. (D) Chaotic and disorganized.",
+  "gold_answer": "Calm and peaceful",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Tense and mysterious",
+    "Calm and peaceful",
+    "Busy and crowded",
+    "Chaotic and disorganized"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "two people in a dark, shadowy alley with flickering streetlights and tense body language",
+    "negative_prompt": "calm, peaceful, open space, sunlight, relaxed figures"
+  },
+  "inpaint_prompt_used": "two people in a dark, shadowy alley with flickering streetlights and tense body language",
+  "negative_prompt_used": "calm, peaceful, open space, sunlight, relaxed figures",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1128.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1128.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1128.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1128.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

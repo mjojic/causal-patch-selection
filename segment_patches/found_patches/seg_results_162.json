@@ -1,0 +1,25 @@
+{
+  "image_idx": 162,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.56,
+  "baseline_sc_new": 0.56,
+  "baseline_sc_gold": 0.44,
+  "final_sc_orig": 0.08,
+  "final_sc_new": 0.92,
+  "final_sc_gold": 0.92,
+  "selected_mask_indices": [
+    4,
+    7
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are all the cars on the road facing the same direction?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

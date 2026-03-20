@@ -1,0 +1,68 @@
+{
+  "image_idx": 386,
+  "stem": "1221920_1800973639",
+  "question_id": "75566",
+  "path": "seed_images/1221920_1800973639.jpg",
+  "consensus_mask_indices": [
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    3,
+    0
+  ],
+  "question": "What color is the fence in the background of the image? Select from the following options: (A) White. (B) Black. (C) Brown. (D) Grey.",
+  "gold_answer": "Brown",
+  "gold_letter": "C",
+  "answer_choices": [
+    "White",
+    "Black",
+    "Brown",
+    "Grey"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a wooden fence with vertical planks, weathered and brown, blending with the rocky terrain",
+    "negative_prompt": "white, black, or grey fence; metal or painted structure; modern or artificial materials"
+  },
+  "inpaint_prompt_used": "a wooden fence with vertical planks, weathered and brown, blending with the rocky terrain",
+  "negative_prompt_used": "white, black, or grey fence; metal or painted structure; modern or artificial materials",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_386.png",
+    "viz_png": "consensus_patches_seed_bench/viz_386.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_386.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_386.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

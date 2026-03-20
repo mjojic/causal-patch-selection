@@ -1,0 +1,70 @@
+{
+  "image_idx": 175,
+  "stem": "109587_218954985",
+  "question_id": "52325",
+  "path": "seed_images/109587_218954985.jpg",
+  "consensus_mask_indices": [
+    11
+  ],
+  "qwen3_selected_mask_indices": [
+    11,
+    1,
+    2,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    11
+  ],
+  "question": "Where is the flower in the image located? Select from the following options: (A) Above the family's heads. (B) On the ground. (C) In the girl's hand. (D) In the woman's hair.",
+  "gold_answer": "In the girl's hand",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Above the family's heads",
+    "On the ground",
+    "In the girl's hand",
+    "In the woman's hair"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 9,
+  "baseline_letter_counts": {
+    "C": 9
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plausible object that contradicts the baseline answer.",
+    "negative_prompt": "blurry, watermark, distorted, artifacts, text"
+  },
+  "inpaint_prompt_used": "A plausible object that contradicts the baseline answer.",
+  "negative_prompt_used": "blurry, watermark, distorted, artifacts, text",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_175.png",
+    "viz_png": "consensus_patches_seed_bench/viz_175.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_175.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_175.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

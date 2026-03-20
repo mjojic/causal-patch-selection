@@ -1,0 +1,24 @@
+{
+  "image_idx": 47,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_orig": 0.08333333333333333,
+  "final_sc_new": 0.9166666666666666,
+  "final_sc_gold": 0.08333333333333333,
+  "selected_mask_indices": [
+    7
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 24,
+  "question": "What structure is behind the horses?",
+  "gold_answer": "A large white colored barn",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A large white colored barn",
+    ""
+  ],
+  "spurious_attribute": "multiple_choice"
+}

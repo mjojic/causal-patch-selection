@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.956598,
+    "isthing": false,
+    "area": 3753
+  },
+  {
+    "id": 2,
+    "label_id": 102,
+    "label": "102",
+    "score": 0.933164,
+    "isthing": false,
+    "area": 318874
+  },
+  {
+    "id": 3,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999661,
+    "isthing": false,
+    "area": 9803
+  },
+  {
+    "id": 4,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.891182,
+    "isthing": false,
+    "area": 1362
+  },
+  {
+    "id": 5,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.757011,
+    "isthing": false,
+    "area": 1307
+  },
+  {
+    "id": 6,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.950122,
+    "isthing": false,
+    "area": 3013
+  },
+  {
+    "id": 7,
+    "label_id": 117,
+    "label": "117",
+    "score": 0.71303,
+    "isthing": false,
+    "area": 15725
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.939597,
+    "isthing": false,
+    "area": 3789
+  },
+  {
+    "id": 9,
+    "label_id": 17,
+    "label": "17",
+    "score": 0.973154,
+    "isthing": false,
+    "area": 9424
+  },
+  {
+    "id": 10,
+    "label_id": 17,
+    "label": "17",
+    "score": 0.999315,
+    "isthing": false,
+    "area": 94240
+  },
+  {
+    "id": 11,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999678,
+    "isthing": false,
+    "area": 13633
+  },
+  {
+    "id": 12,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999901,
+    "isthing": false,
+    "area": 29987
+  },
+  {
+    "id": 13,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.938509,
+    "isthing": false,
+    "area": 1849
+  },
+  {
+    "id": 14,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.895766,
+    "isthing": false,
+    "area": 94613
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "image_idx": 839,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    7,
+    0,
+    5,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "Are the individuals simply passing by each other?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.76,
+  "baseline_sc_gold": 0.24,
+  "baseline_num_extracted": 25,
+  "baseline_letter_counts": {
+    "B": 19,
+    "A": 6
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.56,
+  "final_sc_gold": 0.44,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 14,
+    "A": 11
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a person holding hands with the woman, walking closely beside her",
+    "negative_prompt": "a person walking separately, no physical contact, distant from the woman"
+  },
+  "inpaint_prompt_used": "a person holding hands with the woman, walking closely beside her",
+  "negative_prompt_used": "a person walking separately, no physical contact, distant from the woman",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_839.png",
+    "viz_png": "consensus_patches/viz_839.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_839.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_839.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

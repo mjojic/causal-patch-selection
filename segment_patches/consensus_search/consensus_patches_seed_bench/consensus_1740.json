@@ -1,0 +1,70 @@
+{
+  "image_idx": 1740,
+  "stem": "2040979_3442665964",
+  "question_id": "99799",
+  "path": "seed_images/2040979_3442665964.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What is the primary ingredient that can be seen next to the small white bowl of tomato sauce? Select from the following options: (A) Tomato sauce. (B) Tomatoes. (C) Spinach. (D) Basil.",
+  "gold_answer": "Tomatoes",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Tomato sauce",
+    "Tomatoes",
+    "Spinach",
+    "Basil"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.7,
+  "baseline_sc_gold": 0.3,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 3,
+    "D": 7
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.6,
+  "final_sc_gold": 0.4,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 6,
+    "B": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a small white bowl filled with red tomato sauce",
+    "negative_prompt": "basil leaves, green herbs, spinach, any green foliage"
+  },
+  "inpaint_prompt_used": "a small white bowl filled with red tomato sauce",
+  "negative_prompt_used": "basil leaves, green herbs, spinach, any green foliage",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1740.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1740.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1740.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1740.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

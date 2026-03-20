@@ -1,0 +1,67 @@
+{
+  "image_idx": 1014,
+  "stem": "1591786_474926789",
+  "question_id": "3678",
+  "path": "seed_images/1591786_474926789.jpg",
+  "consensus_mask_indices": [
+    11
+  ],
+  "qwen3_selected_mask_indices": [
+    11
+  ],
+  "qwen25_selected_mask_indices": [
+    11
+  ],
+  "question": "What color is the vest the man is wearing? Select from the following options: (A) White. (B) Gray. (C) Black. (D) Blue.",
+  "gold_answer": "Blue",
+  "gold_letter": "D",
+  "answer_choices": [
+    "White",
+    "Gray",
+    "Black",
+    "Blue"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A man wearing a black vest, standing in a party setting with purple lighting.",
+    "negative_prompt": "A man wearing a blue vest, or any vest that is not black."
+  },
+  "inpaint_prompt_used": "A man wearing a black vest, standing in a party setting with purple lighting.",
+  "negative_prompt_used": "A man wearing a blue vest, or any vest that is not black.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1014.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1014.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1014.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1014.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

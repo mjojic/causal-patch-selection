@@ -1,0 +1,72 @@
+{
+  "image_idx": 2969,
+  "stem": "2736742_3300015863",
+  "question_id": "55307",
+  "path": "seed_images/2736742_3300015863.jpg",
+  "consensus_mask_indices": [
+    2,
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    4,
+    2,
+    1,
+    0
+  ],
+  "question": "How many green smoothies are there on the table? Select from the following options: (A) 8. (B) 4. (C) 6. (D) 2.",
+  "gold_answer": "4",
+  "gold_letter": "B",
+  "answer_choices": [
+    "8",
+    "4",
+    "6",
+    "2"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 8,
+  "final_letter_counts": {
+    "C": 8
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "two additional green smoothies in clear glasses, identical to existing ones",
+    "negative_prompt": "no extra smoothies, only the four visible ones"
+  },
+  "inpaint_prompt_used": "two additional green smoothies in clear glasses, identical to existing ones",
+  "negative_prompt_used": "no extra smoothies, only the four visible ones",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2969.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2969.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2969.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2969.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

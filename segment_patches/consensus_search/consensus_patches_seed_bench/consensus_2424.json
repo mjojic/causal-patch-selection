@@ -1,0 +1,76 @@
+{
+  "image_idx": 2424,
+  "stem": "2434710_1264368606",
+  "question_id": "93675",
+  "path": "seed_images/2434710_1264368606.jpg",
+  "consensus_mask_indices": [
+    0,
+    2,
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    7,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    3,
+    4,
+    2,
+    7
+  ],
+  "question": "What is the attribute detection of the tree on the right side of the image? Select from the following options: (A) Small and leafy. (B) Short and brown. (C) Tall and green. (D) Large and yellow.",
+  "gold_answer": "Small and leafy",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Small and leafy",
+    "Short and brown",
+    "Tall and green",
+    "Large and yellow"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.9,
+  "final_sc_gold": 0.1,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 9,
+    "A": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A short, brown tree with sparse leaves on the right side",
+    "negative_prompt": "Tall, green, leafy tree on the right side"
+  },
+  "inpaint_prompt_used": "A short, brown tree with sparse leaves on the right side",
+  "negative_prompt_used": "Tall, green, leafy tree on the right side",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2424.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2424.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2424.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2424.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

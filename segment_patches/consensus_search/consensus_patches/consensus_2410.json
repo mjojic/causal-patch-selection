@@ -1,0 +1,65 @@
+{
+  "image_idx": 2410,
+  "consensus_mask_indices": [
+    15
+  ],
+  "qwen3_selected_mask_indices": [
+    10,
+    15,
+    16
+  ],
+  "qwen25_selected_mask_indices": [
+    9,
+    15
+  ],
+  "question": "What are the women doing?",
+  "gold_answer": "Talking",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Walking",
+    "Talking"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Two women walking side by side on a sidewalk, not facing each other, no visible conversation gestures.",
+    "negative_prompt": "Women facing each other, gesturing, smiling, or engaged in conversation."
+  },
+  "inpaint_prompt_used": "Two women walking side by side on a sidewalk, not facing each other, no visible conversation gestures.",
+  "negative_prompt_used": "Women facing each other, gesturing, smiling, or engaged in conversation.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_2410.png",
+    "viz_png": "consensus_patches/viz_2410.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2410.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2410.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

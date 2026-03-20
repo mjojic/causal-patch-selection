@@ -1,0 +1,67 @@
+{
+  "image_idx": 217,
+  "consensus_mask_indices": [
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    5,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    1,
+    4
+  ],
+  "question": "Does the image depict a horse statue with a blue and white sash around its neck, mounted on a cement platform surrounded by a small garden ?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.88,
+  "baseline_sc_gold": 0.88,
+  "baseline_num_extracted": 25,
+  "baseline_letter_counts": {
+    "B": 22,
+    "A": 3
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.68,
+  "final_sc_gold": 0.68,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 17,
+    "A": 8
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a small garden with colorful flowers and green shrubs around the base",
+    "negative_prompt": "no garden, bare grass only, no plants or flowers"
+  },
+  "inpaint_prompt_used": "a small garden with colorful flowers and green shrubs around the base",
+  "negative_prompt_used": "no garden, bare grass only, no plants or flowers",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_217.png",
+    "viz_png": "consensus_patches/viz_217.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_217.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_217.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

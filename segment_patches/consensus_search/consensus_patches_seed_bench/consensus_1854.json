@@ -1,0 +1,71 @@
+{
+  "image_idx": 1854,
+  "stem": "2104857_1906641358",
+  "question_id": "84342",
+  "path": "seed_images/2104857_1906641358.jpg",
+  "consensus_mask_indices": [
+    16
+  ],
+  "qwen3_selected_mask_indices": [
+    14,
+    16
+  ],
+  "qwen25_selected_mask_indices": [
+    16
+  ],
+  "question": "How many people are standing behind the brown wooden table in the image? Select from the following options: (A) One person. (B) Two people. (C) Three people. (D) Four people.",
+  "gold_answer": "One person",
+  "gold_letter": "A",
+  "answer_choices": [
+    "One person",
+    "Two people",
+    "Three people",
+    "Four people"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.3,
+  "baseline_sc_gold": 0.3,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 3,
+    "B": 2,
+    "C": 3,
+    "D": 2
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 9,
+  "final_letter_counts": {
+    "B": 9
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "One person standing behind the brown wooden table, wearing a dark shirt",
+    "negative_prompt": "Two or more people standing behind the brown wooden table"
+  },
+  "inpaint_prompt_used": "One person standing behind the brown wooden table, wearing a dark shirt",
+  "negative_prompt_used": "Two or more people standing behind the brown wooden table",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1854.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1854.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1854.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1854.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

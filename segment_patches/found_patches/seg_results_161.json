@@ -1,0 +1,24 @@
+{
+  "image_idx": 161,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.88,
+  "baseline_sc_new": 0.88,
+  "baseline_sc_gold": 0.12,
+  "final_sc_orig": 0.24,
+  "final_sc_new": 0.76,
+  "final_sc_gold": 0.76,
+  "selected_mask_indices": [
+    6
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are there any cars on the road facing left?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

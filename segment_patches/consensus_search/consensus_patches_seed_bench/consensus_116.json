@@ -1,0 +1,71 @@
+{
+  "image_idx": 116,
+  "stem": "1065804_1130774501",
+  "question_id": "27713",
+  "path": "seed_images/1065804_1130774501.jpg",
+  "consensus_mask_indices": [
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    3,
+    0,
+    1
+  ],
+  "question": "How many people are performing on the stage? Select from the following options: (A) 1. (B) 4. (C) 3. (D) 2.",
+  "gold_answer": "2",
+  "gold_letter": "D",
+  "answer_choices": [
+    "1",
+    "4",
+    "3",
+    "2"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.5,
+  "final_sc_gold": 0.5,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 5,
+    "D": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a third musician playing drums in the background",
+    "negative_prompt": "no additional people, only the singer and bassist visible"
+  },
+  "inpaint_prompt_used": "a third musician playing drums in the background",
+  "negative_prompt_used": "no additional people, only the singer and bassist visible",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_116.png",
+    "viz_png": "consensus_patches_seed_bench/viz_116.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_116.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_116.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

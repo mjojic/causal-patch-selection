@@ -1,0 +1,68 @@
+{
+  "image_idx": 5891,
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    4,
+    2,
+    15,
+    6,
+    5
+  ],
+  "question": "Where are the people located with respect to water?",
+  "gold_answer": "In a large pool of water",
+  "gold_letter": "A",
+  "answer_choices": [
+    "In a large pool of water",
+    "Around a water fountain"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.7333333333333333,
+  "baseline_sc_gold": 0.26666666666666666,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "B": 11,
+    "A": 4
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.3333333333333333,
+  "final_sc_gold": 0.6666666666666666,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "A": 10,
+    "B": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large pool of water with people standing and splashing inside it",
+    "negative_prompt": "A water fountain with people standing around it, no pool visible"
+  },
+  "inpaint_prompt_used": "A large pool of water with people standing and splashing inside it",
+  "negative_prompt_used": "A water fountain with people standing around it, no pool visible",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5891.png",
+    "viz_png": "consensus_patches/viz_5891.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5891.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5891.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

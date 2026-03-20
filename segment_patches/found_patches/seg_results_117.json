@@ -1,0 +1,24 @@
+{
+  "image_idx": 117,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.72,
+  "baseline_sc_new": 0.72,
+  "baseline_sc_gold": 0.28,
+  "final_sc_orig": 0.0,
+  "final_sc_new": 1.0,
+  "final_sc_gold": 1.0,
+  "selected_mask_indices": [
+    1
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 24,
+  "question": "Are both individuals in the image wearing head wraps?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

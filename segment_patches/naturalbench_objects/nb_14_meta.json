@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.998083,
+    "isthing": false,
+    "area": 8331,
+    "area_frac": 0.04667226890756303
+  },
+  {
+    "id": 2,
+    "label_id": 16,
+    "label": "16",
+    "score": 0.585756,
+    "isthing": false,
+    "area": 588,
+    "area_frac": 0.0032941176470588237
+  },
+  {
+    "id": 3,
+    "label_id": 16,
+    "label": "16",
+    "score": 0.749029,
+    "isthing": false,
+    "area": 10380,
+    "area_frac": 0.058151260504201684
+  },
+  {
+    "id": 4,
+    "label_id": 129,
+    "label": "129",
+    "score": 0.954015,
+    "isthing": false,
+    "area": 27718,
+    "area_frac": 0.1552829131652661
+  },
+  {
+    "id": 5,
+    "label_id": 125,
+    "label": "125",
+    "score": 0.994447,
+    "isthing": false,
+    "area": 5326,
+    "area_frac": 0.0298375350140056
+  },
+  {
+    "id": 6,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.985751,
+    "isthing": false,
+    "area": 4061,
+    "area_frac": 0.022750700280112043
+  },
+  {
+    "id": 7,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.811796,
+    "isthing": false,
+    "area": 10596,
+    "area_frac": 0.05936134453781513
+  },
+  {
+    "id": 8,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.858119,
+    "isthing": false,
+    "area": 670,
+    "area_frac": 0.003753501400560224
+  },
+  {
+    "id": 9,
+    "label_id": 117,
+    "label": "117",
+    "score": 0.979136,
+    "isthing": false,
+    "area": 26747,
+    "area_frac": 0.14984313725490195
+  },
+  {
+    "id": 10,
+    "label_id": 12,
+    "label": "12",
+    "score": 0.597981,
+    "isthing": false,
+    "area": 292,
+    "area_frac": 0.0016358543417366947
+  },
+  {
+    "id": 11,
+    "label_id": 16,
+    "label": "16",
+    "score": 0.522891,
+    "isthing": false,
+    "area": 3082,
+    "area_frac": 0.01726610644257703
+  },
+  {
+    "id": 12,
+    "label_id": 126,
+    "label": "126",
+    "score": 0.940115,
+    "isthing": false,
+    "area": 79800,
+    "area_frac": 0.4470588235294118
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "image_idx": 5094,
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    4,
+    3
+  ],
+  "question": "What activity is the person in the image engaged in?",
+  "gold_answer": "Working with something to his left",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Working with some sort of dirty material",
+    "Working with something to his left"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.9333333333333333,
+  "baseline_sc_gold": 0.06666666666666667,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 14,
+    "B": 1
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 13,
+  "final_letter_counts": {
+    "B": 13
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Clean, organized workspace with tools and materials for crafting or art, no dirt or messy substances.",
+    "negative_prompt": "Dirty materials, mud, grime, or messy substances in the workspace."
+  },
+  "inpaint_prompt_used": "Clean, organized workspace with tools and materials for crafting or art, no dirt or messy substances.",
+  "negative_prompt_used": "Dirty materials, mud, grime, or messy substances in the workspace.",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5094.png",
+    "viz_png": "consensus_patches/viz_5094.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5094.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5094.json"
+  },
+  "cuda_visible_devices": "1,7",
+  "vlm_device_arg": 1,
+  "inpaint_device_arg": 7,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "image_idx": 211,
+  "stem": "111385_3468590350",
+  "question_id": "80418",
+  "path": "seed_images/111385_3468590350.jpg",
+  "consensus_mask_indices": [
+    9
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    2,
+    9,
+    11,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    9
+  ],
+  "question": "How many soccer players are present in the image? Select from the following options: (A) 3. (B) 2. (C) 1. (D) 4.",
+  "gold_answer": "3",
+  "gold_letter": "A",
+  "answer_choices": [
+    "3",
+    "2",
+    "1",
+    "4"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "B": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a soccer player in a blue jersey standing near the goal",
+    "negative_prompt": "no silhouette, no black shape, no empty space"
+  },
+  "inpaint_prompt_used": "a soccer player in a blue jersey standing near the goal",
+  "negative_prompt_used": "no silhouette, no black shape, no empty space",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_211.png",
+    "viz_png": "consensus_patches_seed_bench/viz_211.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_211.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_211.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

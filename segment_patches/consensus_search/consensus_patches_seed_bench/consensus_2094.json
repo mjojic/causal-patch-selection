@@ -1,0 +1,67 @@
+{
+  "image_idx": 2094,
+  "stem": "2250187_2234357428",
+  "question_id": "89294",
+  "path": "seed_images/2250187_2234357428.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is the man wearing on his lower body? Select from the following options: (A) Blue jeans. (B) Orange pants. (C) Plaid shorts. (D) Red trousers.",
+  "gold_answer": "Plaid shorts",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Blue jeans",
+    "Orange pants",
+    "Plaid shorts",
+    "Red trousers"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "man wearing blue jeans, full-length, visible from waist down",
+    "negative_prompt": "plaid shorts, orange pants, red trousers, any patterned or short lower garment"
+  },
+  "inpaint_prompt_used": "man wearing blue jeans, full-length, visible from waist down",
+  "negative_prompt_used": "plaid shorts, orange pants, red trousers, any patterned or short lower garment",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2094.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2094.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2094.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2094.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

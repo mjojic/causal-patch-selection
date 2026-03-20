@@ -1,0 +1,25 @@
+{
+  "image_idx": 63,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 1.0,
+  "baseline_sc_new": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_orig": 0.7272727272727273,
+  "final_sc_new": 0.7272727272727273,
+  "final_sc_gold": 0.7272727272727273,
+  "selected_mask_indices": [
+    1,
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 22,
+  "question": "What is in the background behind the sign?",
+  "gold_answer": "A field of tall, dry grass and a row of trees",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A field of tall, dry grass and a row of trees",
+    ""
+  ],
+  "spurious_attribute": "multiple_choice"
+}

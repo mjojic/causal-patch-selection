@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.961081,
+    "isthing": false,
+    "area": 1244
+  },
+  {
+    "id": 2,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.65886,
+    "isthing": false,
+    "area": 318
+  },
+  {
+    "id": 3,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.962829,
+    "isthing": false,
+    "area": 7326
+  },
+  {
+    "id": 4,
+    "label_id": 32,
+    "label": "32",
+    "score": 0.69148,
+    "isthing": false,
+    "area": 472
+  },
+  {
+    "id": 5,
+    "label_id": 100,
+    "label": "100",
+    "score": 0.878712,
+    "isthing": false,
+    "area": 1899
+  },
+  {
+    "id": 6,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999901,
+    "isthing": false,
+    "area": 24727
+  },
+  {
+    "id": 7,
+    "label_id": 125,
+    "label": "125",
+    "score": 0.96011,
+    "isthing": false,
+    "area": 39040
+  },
+  {
+    "id": 8,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.996408,
+    "isthing": false,
+    "area": 17690
+  },
+  {
+    "id": 9,
+    "label_id": 91,
+    "label": "91",
+    "score": 0.990095,
+    "isthing": false,
+    "area": 9309
+  },
+  {
+    "id": 10,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.97627,
+    "isthing": false,
+    "area": 2666
+  },
+  {
+    "id": 11,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.826886,
+    "isthing": false,
+    "area": 494
+  },
+  {
+    "id": 12,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.612,
+    "isthing": false,
+    "area": 396
+  },
+  {
+    "id": 13,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999758,
+    "isthing": false,
+    "area": 16099
+  },
+  {
+    "id": 14,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.98714,
+    "isthing": false,
+    "area": 1054
+  },
+  {
+    "id": 15,
+    "label_id": 107,
+    "label": "107",
+    "score": 0.82226,
+    "isthing": false,
+    "area": 3444
+  },
+  {
+    "id": 16,
+    "label_id": 123,
+    "label": "123",
+    "score": 0.991312,
+    "isthing": false,
+    "area": 39912
+  }
+]

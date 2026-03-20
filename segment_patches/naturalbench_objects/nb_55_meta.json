@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.865802,
+    "isthing": false,
+    "area": 2870,
+    "area_frac": 0.016608796296296295
+  },
+  {
+    "id": 2,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.999218,
+    "isthing": false,
+    "area": 11817,
+    "area_frac": 0.06838541666666667
+  },
+  {
+    "id": 3,
+    "label_id": 100,
+    "label": "100",
+    "score": 0.945965,
+    "isthing": false,
+    "area": 100272,
+    "area_frac": 0.5802777777777778
+  },
+  {
+    "id": 4,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.998981,
+    "isthing": false,
+    "area": 7682,
+    "area_frac": 0.04445601851851852
+  },
+  {
+    "id": 5,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.999574,
+    "isthing": false,
+    "area": 36448,
+    "area_frac": 0.21092592592592593
+  },
+  {
+    "id": 6,
+    "label_id": 125,
+    "label": "125",
+    "score": 0.946693,
+    "isthing": false,
+    "area": 2072,
+    "area_frac": 0.011990740740740741
+  },
+  {
+    "id": 7,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.834682,
+    "isthing": false,
+    "area": 1553,
+    "area_frac": 0.008987268518518518
+  },
+  {
+    "id": 8,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.964044,
+    "isthing": false,
+    "area": 4785,
+    "area_frac": 0.02769097222222222
+  },
+  {
+    "id": 9,
+    "label_id": 3,
+    "label": "3",
+    "score": 0.953758,
+    "isthing": false,
+    "area": 2109,
+    "area_frac": 0.01220486111111111
+  }
+]

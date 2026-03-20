@@ -1,0 +1,64 @@
+{
+  "image_idx": 744,
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What activity are the children engaged in?",
+  "gold_answer": "Jumping in the sand",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Jumping in the sand",
+    "Standing next to each other"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 25,
+  "baseline_letter_counts": {
+    "A": 25
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.28,
+  "final_sc_gold": 0.28,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 18,
+    "A": 7
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Two children standing still on a sandy beach, arms slightly raised, not jumping.",
+    "negative_prompt": "Children jumping, mid-air motion, dynamic pose, sand kicked up, airborne legs."
+  },
+  "inpaint_prompt_used": "Two children standing still on a sandy beach, arms slightly raised, not jumping.",
+  "negative_prompt_used": "Children jumping, mid-air motion, dynamic pose, sand kicked up, airborne legs.",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_744.png",
+    "viz_png": "consensus_patches/viz_744.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_744.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_744.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

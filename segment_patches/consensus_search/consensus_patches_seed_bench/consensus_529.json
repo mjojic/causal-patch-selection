@@ -1,0 +1,75 @@
+{
+  "image_idx": 529,
+  "stem": "1306252_2176675322",
+  "question_id": "29055",
+  "path": "seed_images/1306252_2176675322.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    13,
+    6,
+    14
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    8,
+    12,
+    7,
+    15
+  ],
+  "question": "Based on the information provided, why might the room feel cozy? Select from the following options: (A) The presence of a fireplace.. (B) The room's high ceiling.. (C) The fact that it's a log cabin.. (D) Various light sources detected by the AI..",
+  "gold_answer": "The fact that it's a log cabin",
+  "gold_letter": "C",
+  "answer_choices": [
+    "The presence of a fireplace",
+    "The room's high ceiling",
+    "The fact that it's a log cabin",
+    "Various light sources detected by the AI"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.2,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 8,
+    "C": 2
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.8,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 8,
+    "C": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A single, dim overhead bulb with no other visible light sources",
+    "negative_prompt": "Multiple light sources, chandeliers, lamps, or glowing fixtures"
+  },
+  "inpaint_prompt_used": "A single, dim overhead bulb with no other visible light sources",
+  "negative_prompt_used": "Multiple light sources, chandeliers, lamps, or glowing fixtures",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_529.png",
+    "viz_png": "consensus_patches_seed_bench/viz_529.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_529.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_529.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

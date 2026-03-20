@@ -1,0 +1,25 @@
+{
+  "image_idx": 153,
+  "baseline_majority_letter": "B",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.84,
+  "baseline_sc_new": 0.84,
+  "baseline_sc_gold": 0.84,
+  "final_sc_orig": 0.32,
+  "final_sc_new": 0.68,
+  "final_sc_gold": 0.32,
+  "selected_mask_indices": [
+    5,
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is there a boy in a blue jersey running or standing in the image?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

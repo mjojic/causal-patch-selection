@@ -1,0 +1,72 @@
+{
+  "image_idx": 2989,
+  "stem": "2749363_3461728091",
+  "question_id": "62032",
+  "path": "seed_images/2749363_3461728091.jpg",
+  "consensus_mask_indices": [
+    3,
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    5,
+    3,
+    0
+  ],
+  "question": "What can be found in the image? Select from the following options: (A) A man wearing a black shirt and a girl in a white shirt.. (B) A group of people sitting down and a young boy with a basketball player.. (C) A fan of the team and a young boy sitting next to a basketball player.. (D) A young boy and a fan of a person at a game of basketball..",
+  "gold_answer": "A group of people sitting down and a young boy with a basketball player",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A man wearing a black shirt and a girl in a white shirt",
+    "A group of people sitting down and a young boy with a basketball player",
+    "A fan of the team and a young boy sitting next to a basketball player",
+    "A young boy and a fan of a person at a game of basketball"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.9,
+  "baseline_sc_gold": 0.9,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 9,
+    "C": 1
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 2,
+  "final_letter_counts": {
+    "D": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A young boy in a white jersey sitting between two adults, one with a beard.",
+    "negative_prompt": "A basketball player, a group of people, or any sports-related figures in the blacked-out areas."
+  },
+  "inpaint_prompt_used": "A young boy in a white jersey sitting between two adults, one with a beard.",
+  "negative_prompt_used": "A basketball player, a group of people, or any sports-related figures in the blacked-out areas.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2989.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2989.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2989.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2989.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "image_idx": 1557,
+  "consensus_mask_indices": [
+    4,
+    9
+  ],
+  "qwen3_selected_mask_indices": [
+    4,
+    9
+  ],
+  "qwen25_selected_mask_indices": [
+    9,
+    0,
+    4
+  ],
+  "question": "What is the color of the helmet worn by the man on the bike?",
+  "gold_answer": "The color of the helmet is not specified",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yellow and white",
+    "The color of the helmet is not specified"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.8421052631578947,
+  "baseline_sc_gold": 0.8421052631578947,
+  "baseline_num_extracted": 19,
+  "baseline_letter_counts": {
+    "B": 16,
+    "A": 3
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 20,
+  "final_letter_counts": {
+    "A": 20
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "The man on the bike wears a yellow and white helmet.",
+    "negative_prompt": "The helmet color is not visible or unspecified."
+  },
+  "inpaint_prompt_used": "The man on the bike wears a yellow and white helmet.",
+  "negative_prompt_used": "The helmet color is not visible or unspecified.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_1557.png",
+    "viz_png": "consensus_patches/viz_1557.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1557.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1557.json"
+  },
+  "cuda_visible_devices": "3,0",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 20,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

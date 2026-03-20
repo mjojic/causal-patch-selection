@@ -1,0 +1,73 @@
+{
+  "image_idx": 1152,
+  "stem": "1684591_4064933764",
+  "question_id": "86507",
+  "path": "seed_images/1684591_4064933764.jpg",
+  "consensus_mask_indices": [
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    10,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    8,
+    3,
+    1,
+    4
+  ],
+  "question": "Where is the blonde woman with curly hair sitting in the image? Select from the following options: (A) On the left-hand side. (B) In the middle. (C) On the right-hand side. (D) Cannot tell.",
+  "gold_answer": "On the left-hand side",
+  "gold_letter": "A",
+  "answer_choices": [
+    "On the left-hand side",
+    "In the middle",
+    "On the right-hand side",
+    "Cannot tell"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.2,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 8,
+    "A": 2
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.8,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 8,
+    "B": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A blonde woman with curly hair sitting on the left side of the group.",
+    "negative_prompt": "Blonde woman with curly hair in the middle or on the right side."
+  },
+  "inpaint_prompt_used": "A blonde woman with curly hair sitting on the left side of the group.",
+  "negative_prompt_used": "Blonde woman with curly hair in the middle or on the right side.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1152.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1152.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1152.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1152.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "image_idx": 2240,
+  "stem": "2326475_52275052",
+  "question_id": "78978",
+  "path": "seed_images/2326475_52275052.jpg",
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    2,
+    0
+  ],
+  "question": "What is happening in the image? Select from the following options: (A) A tennis match is happening with a tennis ball flying in the air.. (B) A soccer match is going on with smoke flares coming from the goal.. (C) A baseball game is going on, and a player is throwing the ball.. (D) A football match is happening, and a player is kicking the ball towards the goal..",
+  "gold_answer": "A soccer match is going on with smoke flares coming from the goal",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A tennis match is happening with a tennis ball flying in the air",
+    "A soccer match is going on with smoke flares coming from the goal",
+    "A baseball game is going on, and a player is throwing the ball",
+    "A football match is happening, and a player is kicking the ball towards the goal"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A soccer player in white uniform running on green grass field",
+    "negative_prompt": "Smoke flares, goal net with smoke, fireworks, or any explosion near the goal"
+  },
+  "inpaint_prompt_used": "A soccer player in white uniform running on green grass field",
+  "negative_prompt_used": "Smoke flares, goal net with smoke, fireworks, or any explosion near the goal",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2240.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2240.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_2240.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2240.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

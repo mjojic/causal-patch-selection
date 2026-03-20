@@ -1,0 +1,24 @@
+{
+  "image_idx": 62,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.96,
+  "baseline_sc_new": 0.96,
+  "baseline_sc_gold": 0.04,
+  "final_sc_orig": 0.16666666666666666,
+  "final_sc_new": 0.8333333333333334,
+  "final_sc_gold": 0.8333333333333334,
+  "selected_mask_indices": [
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 24,
+  "question": "What is in the background behind the sign?",
+  "gold_answer": "A white beach with black rocks and a forest with green trees",
+  "gold_letter": "B",
+  "answer_choices": [
+    "A field of tall, dry grass and a row of trees",
+    "A white beach with black rocks and a forest with green trees"
+  ],
+  "spurious_attribute": "multiple_choice"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.999488,
+    "isthing": false,
+    "area": 889010
+  },
+  {
+    "id": 2,
+    "label_id": 99,
+    "label": "99",
+    "score": 0.934416,
+    "isthing": false,
+    "area": 1179801
+  },
+  {
+    "id": 3,
+    "label_id": 129,
+    "label": "129",
+    "score": 0.995207,
+    "isthing": false,
+    "area": 603984
+  },
+  {
+    "id": 4,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.99583,
+    "isthing": false,
+    "area": 285847
+  },
+  {
+    "id": 5,
+    "label_id": 82,
+    "label": "82",
+    "score": 0.990273,
+    "isthing": false,
+    "area": 187071
+  }
+]

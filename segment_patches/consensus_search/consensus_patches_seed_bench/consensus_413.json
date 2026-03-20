@@ -1,0 +1,71 @@
+{
+  "image_idx": 413,
+  "stem": "1236141_2677916690",
+  "question_id": "57007",
+  "path": "seed_images/1236141_2677916690.jpg",
+  "consensus_mask_indices": [
+    1,
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    2
+  ],
+  "question": "What is the relation between the plate of salad and the bowl of sweet potatoes in the image? Select from the following options: (A) The bowl of sweet potatoes is on the plate of salad. (B) The plate of salad is on the bowl of sweet potatoes. (C) They are not visible in the image. (D) They are placed next to each other.",
+  "gold_answer": "They are placed next to each other",
+  "gold_letter": "D",
+  "answer_choices": [
+    "The bowl of sweet potatoes is on the plate of salad",
+    "The plate of salad is on the bowl of sweet potatoes",
+    "They are not visible in the image",
+    "They are placed next to each other"
+  ],
+  "spurious_attribute": 7,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plate of salad directly stacked on top of a bowl of sweet potatoes",
+    "negative_prompt": "Two separate dishes placed side by side with space between them"
+  },
+  "inpaint_prompt_used": "A plate of salad directly stacked on top of a bowl of sweet potatoes",
+  "negative_prompt_used": "Two separate dishes placed side by side with space between them",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_413.png",
+    "viz_png": "consensus_patches_seed_bench/viz_413.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_413.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_413.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

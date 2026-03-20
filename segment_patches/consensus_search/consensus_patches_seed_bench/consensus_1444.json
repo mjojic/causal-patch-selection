@@ -1,0 +1,73 @@
+{
+  "image_idx": 1444,
+  "stem": "1861347_2991286644",
+  "question_id": "81783",
+  "path": "seed_images/1861347_2991286644.jpg",
+  "consensus_mask_indices": [
+    5,
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    5,
+    1,
+    2,
+    7
+  ],
+  "qwen25_selected_mask_indices": [
+    7,
+    5
+  ],
+  "question": "What is the relation between the bench and the potted plant in the image? Select from the following options: (A) The plant is on the bench. (B) The bench is behind the plant. (C) The plant is in front of the bench. (D) The bench and the plant are not related.",
+  "gold_answer": "The plant is on the bench",
+  "gold_letter": "A",
+  "answer_choices": [
+    "The plant is on the bench",
+    "The bench is behind the plant",
+    "The plant is in front of the bench",
+    "The bench and the plant are not related"
+  ],
+  "spurious_attribute": 6,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.8571428571428571,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 7,
+  "baseline_letter_counts": {
+    "D": 6,
+    "C": 1
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a wooden bench with a potted plant sitting on top of it",
+    "negative_prompt": "no bench, no plant, empty space, or unrelated objects"
+  },
+  "inpaint_prompt_used": "a wooden bench with a potted plant sitting on top of it",
+  "negative_prompt_used": "no bench, no plant, empty space, or unrelated objects",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1444.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1444.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1444.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1444.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

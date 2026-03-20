@@ -1,0 +1,78 @@
+{
+  "image_idx": 2544,
+  "stem": "2506749_3984941343",
+  "question_id": "81844",
+  "path": "seed_images/2506749_3984941343.jpg",
+  "consensus_mask_indices": [
+    1,
+    2,
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    4,
+    2,
+    3,
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    7,
+    2,
+    1,
+    8,
+    3
+  ],
+  "question": "What is the shape of the window in the bathroom? Select from the following options: (A) Rectangular. (B) Curved. (C) Arched. (D) Trapezoidal.",
+  "gold_answer": "Rectangular",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Rectangular",
+    "Curved",
+    "Arched",
+    "Trapezoidal"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 0.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.9,
+  "final_sc_gold": 0.1,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 9,
+    "A": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A rectangular window with straight edges and right angles, framed in wood.",
+    "negative_prompt": "Trapezoidal or slanted window shapes, any non-rectangular geometry."
+  },
+  "inpaint_prompt_used": "A rectangular window with straight edges and right angles, framed in wood.",
+  "negative_prompt_used": "Trapezoidal or slanted window shapes, any non-rectangular geometry.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2544.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2544.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2544.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2544.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

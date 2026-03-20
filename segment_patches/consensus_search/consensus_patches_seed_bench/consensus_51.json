@@ -1,0 +1,69 @@
+{
+  "image_idx": 51,
+  "stem": "1031653_2074472931",
+  "question_id": "99899",
+  "path": "seed_images/1031653_2074472931.jpg",
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    3
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "What is the main food item being sold at the market stall? Select from the following options: (A) Sausages. (B) Meat. (C) Fish. (D) Vegetables.",
+  "gold_answer": "Meat",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Sausages",
+    "Meat",
+    "Fish",
+    "Vegetables"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.8,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 8,
+    "C": 2
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Fresh fish displayed on ice with scales and fins visible",
+    "negative_prompt": "Meat, sausages, vegetables, or any non-fish food items"
+  },
+  "inpaint_prompt_used": "Fresh fish displayed on ice with scales and fins visible",
+  "negative_prompt_used": "Meat, sausages, vegetables, or any non-fish food items",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_51.png",
+    "viz_png": "consensus_patches_seed_bench/viz_51.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_51.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_51.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

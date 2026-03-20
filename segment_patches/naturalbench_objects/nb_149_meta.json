@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.998725,
+    "isthing": false,
+    "area": 22228,
+    "area_frac": 0.11854933333333334
+  },
+  {
+    "id": 2,
+    "label_id": 100,
+    "label": "100",
+    "score": 0.952715,
+    "isthing": false,
+    "area": 4158,
+    "area_frac": 0.022176
+  },
+  {
+    "id": 3,
+    "label_id": 26,
+    "label": "26",
+    "score": 0.949212,
+    "isthing": false,
+    "area": 2255,
+    "area_frac": 0.012026666666666666
+  },
+  {
+    "id": 4,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999884,
+    "isthing": false,
+    "area": 9352,
+    "area_frac": 0.049877333333333336
+  },
+  {
+    "id": 5,
+    "label_id": 129,
+    "label": "129",
+    "score": 0.974373,
+    "isthing": false,
+    "area": 8299,
+    "area_frac": 0.04426133333333333
+  },
+  {
+    "id": 6,
+    "label_id": 116,
+    "label": "116",
+    "score": 0.998736,
+    "isthing": false,
+    "area": 77191,
+    "area_frac": 0.41168533333333335
+  },
+  {
+    "id": 7,
+    "label_id": 92,
+    "label": "92",
+    "score": 0.917017,
+    "isthing": false,
+    "area": 1710,
+    "area_frac": 0.00912
+  },
+  {
+    "id": 8,
+    "label_id": 117,
+    "label": "117",
+    "score": 0.916584,
+    "isthing": false,
+    "area": 3448,
+    "area_frac": 0.018389333333333334
+  },
+  {
+    "id": 9,
+    "label_id": 2,
+    "label": "2",
+    "score": 0.972966,
+    "isthing": false,
+    "area": 700,
+    "area_frac": 0.0037333333333333333
+  },
+  {
+    "id": 10,
+    "label_id": 0,
+    "label": "0",
+    "score": 0.999894,
+    "isthing": false,
+    "area": 10864,
+    "area_frac": 0.05794133333333333
+  },
+  {
+    "id": 11,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.775287,
+    "isthing": false,
+    "area": 886,
+    "area_frac": 0.004725333333333333
+  },
+  {
+    "id": 12,
+    "label_id": 123,
+    "label": "123",
+    "score": 0.967012,
+    "isthing": false,
+    "area": 46409,
+    "area_frac": 0.24751466666666666
+  }
+]

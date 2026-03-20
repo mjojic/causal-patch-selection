@@ -1,0 +1,76 @@
+{
+  "image_idx": 992,
+  "stem": "1580469_4056820192",
+  "question_id": "69808",
+  "path": "seed_images/1580469_4056820192.jpg",
+  "consensus_mask_indices": [
+    0,
+    1,
+    4
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    1,
+    0,
+    4
+  ],
+  "question": "What is happening in this image? Select from the following options: (A) A person is singing on a stage with a guitar.. (B) A person is playing a guitar alone on a stage.. (C) Multiple people are singing on a stage with several instruments.. (D) Multiple people are practicing for a concert on a stage..",
+  "gold_answer": "Multiple people are singing on a stage with several instruments",
+  "gold_letter": "C",
+  "answer_choices": [
+    "A person is singing on a stage with a guitar",
+    "A person is playing a guitar alone on a stage",
+    "Multiple people are singing on a stage with several instruments",
+    "Multiple people are practicing for a concert on a stage"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.8,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 8,
+    "A": 2
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.2,
+  "final_sc_gold": 0.2,
+  "final_num_extracted": 5,
+  "final_letter_counts": {
+    "A": 3,
+    "D": 1,
+    "C": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A single person singing into a microphone, wearing a jacket with wings and text, standing alone on stage.",
+    "negative_prompt": "Multiple people, instruments, practicing, concert preparation, group performance."
+  },
+  "inpaint_prompt_used": "A single person singing into a microphone, wearing a jacket with wings and text, standing alone on stage.",
+  "negative_prompt_used": "Multiple people, instruments, practicing, concert preparation, group performance.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_992.png",
+    "viz_png": "consensus_patches_seed_bench/viz_992.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_992.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_992.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

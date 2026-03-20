@@ -1,0 +1,67 @@
+{
+  "image_idx": 1225,
+  "stem": "1731488_652705804",
+  "question_id": "76665",
+  "path": "seed_images/1731488_652705804.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    1
+  ],
+  "question": "What is the woman wearing on her head? Select from the following options: (A) A hat. (B) Sunglasses. (C) A bow. (D) Headphones.",
+  "gold_answer": "Headphones",
+  "gold_letter": "D",
+  "answer_choices": [
+    "A hat",
+    "Sunglasses",
+    "A bow",
+    "Headphones"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A black hijab covering the head and face, with no visible headphones.",
+    "negative_prompt": "Headphones, earpieces, or any audio device on the head."
+  },
+  "inpaint_prompt_used": "A black hijab covering the head and face, with no visible headphones.",
+  "negative_prompt_used": "Headphones, earpieces, or any audio device on the head.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1225.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1225.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1225.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1225.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

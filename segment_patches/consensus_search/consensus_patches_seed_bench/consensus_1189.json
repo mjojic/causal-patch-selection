@@ -1,0 +1,74 @@
+{
+  "image_idx": 1189,
+  "stem": "1707930_2418830177",
+  "question_id": "63234",
+  "path": "seed_images/1707930_2418830177.jpg",
+  "consensus_mask_indices": [
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    14,
+    6,
+    2,
+    12
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    1
+  ],
+  "question": "What is the position of the barge compared to the boats? Select from the following options: (A) In front of the boats. (B) Behind the boats. (C) Next to the boats. (D) Under the boats.",
+  "gold_answer": "Behind the boats",
+  "gold_letter": "B",
+  "answer_choices": [
+    "In front of the boats",
+    "Behind the boats",
+    "Next to the boats",
+    "Under the boats"
+  ],
+  "spurious_attribute": 6,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.6,
+  "baseline_sc_gold": 0.4,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 4,
+    "C": 6
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.3,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 7,
+    "C": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A long barge positioned directly in front of the boats, blocking their view.",
+    "negative_prompt": "The barge is not next to the boats; it is clearly in front of them."
+  },
+  "inpaint_prompt_used": "A long barge positioned directly in front of the boats, blocking their view.",
+  "negative_prompt_used": "The barge is not next to the boats; it is clearly in front of them.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1189.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1189.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1189.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1189.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

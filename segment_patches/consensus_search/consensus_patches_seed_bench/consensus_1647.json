@@ -1,0 +1,74 @@
+{
+  "image_idx": 1647,
+  "stem": "1976311_2172307829",
+  "question_id": "31324",
+  "path": "seed_images/1976311_2172307829.jpg",
+  "consensus_mask_indices": [
+    0,
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    5,
+    2,
+    0,
+    6
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    3
+  ],
+  "question": "What items might a guest use most during their stay in this living room? Select from the following options: (A) Wicker chair and magazines. (B) Wicker basket and pillow. (C) Potted plants and fireplace. (D) Decorative pillow and framed pictures.",
+  "gold_answer": "Wicker chair and magazines",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Wicker chair and magazines",
+    "Wicker basket and pillow",
+    "Potted plants and fireplace",
+    "Decorative pillow and framed pictures"
+  ],
+  "spurious_attribute": 8,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.2857142857142857,
+  "final_sc_gold": 0.2857142857142857,
+  "final_num_extracted": 7,
+  "final_letter_counts": {
+    "A": 2,
+    "C": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A wooden chair with a cushion and a stack of magazines on a side table",
+    "negative_prompt": "Wicker chair, magazines, or any reading material"
+  },
+  "inpaint_prompt_used": "A wooden chair with a cushion and a stack of magazines on a side table",
+  "negative_prompt_used": "Wicker chair, magazines, or any reading material",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1647.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1647.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1647.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1647.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "label_id": 119,
+    "label": "119",
+    "score": 0.999489,
+    "isthing": false,
+    "area": 745731
+  },
+  {
+    "id": 2,
+    "label_id": 14,
+    "label": "14",
+    "score": 0.999032,
+    "isthing": false,
+    "area": 10632
+  },
+  {
+    "id": 3,
+    "label_id": 103,
+    "label": "103",
+    "score": 0.943012,
+    "isthing": false,
+    "area": 116085
+  }
+]

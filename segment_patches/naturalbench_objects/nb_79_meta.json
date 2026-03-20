@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.982024,
+    "isthing": false,
+    "area": 63113,
+    "area_frac": 0.020063082377115887
+  },
+  {
+    "id": 2,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.957923,
+    "isthing": false,
+    "area": 63387,
+    "area_frac": 0.020150184631347656
+  },
+  {
+    "id": 3,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.977073,
+    "isthing": false,
+    "area": 72402,
+    "area_frac": 0.023015975952148438
+  },
+  {
+    "id": 4,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.982923,
+    "isthing": false,
+    "area": 96459,
+    "area_frac": 0.030663490295410156
+  },
+  {
+    "id": 5,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.943945,
+    "isthing": false,
+    "area": 88691,
+    "area_frac": 0.028194109598795574
+  },
+  {
+    "id": 6,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.979174,
+    "isthing": false,
+    "area": 63874,
+    "area_frac": 0.02030499776204427
+  },
+  {
+    "id": 7,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.976816,
+    "isthing": false,
+    "area": 55254,
+    "area_frac": 0.017564773559570312
+  },
+  {
+    "id": 8,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.967597,
+    "isthing": false,
+    "area": 51535,
+    "area_frac": 0.016382535298665363
+  },
+  {
+    "id": 9,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.974509,
+    "isthing": false,
+    "area": 90259,
+    "area_frac": 0.02869256337483724
+  },
+  {
+    "id": 10,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.969115,
+    "isthing": false,
+    "area": 56733,
+    "area_frac": 0.018034934997558594
+  },
+  {
+    "id": 11,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.982044,
+    "isthing": false,
+    "area": 92224,
+    "area_frac": 0.029317220052083332
+  },
+  {
+    "id": 12,
+    "label_id": 47,
+    "label": "47",
+    "score": 0.968842,
+    "isthing": false,
+    "area": 50222,
+    "area_frac": 0.01596514383951823
+  }
+]

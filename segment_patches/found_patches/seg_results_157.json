@@ -1,0 +1,26 @@
+{
+  "image_idx": 157,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "A",
+  "baseline_sc_orig": 0.96,
+  "baseline_sc_new": 0.96,
+  "baseline_sc_gold": 0.04,
+  "final_sc_orig": 0.88,
+  "final_sc_new": 0.88,
+  "final_sc_gold": 0.12,
+  "selected_mask_indices": [
+    6,
+    2,
+    0
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Is the man photographed from behind?",
+  "gold_answer": "No",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

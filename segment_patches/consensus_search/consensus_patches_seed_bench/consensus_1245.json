@@ -1,0 +1,67 @@
+{
+  "image_idx": 1245,
+  "stem": "173943_1244813466",
+  "question_id": "88157",
+  "path": "seed_images/173943_1244813466.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "Which of the following is not present in the image? Select from the following options: (A) Coral reef. (B) Palm tree. (C) Seashell. (D) Fish.",
+  "gold_answer": "Palm tree",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Coral reef",
+    "Palm tree",
+    "Seashell",
+    "Fish"
+  ],
+  "spurious_attribute": 2,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 3,
+  "final_letter_counts": {
+    "A": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A tall palm tree with green fronds standing on a sandy beach near the ocean.",
+    "negative_prompt": "No palm tree, no beach, no sand, no ocean, no tropical vegetation."
+  },
+  "inpaint_prompt_used": "A tall palm tree with green fronds standing on a sandy beach near the ocean.",
+  "negative_prompt_used": "No palm tree, no beach, no sand, no ocean, no tropical vegetation.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1245.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1245.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1245.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1245.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

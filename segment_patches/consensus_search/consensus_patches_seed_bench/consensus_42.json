@@ -1,0 +1,68 @@
+{
+  "image_idx": 42,
+  "stem": "102331_3561850560",
+  "question_id": "101442",
+  "path": "seed_images/102331_3561850560.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "How many drawers are there in the white chest of drawers? Select from the following options: (A) Six. (B) Five. (C) Four. (D) Seven.",
+  "gold_answer": "Six",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Six",
+    "Five",
+    "Four",
+    "Seven"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 9,
+  "final_letter_counts": {
+    "B": 4,
+    "C": 5
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Three drawers visible in the center, with no additional drawers above or below",
+    "negative_prompt": "Six drawers, multiple rows, stacked drawers, full chest structure"
+  },
+  "inpaint_prompt_used": "Three drawers visible in the center, with no additional drawers above or below",
+  "negative_prompt_used": "Six drawers, multiple rows, stacked drawers, full chest structure",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_42.png",
+    "viz_png": "consensus_patches_seed_bench/viz_42.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_42.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_42.json"
+  },
+  "cuda_visible_devices": "2,0",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 0,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

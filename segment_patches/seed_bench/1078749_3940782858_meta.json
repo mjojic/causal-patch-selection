@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.961426,
+    "isthing": false,
+    "area": 1794
+  },
+  {
+    "id": 2,
+    "label_id": 121,
+    "label": "121",
+    "score": 0.682252,
+    "isthing": false,
+    "area": 112739
+  },
+  {
+    "id": 3,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.812849,
+    "isthing": false,
+    "area": 769
+  },
+  {
+    "id": 4,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.929776,
+    "isthing": false,
+    "area": 1499
+  },
+  {
+    "id": 5,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.597221,
+    "isthing": false,
+    "area": 1920
+  },
+  {
+    "id": 6,
+    "label_id": 60,
+    "label": "60",
+    "score": 0.984024,
+    "isthing": false,
+    "area": 66537
+  },
+  {
+    "id": 7,
+    "label_id": 92,
+    "label": "92",
+    "score": 0.911872,
+    "isthing": false,
+    "area": 7972
+  },
+  {
+    "id": 8,
+    "label_id": 118,
+    "label": "118",
+    "score": 0.943965,
+    "isthing": false,
+    "area": 167710
+  },
+  {
+    "id": 9,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.858259,
+    "isthing": false,
+    "area": 1465
+  },
+  {
+    "id": 10,
+    "label_id": 104,
+    "label": "104",
+    "score": 0.831635,
+    "isthing": false,
+    "area": 282976
+  },
+  {
+    "id": 11,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.961478,
+    "isthing": false,
+    "area": 1538
+  },
+  {
+    "id": 12,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.837016,
+    "isthing": false,
+    "area": 1306
+  },
+  {
+    "id": 13,
+    "label_id": 131,
+    "label": "131",
+    "score": 0.905979,
+    "isthing": false,
+    "area": 16575
+  },
+  {
+    "id": 14,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.727321,
+    "isthing": false,
+    "area": 1196
+  },
+  {
+    "id": 15,
+    "label_id": 122,
+    "label": "122",
+    "score": 0.907071,
+    "isthing": false,
+    "area": 23363
+  },
+  {
+    "id": 16,
+    "label_id": 39,
+    "label": "39",
+    "score": 0.938557,
+    "isthing": false,
+    "area": 1285
+  }
+]

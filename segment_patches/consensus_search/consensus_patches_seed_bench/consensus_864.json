@@ -1,0 +1,71 @@
+{
+  "image_idx": 864,
+  "stem": "150984_3904371443",
+  "question_id": "67388",
+  "path": "seed_images/150984_3904371443.jpg",
+  "consensus_mask_indices": [
+    10
+  ],
+  "qwen3_selected_mask_indices": [
+    10
+  ],
+  "qwen25_selected_mask_indices": [
+    0,
+    1,
+    2,
+    3,
+    10
+  ],
+  "question": "What is the primary activity depicted in the image? Select from the following options: (A) A crane lifting a box from a building. (B) A man on a truck operating a crane to lift a box from a building. (C) A crane lifting a house at sunset. (D) A man on a balcony of a house under construction in the city at sunset.",
+  "gold_answer": "A crane lifting a box from a building",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A crane lifting a box from a building",
+    "A man on a truck operating a crane to lift a box from a building",
+    "A crane lifting a house at sunset",
+    "A man on a balcony of a house under construction in the city at sunset"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A plausible object that contradicts the baseline answer.",
+    "negative_prompt": "blurry, watermark, distorted, artifacts, text"
+  },
+  "inpaint_prompt_used": "A plausible object that contradicts the baseline answer.",
+  "negative_prompt_used": "blurry, watermark, distorted, artifacts, text",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_864.png",
+    "viz_png": "consensus_patches_seed_bench/viz_864.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_864.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_864.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "image_idx": 1870,
+  "stem": "21130_1629351688",
+  "question_id": "35849",
+  "path": "seed_images/21130_1629351688.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is the color of the animal in the image? Select from the following options: (A) White. (B) Tan. (C) All of the above. (D) Brown.",
+  "gold_answer": "All of the above",
+  "gold_letter": "C",
+  "answer_choices": [
+    "White",
+    "Tan",
+    "All of the above",
+    "Brown"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 3,
+  "final_letter_counts": {
+    "C": 3
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "solid black silhouette of a rabbit, no visible fur or color details",
+    "negative_prompt": "white, tan, brown, or any visible color variation in the silhouette"
+  },
+  "inpaint_prompt_used": "solid black silhouette of a rabbit, no visible fur or color details",
+  "negative_prompt_used": "white, tan, brown, or any visible color variation in the silhouette",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1870.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1870.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1870.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1870.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

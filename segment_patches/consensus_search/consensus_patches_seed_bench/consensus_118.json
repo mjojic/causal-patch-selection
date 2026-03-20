@@ -1,0 +1,73 @@
+{
+  "image_idx": 118,
+  "stem": "106630_1397876117",
+  "question_id": "75602",
+  "path": "seed_images/106630_1397876117.jpg",
+  "consensus_mask_indices": [
+    10
+  ],
+  "qwen3_selected_mask_indices": [
+    8,
+    10
+  ],
+  "qwen25_selected_mask_indices": [
+    10,
+    0,
+    2,
+    3
+  ],
+  "question": "Where is the doorway in the image? Select from the following options: (A) In the living room next to the potted plant.. (B) It is not visible in the image.. (C) In the bedroom next to the bed and potted plant.. (D) In the hallway next to the table and chair..",
+  "gold_answer": "In the living room next to the potted plant",
+  "gold_letter": "A",
+  "answer_choices": [
+    "In the living room next to the potted plant",
+    "It is not visible in the image",
+    "In the bedroom next to the bed and potted plant",
+    "In the hallway next to the table and chair"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 9,
+  "baseline_letter_counts": {
+    "A": 9
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.14285714285714285,
+  "final_sc_gold": 0.14285714285714285,
+  "final_num_extracted": 7,
+  "final_letter_counts": {
+    "C": 4,
+    "D": 2,
+    "A": 1
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A closed wooden door with a brass handle, framed by a white doorframe, next to a potted plant.",
+    "negative_prompt": "No doorway, no doorframe, no entrance, no opening in the wall."
+  },
+  "inpaint_prompt_used": "A closed wooden door with a brass handle, framed by a white doorframe, next to a potted plant.",
+  "negative_prompt_used": "No doorway, no doorframe, no entrance, no opening in the wall.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_118.png",
+    "viz_png": "consensus_patches_seed_bench/viz_118.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_118.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_118.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

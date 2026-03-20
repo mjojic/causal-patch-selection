@@ -1,0 +1,48 @@
+{
+  "image_idx": 4231,
+  "model_dir": "/mnt/shared/shared_hf_home/models--Qwen--Qwen3-VL-32B-Instruct-FP8",
+  "model_snapshot": "/mnt/shared/shared_hf_home/models--Qwen--Qwen3-VL-32B-Instruct-FP8",
+  "model_tag": "models--Qwen--Qwen3-VL-32B-Instruct-FP8",
+  "question": "Is the rider going uphill or downhill?",
+  "gold_answer": "Downhill",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Downhill",
+    "Uphill"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "target_letter": "A",
+  "baseline_sc_target": 1.0,
+  "final_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "final_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "final_num_extracted": 15,
+  "selected_mask_indices": [
+    1
+  ],
+  "search_num_patches": 5,
+  "num_samples_sc": 15,
+  "min_sc_drop": 0.1,
+  "require_monotonic_improvement": false,
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_prompt": "Fill the masked region naturally, removing whatever objects appear there. Preserve the rest of the image exactly.",
+  "inpaint_negative_prompt": "text, watermark, logo, artifacts, distortion, blur",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "image_size": null,
+  "cuda_visible_devices": "2,1",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 1,
+  "vllm_settings": {
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.65,
+    "max_model_len": 18000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 0,
+    "qwen25_forced_fp8_quantization": false,
+    "calculate_kv_scales_for_qwen25": false
+  }
+}

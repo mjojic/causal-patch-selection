@@ -1,0 +1,72 @@
+{
+  "image_idx": 1355,
+  "stem": "1808081_819679570",
+  "question_id": "82721",
+  "path": "seed_images/1808081_819679570.jpg",
+  "consensus_mask_indices": [
+    1
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1,
+    9
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    1
+  ],
+  "question": "What is the gender of the person speaking into the microphone? Select from the following options: (A) Both male and female. (B) Female. (C) Cannot be determined. (D) Male.",
+  "gold_answer": "Male",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Both male and female",
+    "Female",
+    "Cannot be determined",
+    "Male"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.7,
+  "baseline_sc_gold": 0.7,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 7,
+    "C": 3
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.7,
+  "final_sc_gold": 0.7,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 3,
+    "D": 7
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "long curly hair, feminine facial features, wearing a dress",
+    "negative_prompt": "male features, short hair, beard, t-shirt"
+  },
+  "inpaint_prompt_used": "long curly hair, feminine facial features, wearing a dress",
+  "negative_prompt_used": "male features, short hair, beard, t-shirt",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1355.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1355.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1355.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1355.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

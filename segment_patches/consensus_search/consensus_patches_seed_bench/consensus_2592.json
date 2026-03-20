@@ -1,0 +1,67 @@
+{
+  "image_idx": 2592,
+  "stem": "2534862_4265742864",
+  "question_id": "30611",
+  "path": "seed_images/2534862_4265742864.jpg",
+  "consensus_mask_indices": [
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    7
+  ],
+  "qwen25_selected_mask_indices": [
+    7
+  ],
+  "question": "What color is the shirt the man is wearing? Select from the following options: (A) Red. (B) Blue. (C) Yellow. (D) Green.",
+  "gold_answer": "Blue",
+  "gold_letter": "B",
+  "answer_choices": [
+    "Red",
+    "Blue",
+    "Yellow",
+    "Green"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "B",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 10
+  },
+  "final_majority_letter": "A",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "A": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "man wearing a red shirt, sitting at desk with laptop",
+    "negative_prompt": "blue shirt, yellow shirt, green shirt"
+  },
+  "inpaint_prompt_used": "man wearing a red shirt, sitting at desk with laptop",
+  "negative_prompt_used": "blue shirt, yellow shirt, green shirt",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2592.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2592.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2592.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2592.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

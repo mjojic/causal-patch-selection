@@ -1,0 +1,65 @@
+{
+  "image_idx": 731,
+  "consensus_mask_indices": [
+    2
+  ],
+  "qwen3_selected_mask_indices": [
+    2,
+    4,
+    1
+  ],
+  "qwen25_selected_mask_indices": [
+    2
+  ],
+  "question": "Is the Sahara hotel in the middle of the frame?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.96,
+  "baseline_sc_gold": 0.96,
+  "baseline_num_extracted": 25,
+  "baseline_letter_counts": {
+    "A": 24,
+    "B": 1
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 25,
+  "final_letter_counts": {
+    "B": 25
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A tall, modern hotel building with a distinctive curved roof and glass facade",
+    "negative_prompt": "No hotel, no tall building, no curved roof, no glass facade"
+  },
+  "inpaint_prompt_used": "A tall, modern hotel building with a distinctive curved roof and glass facade",
+  "negative_prompt_used": "No hotel, no tall building, no curved roof, no glass facade",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_731.png",
+    "viz_png": "consensus_patches/viz_731.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_731.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_731.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 25,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

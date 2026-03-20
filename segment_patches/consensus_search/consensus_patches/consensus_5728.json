@@ -1,0 +1,65 @@
+{
+  "image_idx": 5728,
+  "consensus_mask_indices": [
+    7
+  ],
+  "qwen3_selected_mask_indices": [
+    7
+  ],
+  "qwen25_selected_mask_indices": [
+    4,
+    7,
+    1,
+    0
+  ],
+  "question": "Is the person wearing a sports-related cap?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 15
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "person wearing a plain black baseball cap with no logos or sports team branding",
+    "negative_prompt": "person wearing a cap with sports team logo, emblem, or athletic branding"
+  },
+  "inpaint_prompt_used": "person wearing a plain black baseball cap with no logos or sports team branding",
+  "negative_prompt_used": "person wearing a cap with sports team logo, emblem, or athletic branding",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_5728.png",
+    "viz_png": "consensus_patches/viz_5728.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_5728.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct-mjojic/patch_selection_5728.json"
+  },
+  "cuda_visible_devices": "0,1",
+  "vlm_device_arg": 0,
+  "inpaint_device_arg": 1,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

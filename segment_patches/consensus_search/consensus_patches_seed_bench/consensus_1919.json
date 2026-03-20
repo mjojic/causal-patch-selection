@@ -1,0 +1,67 @@
+{
+  "image_idx": 1919,
+  "stem": "2140138_439493356",
+  "question_id": "66275",
+  "path": "seed_images/2140138_439493356.jpg",
+  "consensus_mask_indices": [
+    8
+  ],
+  "qwen3_selected_mask_indices": [
+    8
+  ],
+  "qwen25_selected_mask_indices": [
+    8
+  ],
+  "question": "What material are the stairs made of in the modern home? Select from the following options: (A) Concrete. (B) Marble. (C) Glass. (D) Wood.",
+  "gold_answer": "Wood",
+  "gold_letter": "D",
+  "answer_choices": [
+    "Concrete",
+    "Marble",
+    "Glass",
+    "Wood"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Stairs made of smooth, polished concrete with clean geometric lines.",
+    "negative_prompt": "Wooden stairs, any wood texture or grain, warm brown tones, natural wood patterns."
+  },
+  "inpaint_prompt_used": "Stairs made of smooth, polished concrete with clean geometric lines.",
+  "negative_prompt_used": "Wooden stairs, any wood texture or grain, warm brown tones, natural wood patterns.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1919.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1919.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1919.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1919.json"
+  },
+  "cuda_visible_devices": "3",
+  "vlm_device_arg": 3,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

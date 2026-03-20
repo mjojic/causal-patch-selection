@@ -1,0 +1,63 @@
+{
+  "image_idx": 1175,
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "What is behind the object with the star in the center?",
+  "gold_answer": "A dark brown wooden pillar",
+  "gold_letter": "A",
+  "answer_choices": [
+    "A dark brown wooden pillar",
+    "A light tan pillar with brown shell markings"
+  ],
+  "spurious_attribute": "multiple_choice",
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 15,
+  "baseline_letter_counts": {
+    "A": 15
+  },
+  "final_majority_letter": "B",
+  "final_sc_target": 0.13333333333333333,
+  "final_sc_gold": 0.13333333333333333,
+  "final_num_extracted": 15,
+  "final_letter_counts": {
+    "B": 13,
+    "A": 2
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A light tan pillar with brown shell markings, textured surface, vertical orientation",
+    "negative_prompt": "Dark brown wooden pillar, smooth wood grain, dark coloration"
+  },
+  "inpaint_prompt_used": "A light tan pillar with brown shell markings, textured surface, vertical orientation",
+  "negative_prompt_used": "Dark brown wooden pillar, smooth wood grain, dark coloration",
+  "inpaint_model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches/mask_1175.png",
+    "viz_png": "consensus_patches/viz_1175.png",
+    "qwen3_results_json": "found_patches/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1175.json",
+    "qwen25_results_json": "found_patches/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1175.json"
+  },
+  "cuda_visible_devices": "2,3",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 3,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 15,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

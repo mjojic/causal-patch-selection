@@ -1,0 +1,76 @@
+{
+  "image_idx": 2615,
+  "stem": "2547774_1600018200",
+  "question_id": "70304",
+  "path": "seed_images/2547774_1600018200.jpg",
+  "consensus_mask_indices": [
+    0,
+    12
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    11,
+    13,
+    12,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    9,
+    0,
+    5,
+    12,
+    6
+  ],
+  "question": "What is the overall scene depicted in the image? Select from the following options: (A) A marketplace with many vendors selling various goods. (B) A quiet street with little activity or foot traffic. (C) A suburban neighborhood on a sunny day. (D) A bustling city center with many people out and about.",
+  "gold_answer": "A bustling city center with many people out and about",
+  "gold_letter": "D",
+  "answer_choices": [
+    "A marketplace with many vendors selling various goods",
+    "A quiet street with little activity or foot traffic",
+    "A suburban neighborhood on a sunny day",
+    "A bustling city center with many people out and about"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "D": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "empty sidewalk with no people, quiet and deserted, no activity visible",
+    "negative_prompt": "crowds of people, bustling activity, vendors, market stalls, busy street"
+  },
+  "inpaint_prompt_used": "empty sidewalk with no people, quiet and deserted, no activity visible",
+  "negative_prompt_used": "crowds of people, bustling activity, vendors, market stalls, busy street",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2615.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2615.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2615.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2615.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

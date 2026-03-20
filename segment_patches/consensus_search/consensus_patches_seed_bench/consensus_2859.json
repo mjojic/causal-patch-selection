@@ -1,0 +1,77 @@
+{
+  "image_idx": 2859,
+  "stem": "2685903_1887570128",
+  "question_id": "1197",
+  "path": "seed_images/2685903_1887570128.jpg",
+  "consensus_mask_indices": [
+    0,
+    4,
+    6
+  ],
+  "qwen3_selected_mask_indices": [
+    3,
+    6,
+    2,
+    4,
+    0
+  ],
+  "qwen25_selected_mask_indices": [
+    6,
+    4,
+    0
+  ],
+  "question": "What is the position of the beds in the room? Select from the following options: (A) Against the wall. (B) Facing each other. (C) Next to a dresser. (D) Separated by a door.",
+  "gold_answer": "Against the wall",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Against the wall",
+    "Facing each other",
+    "Next to a dresser",
+    "Separated by a door"
+  ],
+  "spurious_attribute": 4,
+  "baseline_majority_letter": "C",
+  "baseline_sc_target": 0.8,
+  "baseline_sc_gold": 0.2,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "C": 8,
+    "A": 2
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.5714285714285714,
+  "final_sc_gold": 0.42857142857142855,
+  "final_num_extracted": 7,
+  "final_letter_counts": {
+    "A": 3,
+    "C": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Two beds positioned side by side, with a large dresser visible on the left side of the room.",
+    "negative_prompt": "No dresser near the beds, beds not adjacent to any furniture, empty space between beds and dresser."
+  },
+  "inpaint_prompt_used": "Two beds positioned side by side, with a large dresser visible on the left side of the room.",
+  "negative_prompt_used": "No dresser near the beds, beds not adjacent to any furniture, empty space between beds and dresser.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2859.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2859.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2859.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2859.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

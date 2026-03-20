@@ -1,0 +1,24 @@
+{
+  "image_idx": 140,
+  "baseline_majority_letter": "A",
+  "final_majority_letter": "B",
+  "baseline_sc_orig": 0.72,
+  "baseline_sc_new": 0.72,
+  "baseline_sc_gold": 0.72,
+  "final_sc_orig": 0.04,
+  "final_sc_new": 0.96,
+  "final_sc_gold": 0.04,
+  "selected_mask_indices": [
+    2
+  ],
+  "baseline_num_extracted": 25,
+  "final_num_extracted": 25,
+  "question": "Are all individuals clearly focused on shopping?",
+  "gold_answer": "Yes",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Yes",
+    "No"
+  ],
+  "spurious_attribute": "yes_no"
+}

@@ -1,0 +1,68 @@
+{
+  "image_idx": 2642,
+  "stem": "256422_3150999505",
+  "question_id": "16251",
+  "path": "seed_images/256422_3150999505.jpg",
+  "consensus_mask_indices": [
+    5
+  ],
+  "qwen3_selected_mask_indices": [
+    5
+  ],
+  "qwen25_selected_mask_indices": [
+    5
+  ],
+  "question": "What color is the countertop in the image? Select from the following options: (A) Green. (B) Brown. (C) White. (D) Tan.",
+  "gold_answer": "Green",
+  "gold_letter": "A",
+  "answer_choices": [
+    "Green",
+    "Brown",
+    "White",
+    "Tan"
+  ],
+  "spurious_attribute": 3,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 1.0,
+  "baseline_sc_gold": 1.0,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 10
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 0.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 6,
+    "C": 4
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "a brown countertop with wooden texture and warm lighting",
+    "negative_prompt": "green countertop, any green color or surface"
+  },
+  "inpaint_prompt_used": "a brown countertop with wooden texture and warm lighting",
+  "negative_prompt_used": "green countertop, any green color or surface",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_2642.png",
+    "viz_png": "consensus_patches_seed_bench/viz_2642.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_2642.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--RedHatAI--Qwen2.5-VL-72B-Instruct-FP8-dynamic/patch_selection_2642.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

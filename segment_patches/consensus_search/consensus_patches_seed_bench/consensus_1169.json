@@ -1,0 +1,76 @@
+{
+  "image_idx": 1169,
+  "stem": "1698852_3879610008",
+  "question_id": "96465",
+  "path": "seed_images/1698852_3879610008.jpg",
+  "consensus_mask_indices": [
+    0,
+    2,
+    3
+  ],
+  "qwen3_selected_mask_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "qwen25_selected_mask_indices": [
+    3,
+    0,
+    2
+  ],
+  "question": "How many hands are visible in the image? Select from the following options: (A) One. (B) Three. (C) Two. (D) Four.",
+  "gold_answer": "Four",
+  "gold_letter": "D",
+  "answer_choices": [
+    "One",
+    "Three",
+    "Two",
+    "Four"
+  ],
+  "spurious_attribute": 5,
+  "baseline_majority_letter": "D",
+  "baseline_sc_target": 0.7,
+  "baseline_sc_gold": 0.7,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "B": 3,
+    "D": 7
+  },
+  "final_majority_letter": "D",
+  "final_sc_target": 1.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "D": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "Two hands visible, one on each silhouette, clearly outlined and positioned naturally.",
+    "negative_prompt": "No hands visible in the blacked-out regions, silhouettes show no limbs or appendages."
+  },
+  "inpaint_prompt_used": "Two hands visible, one on each silhouette, clearly outlined and positioned naturally.",
+  "negative_prompt_used": "No hands visible in the blacked-out regions, silhouettes show no limbs or appendages.",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_1169.png",
+    "viz_png": "consensus_patches_seed_bench/viz_1169.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_1169.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_1169.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}

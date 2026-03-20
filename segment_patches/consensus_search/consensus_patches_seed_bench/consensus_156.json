@@ -1,0 +1,70 @@
+{
+  "image_idx": 156,
+  "stem": "1083647_917721652",
+  "question_id": "13909",
+  "path": "seed_images/1083647_917721652.jpg",
+  "consensus_mask_indices": [
+    0
+  ],
+  "qwen3_selected_mask_indices": [
+    1,
+    0,
+    2
+  ],
+  "qwen25_selected_mask_indices": [
+    0
+  ],
+  "question": "Which structure is most prominently featured in the image? Select from the following options: (A) Clock tower. (B) Tower. (C) Telephone booth. (D) Building.",
+  "gold_answer": "Telephone booth",
+  "gold_letter": "C",
+  "answer_choices": [
+    "Clock tower",
+    "Tower",
+    "Telephone booth",
+    "Building"
+  ],
+  "spurious_attribute": 1,
+  "baseline_majority_letter": "A",
+  "baseline_sc_target": 0.5,
+  "baseline_sc_gold": 0.5,
+  "baseline_num_extracted": 10,
+  "baseline_letter_counts": {
+    "A": 5,
+    "C": 5
+  },
+  "final_majority_letter": "C",
+  "final_sc_target": 0.0,
+  "final_sc_gold": 1.0,
+  "final_num_extracted": 10,
+  "final_letter_counts": {
+    "C": 10
+  },
+  "use_qwen_diffusion_prompt": true,
+  "qwen_prompt_object": {
+    "inpaint_prompt": "A large, ornate red telephone booth with glass panels and a crown emblem",
+    "negative_prompt": "Clock tower, Big Ben, tall stone tower with clock face"
+  },
+  "inpaint_prompt_used": "A large, ornate red telephone booth with glass panels and a crown emblem",
+  "negative_prompt_used": "Clock tower, Big Ben, tall stone tower with clock face",
+  "inpaint_model_id": "/mnt/shared/shared_hf_home/hub/models--stable-diffusion-v1-5--stable-diffusion-inpainting",
+  "inpaint_steps": 30,
+  "inpaint_guidance": 7.5,
+  "inpaint_strength": 1.0,
+  "paths": {
+    "mask_png": "consensus_patches_seed_bench/mask_156.png",
+    "viz_png": "consensus_patches_seed_bench/viz_156.png",
+    "qwen3_results_json": "found_patches_seed_bench/models--Qwen--Qwen2.5-VL-72B-Instruct/patch_selection_156.json",
+    "qwen25_results_json": "found_patches_seed_bench/models--Qwen--Qwen3-VL-32B-Instruct-FP8/patch_selection_156.json"
+  },
+  "cuda_visible_devices": "2",
+  "vlm_device_arg": 2,
+  "inpaint_device_arg": 2,
+  "qwen3_repo_id": "(local_snapshot)",
+  "hf_cache_dir": "/mnt/shared/shared_hf_home/hub",
+  "sc_params": {
+    "num_samples_sc": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 1024
+  }
+}
