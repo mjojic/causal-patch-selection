@@ -72,7 +72,7 @@ def parse_args():
     parser.add_argument("--use_qwen_diffusion_prompt", action="store_true",help="Qwen generates diffusion prompt instead of default prompt",)
     parser.add_argument("--qwen_prompt_temperature",type=float,default=0.2)
     parser.add_argument("--qwen_prompt_top_p", type=float, default=0.9,help="Top-p for the Qwen->diffusion-prompt generation call.",)
-    parser.add_argument("--qwen_prompt_max_tokens",type=int,default=512,help="Max tokens for the Qwen->diffusion-prompt generation call.")
+    parser.add_argument("--qwen_prompt_max_tokens",type=int,default=256,help="Max tokens for the Qwen->diffusion-prompt generation call.")
 
     # Optional fixed resolution casting
     parser.add_argument("--image_size",type=int,default=768)
@@ -422,15 +422,17 @@ def qwen_diffusion_prompts_batch(
         "You are helping generate an image-edit instruction for an inpainting model.\n\n"
         "Task:\n"
         f"Given the VQA question and answer choices, the baseline answer is {baseline_letter} ({baseline_answer_text}).\n"
-        f"Propose what to place INSIDE the blacked-out region to make {baseline_letter} less likely.\n\n"
+        f"Question: {q}\n"
+        f"Answer choices: {choices}\n"
+        f"Think about what coul be placed INSIDE the blacked-out region to make {baseline_letter} less likely.\n\n"
         "Constraints:\n"
         "- Only describe what should appear INSIDE the region.\n"
-        "- Keep it <= 20 words, concrete, visual.\n"
+        "- Keep it short, 10 words, concrete, visual, ensure that the positive and negative inpaint prompts align to describe a cohesive scene to place in the black region.\n"
+        "- Do not list negative instructions (indicating the omission of something) in the positive prompt"
+        "- Do not list positive instructions (indicating the addition of something in the negative prompt)"
         "- Preserve everything outside the region.\n\n"
         "Return JSON ONLY:\n"
         "{\"inpaint_prompt\": \"...\", \"negative_prompt\": \"...\"}\n\n"
-        f"Question: {q}\n"
-        f"Answer choices: {choices}\n"
     )
 
     vllm_inputs = []
@@ -510,6 +512,9 @@ def find_segmentation_patches_inpaint(
     original_image = data_dict["image"]
     w0, h0 = original_image.size
 
+    # ---------------------------
+    # (1) Baseline once per image
+    # ---------------------------
     baseline_res = self_consistency_batch(
         llm, processor, data_dict, [original_image], num_samples_sc, temperature, top_p
     )[0]
@@ -518,12 +523,15 @@ def find_segmentation_patches_inpaint(
     baseline_majority_letter = baseline_res["majority_letter"]
     gold_letter = data_dict["gold_letter"]
 
-    baseline_sc_orig = sc_wrt_letter(baseline_counts, baseline_num, baseline_majority_letter)
-    baseline_sc_new = baseline_sc_orig
+    # FIXED target letter for the entire search
+    target_letter = baseline_majority_letter
+    target_answer_text = _letter_to_choice_text(target_letter, data_dict["answer_choices"])
+
+    baseline_sc_target = sc_wrt_letter(baseline_counts, baseline_num, target_letter)
     baseline_sc_gold = baseline_res["gold_sc"]
 
-    print(f"Baseline majority letter: {baseline_majority_letter}")
-    print(f"Baseline SC (orig/new answer): {baseline_sc_orig}")
+    print(f"Baseline majority letter (FIXED TARGET): {target_letter}")
+    print(f"Baseline SC wrt TARGET: {baseline_sc_target}")
     print(f"Baseline SC (gold): {baseline_sc_gold}")
 
     if masks.dtype != bool:
@@ -536,31 +544,51 @@ def find_segmentation_patches_inpaint(
     selected_indices: List[int] = []
     qwen_prompts_used: List[Dict[str, Any]] = []
 
-    baseline_answer_text = _letter_to_choice_text(baseline_majority_letter, data_dict["answer_choices"])
+    # -----------------------------------------
+    # Helper: get prompt for *current* global mask
+    # -----------------------------------------
+    def _prompt_for_mask(mask_bool: np.ndarray) -> Tuple[str, str, Optional[Dict[str, str]]]:
+        """
+        Returns (pos_prompt, neg_prompt, pobj_or_none)
+        """
+        if (not use_qwen_diffusion_prompt) or (target_letter is None) or (not mask_bool.any()):
+            return inpaint_prompt, inpaint_negative_prompt, None
 
+        masked_for_qwen = apply_black_mask(original_image, mask_bool)
+        pobj = qwen_diffusion_prompts_batch(
+            llm=llm,
+            processor=processor,
+            data_dict=data_dict,
+            masked_images=[masked_for_qwen],
+            baseline_letter=target_letter,              # FIXED
+            baseline_answer_text=target_answer_text,    # FIXED
+            temperature=qwen_prompt_temperature,
+            top_p=qwen_prompt_top_p,
+            max_tokens=qwen_prompt_max_tokens,
+        )[0]
+        p = pobj.get("inpaint_prompt", "") or inpaint_prompt
+        n = pobj.get("negative_prompt", "") or inpaint_negative_prompt
+        return p, n, pobj
+
+    # -----------------------------------------
+    # Greedy selection
+    # -----------------------------------------
     for step_i in range(num_patches):
         print(f"\n--- Searching for segmentation patch {step_i + 1}/{num_patches} ---")
+        print(f"Target letter (fixed): {target_letter}")
 
+        # Current baseline image = original inpainted with current global_mask
         if global_mask.any():
-            if use_qwen_diffusion_prompt and (baseline_majority_letter is not None):
-                masked_for_qwen = apply_black_mask(original_image, global_mask)
-                pobj = qwen_diffusion_prompts_batch(
-                    llm=llm,
-                    processor=processor,
-                    data_dict=data_dict,
-                    masked_images=[masked_for_qwen],
-                    baseline_letter=baseline_majority_letter,
-                    baseline_answer_text=baseline_answer_text,
-                    temperature=qwen_prompt_temperature,
-                    top_p=qwen_prompt_top_p,
-                    max_tokens=qwen_prompt_max_tokens,
-                )[0]
-
-                cur_prompt = pobj.get("inpaint_prompt", "") or inpaint_prompt
-                cur_neg = pobj.get("negative_prompt", "") or inpaint_negative_prompt
-            else:
-                cur_prompt = inpaint_prompt
-                cur_neg = inpaint_negative_prompt
+            cur_prompt, cur_neg, pobj = _prompt_for_mask(global_mask)
+            if pobj is not None:
+                qwen_prompts_used.append({
+                    "step": step_i,
+                    "kind": "current_global_mask",
+                    "baseline_letter": target_letter,
+                    "baseline_answer_text": target_answer_text,
+                    "inpaint_prompt": cur_prompt,
+                    "negative_prompt": cur_neg,
+                })
 
             cur_img = inpaint_batch(
                 pipe=inpaint_pipe,
@@ -578,48 +606,42 @@ def find_segmentation_patches_inpaint(
         else:
             cur_img = original_image
 
+        # SC of the CURRENT image, but always wrt FIXED target_letter
         cur_res = self_consistency_batch(
             llm, processor, data_dict, [cur_img], num_samples_sc, temperature, top_p
         )[0]
         cur_num = cur_res["num_extracted"]
         cur_counts = cur_res["letter_counts"]
-        cur_majority_letter = cur_res["majority_letter"]
 
-        orig_letter = baseline_majority_letter
-        new_letter = cur_majority_letter
-
-        cur_sc_orig = sc_wrt_letter(cur_counts, cur_num, orig_letter)
-        cur_sc_new = sc_wrt_letter(cur_counts, cur_num, new_letter)
+        cur_sc_target = sc_wrt_letter(cur_counts, cur_num, target_letter)
         cur_sc_gold = sc_wrt_letter(cur_counts, cur_num, gold_letter)
+        cur_majority_for_logging = cur_res["majority_letter"]
 
-        print(f"Current majority letter: {cur_majority_letter}")
-        print(f"Current SC wrt original answer: {cur_sc_orig}")
-        print(f"Current SC wrt new answer: {cur_sc_new}")
+        print(f"Current majority letter (logging only): {cur_majority_for_logging}")
+        print(f"Current SC wrt TARGET ({target_letter}): {cur_sc_target}")
         print(f"Current SC wrt gold: {cur_sc_gold}")
 
-        if cur_sc_orig is None:
+        if cur_sc_target is None:
             print("No valid SC baseline (no parsed answers); stopping.")
             break
 
         cand_indices = [m_idx for m_idx in range(N) if m_idx not in selected_indices]
         cand_masks = [global_mask | masks[m_idx] for m_idx in cand_indices]
 
-
-        if use_qwen_diffusion_prompt and (orig_letter is not None):
+        # Inpaint candidates (optionally per-candidate Qwen prompts, still targeting FIXED letter)
+        if use_qwen_diffusion_prompt and (target_letter is not None):
             cand_masked_imgs = [apply_black_mask(original_image, cm) for cm in cand_masks]
-
             prompt_objs = qwen_diffusion_prompts_batch(
                 llm=llm,
                 processor=processor,
                 data_dict=data_dict,
                 masked_images=cand_masked_imgs,
-                baseline_letter=orig_letter,
-                baseline_answer_text=baseline_answer_text,
+                baseline_letter=target_letter,            # FIXED
+                baseline_answer_text=target_answer_text,  # FIXED
                 temperature=qwen_prompt_temperature,
                 top_p=qwen_prompt_top_p,
                 max_tokens=qwen_prompt_max_tokens,
             )
-            print(f"Prompt for SD {prompt_objs}")
 
             cand_images: List[Image.Image] = []
             for cm, pobj in zip(cand_masks, prompt_objs):
@@ -642,10 +664,12 @@ def find_segmentation_patches_inpaint(
 
             qwen_prompts_used.append({
                 "step": step_i,
-                "baseline_letter": orig_letter,
-                "baseline_answer_text": baseline_answer_text,
+                "kind": "candidates",
+                "baseline_letter": target_letter,
+                "baseline_answer_text": target_answer_text,
                 "candidates": [
-                    {"mask_idx": mi, "inpaint_prompt": pobj.get("inpaint_prompt", ""),
+                    {"mask_idx": mi,
+                     "inpaint_prompt": pobj.get("inpaint_prompt", ""),
                      "negative_prompt": pobj.get("negative_prompt", "")}
                     for mi, pobj in zip(cand_indices, prompt_objs)
                 ],
@@ -665,7 +689,7 @@ def find_segmentation_patches_inpaint(
                 seed=seed + 2000 + step_i,
             )
 
-
+        # Evaluate candidates
         cand_sc_results = self_consistency_batch(
             llm, processor, data_dict, cand_images, num_samples_sc, temperature, top_p
         )
@@ -677,32 +701,45 @@ def find_segmentation_patches_inpaint(
         for m_idx, res in zip(cand_indices, cand_sc_results):
             cand_num = res["num_extracted"]
             cand_counts = res["letter_counts"]
-            cand_sc_orig = sc_wrt_letter(cand_counts, cand_num, orig_letter)
-            drop = (cur_sc_orig - cand_sc_orig) if (cand_sc_orig is not None) else 0.0
+            cand_sc_target = sc_wrt_letter(cand_counts, cand_num, target_letter)
 
-            print(f"  Mask {m_idx}: SC_orig_after={cand_sc_orig}, drop={drop:.4f}")
+            drop = (cur_sc_target - cand_sc_target) if (cand_sc_target is not None) else 0.0
+            print(f"  Mask {m_idx}: SC_target_after={cand_sc_target}, drop={drop:.4f}")
 
-            if cand_sc_orig is not None and drop > best_drop and drop >= min_sc_drop:
+            if cand_sc_target is not None and drop > best_drop and drop >= min_sc_drop:
                 best_drop = drop
                 best_idx = m_idx
-                best_sc_after = cand_sc_orig
+                best_sc_after = cand_sc_target
 
         if best_idx is None:
-            print(f"No patch produced SC drop >= {min_sc_drop}; stopping search for this image.")
+            print(f"No patch produced TARGET SC drop >= {min_sc_drop}; stopping search for this image.")
             break
 
-        print(f"Selected mask index {best_idx} with SC_orig_after={best_sc_after}, drop={best_drop:.4f}")
+        print(f"Selected mask index {best_idx} with SC_target_after={best_sc_after}, drop={best_drop:.4f}")
         global_mask |= masks[best_idx]
         selected_indices.append(best_idx)
 
+    # Final perturbed image: inpaint with final global mask.
+    # (Use Qwen prompt for the final mask too if enabled, still targeting fixed letter.)
     if global_mask.any():
+        final_prompt, final_neg, pobj = _prompt_for_mask(global_mask)
+        if pobj is not None:
+            qwen_prompts_used.append({
+                "step": "final",
+                "kind": "final_global_mask",
+                "baseline_letter": target_letter,
+                "baseline_answer_text": target_answer_text,
+                "inpaint_prompt": final_prompt,
+                "negative_prompt": final_neg,
+            })
+
         final_img = inpaint_batch(
             pipe=inpaint_pipe,
             device=inpaint_device,
             base_image=original_image,
             masks_bool=[global_mask],
-            prompt=inpaint_prompt,
-            negative_prompt=inpaint_negative_prompt,
+            prompt=final_prompt,
+            negative_prompt=final_neg,
             num_steps=inpaint_steps,
             guidance=inpaint_guidance,
             strength=inpaint_strength,
@@ -719,24 +756,24 @@ def find_segmentation_patches_inpaint(
     final_counts = final_res["letter_counts"]
     final_majority_letter = final_res["majority_letter"]
 
-    final_sc_orig = sc_wrt_letter(final_counts, final_num, baseline_majority_letter)
-    final_sc_new = sc_wrt_letter(final_counts, final_num, final_majority_letter)
+    final_sc_target = sc_wrt_letter(final_counts, final_num, target_letter)
     final_sc_gold = sc_wrt_letter(final_counts, final_num, gold_letter)
 
     print("\n=== Final metrics after all selected patches ===")
-    print(f"Final majority letter: {final_majority_letter}")
-    print(f"Final SC wrt original answer: {final_sc_orig}")
-    print(f"Final SC wrt new answer: {final_sc_new}")
+    print(f"Target letter (fixed): {target_letter}")
+    print(f"Final majority letter (logging): {final_majority_letter}")
+    print(f"Final SC wrt TARGET: {final_sc_target}")
     print(f"Final SC wrt gold: {final_sc_gold}")
 
+    # Keep your old keys for downstream code compatibility
     return {
-        "baseline_majority_letter": baseline_majority_letter,
-        "baseline_sc_orig": baseline_sc_orig,
-        "baseline_sc_new": baseline_sc_new,
+        "baseline_majority_letter": target_letter,
+        "baseline_sc_orig": baseline_sc_target,   # orig == target now
+        "baseline_sc_new": baseline_sc_target,    # keep same to avoid breaking viz/json
         "baseline_sc_gold": baseline_sc_gold,
         "final_majority_letter": final_majority_letter,
-        "final_sc_orig": final_sc_orig,
-        "final_sc_new": final_sc_new,
+        "final_sc_orig": final_sc_target,         # orig == target now
+        "final_sc_new": None,                     # no longer meaningful (target is fixed)
         "final_sc_gold": final_sc_gold,
         "selected_mask_indices": selected_indices,
         "global_mask": global_mask,
@@ -745,6 +782,7 @@ def find_segmentation_patches_inpaint(
         "final_image": final_img,
         "qwen_prompts_used": qwen_prompts_used,
     }
+
 
 
 # VISUALIZATION
@@ -1008,6 +1046,18 @@ def main():
             qwen_prompt_top_p=args.qwen_prompt_top_p,
             qwen_prompt_max_tokens=args.qwen_prompt_max_tokens,
         )
+
+        b = results["baseline_sc_orig"]
+        f = results["final_sc_orig"]
+
+        if (b is None) or (f is None):
+            print("Skipping viz/json: baseline_sc_orig or final_sc_orig is None (no parsed answers).")
+            continue
+
+        sc_drop = b - f
+        if sc_drop <= 0.0:
+            print(f"Skipping viz/json: no SC drop (baseline={b:.4f}, final={f:.4f}, drop={sc_drop:.4f}).")
+            continue
 
         original_image = dp["image"]
         final_image = results["final_image"]

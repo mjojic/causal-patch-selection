@@ -9,7 +9,6 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 import torch
-import datasets
 import numpy as np
 from PIL import Image
 
@@ -36,6 +35,33 @@ def resolve_hf_snapshot_dir(model_dir: str) -> str:
     return str(snap)
 
 
+def extract_repo_id_from_cache_path(cache_path: str) -> str:
+    """
+    Extract HuggingFace repo_id from cache path format.
+    
+    Cache format: models--namespace--repo-name
+    Repo format: namespace/repo-name
+    
+    Example:
+        models--facebook--mask2former-swin-base-coco-panoptic
+        -> facebook/mask2former-swin-base-coco-panoptic
+    """
+    # Get the directory name (last component of path)
+    dir_name = os.path.basename(cache_path.rstrip('/'))
+    
+    # Check if it's in cache format (starts with models--)
+    if dir_name.startswith("models--"):
+        # Remove "models--" prefix
+        repo_part = dir_name[8:]  # len("models--") = 8
+        # Replace "--" with "/"
+        repo_id = repo_part.replace("--", "/")
+        return repo_id
+    
+    # If it's already a repo_id format or direct path, return as-is
+    # (will be validated by HuggingFace)
+    return dir_name
+
+
 # ---------------------------------------------------------------------
 # Argument parsing
 # ---------------------------------------------------------------------
@@ -44,28 +70,16 @@ def parse_args():
 
     # Core parameters
     parser.add_argument(
-        "--output_dir",
+        "--image_path",
         type=str,
-        default="./naturalbench_segmentation_results",
-        help="Directory to save masks and metadata",
+        default="/mnt/arc/mjojic/mathvista_1.png",
+        help="Path to input image to segment",
     )
     parser.add_argument(
-        "--split",
+        "--output_path",
         type=str,
-        default="test",
-        help="Dataset split to process",
-    )
-    parser.add_argument(
-        "--start_idx",
-        type=int,
-        default=0,
-        help="Inclusive start index of NaturalBench to process",
-    )
-    parser.add_argument(
-        "--end_idx",
-        type=int,
-        default=-1,
-        help="Exclusive end index of NaturalBench to process (-1 = until end)",
+        default="/mnt/arc/mjojic/segmap_mathvista_1.png",
+        help="Path to save segmentation map",
     )
     parser.add_argument(
         "--model_path",
@@ -82,19 +96,13 @@ def parse_args():
     parser.add_argument(
         "--device",
         type=str,
-        default="cuda:0",
+        default="cuda:2",
         help="CUDA device string, e.g. 'cuda:0'",
     )
 
     return parser.parse_args()
 
 
-# ---------------------------------------------------------------------
-# Dataset loading – NaturalBench (lmms-eval format)
-# ---------------------------------------------------------------------
-def load_naturalbench_dataset(split: str = "test"):
-    ds = datasets.load_dataset("BaiqiL/NaturalBench-lmms-eval", split=split)
-    return ds
 
 
 # ---------------------------------------------------------------------
@@ -128,23 +136,18 @@ def save_segmentation_map(seg_map: np.ndarray, out_path: str):
 # ---------------------------------------------------------------------
 # Process single image
 # ---------------------------------------------------------------------
-def process_image(idx: int, row: Dict[str, Any], model, processor, device: str, out_dir: str, min_area: int) -> bool:
+def process_image(image_path: str, output_path: str, model, processor, device: str, min_area: int) -> bool:
     """
-    Process a single image from the dataset:
-    - Extract image
+    Process a single image:
+    - Load image from file path
     - Run segmentation
-    - Save masks, metadata, and visualizations
+    - Save segmentation map visualization
     
     Returns True if successful, False otherwise
     """
     try:
         # Load the image
-        image = row["Image"]
-        if not isinstance(image, Image.Image):
-            image = Image.open(image).convert("RGB")
-        else:
-            image = image.convert("RGB")
-
+        image = Image.open(image_path).convert("RGB")
         width, height = image.size
 
         # Run segmentation
@@ -191,26 +194,14 @@ def process_image(idx: int, row: Dict[str, Any], model, processor, device: str, 
         else:
             masks_np = np.zeros((0, height, width), dtype=bool)
 
-        # Save results
-        base = f"nb_{idx}"
-
-        masks_path = os.path.join(out_dir, f"{base}_masks.npz")
-        meta_path = os.path.join(out_dir, f"{base}_meta.json")
-        segmap_path = os.path.join(out_dir, f"{base}_segmap.png")
-
-        # Save masks + metadata
-        np.savez_compressed(masks_path, masks=masks_np)
-        with open(meta_path, "w") as f:
-            json.dump(meta, f, indent=2)
-
         # Save segmentation map visualization
-        save_segmentation_map(seg_map, segmap_path)
+        save_segmentation_map(seg_map, output_path)
 
-        print(f"[{idx}] Saved {masks_np.shape[0]} masks ({width}x{height})")
+        print(f"Saved {masks_np.shape[0]} masks ({width}x{height}) to {output_path}")
         return True
 
     except Exception as e:
-        print(f"[{idx}] ERROR: {e}")
+        print(f"ERROR: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -223,35 +214,49 @@ def main():
     args = parse_args()
     device = args.device
 
-    # Create output directory
-    os.makedirs(args.output_dir, exist_ok=True)
-
-    # Load dataset
-    print("Loading NaturalBench dataset...")
-    ds = load_naturalbench_dataset(split=args.split)
-    n_ds = len(ds)
-    print(f"Dataset size: {n_ds}")
-
-    # Resolve end_idx
-    start_idx = max(0, args.start_idx)
-    end_idx = n_ds if args.end_idx < 0 else min(args.end_idx, n_ds)
-    if start_idx >= end_idx:
-        print(f"Empty index range: start_idx={start_idx}, end_idx={end_idx}")
+    # Check input image exists
+    if not os.path.exists(args.image_path):
+        print(f"Error: Input image not found: {args.image_path}")
         return
-    print(f"Processing dataset indices in range [{start_idx}, {end_idx})")
+
+    # Create output directory if needed
+    output_dir = os.path.dirname(args.output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
 
     # Resolve model path and load segmentation model
-    print(f"Resolving model path: {args.model_path}")
-    try:
+    print(f"Checking model path: {args.model_path}")
+    
+    # Check if model exists locally
+    model_exists = False
+    snapshot_path = None
+    repo_id = None
+    
+    # First, check if it's a local directory path
+    if os.path.exists(args.model_path):
+        try:
+            snapshot_path = resolve_hf_snapshot_dir(args.model_path)
+            # Verify it's actually a valid model directory
+            if os.path.exists(os.path.join(snapshot_path, "config.json")):
+                model_exists = True
+                print(f"Found model in cache: {snapshot_path}")
+        except (FileNotFoundError, ValueError):
+            pass
+    
+    # If model doesn't exist locally, extract repo_id and download it
+    if not model_exists:
+        # Extract repo_id from cache path format
+        repo_id = extract_repo_id_from_cache_path(args.model_path)
+        print(f"Model not found in cache. Downloading from HuggingFace Hub: {repo_id}")
+        snapshot_path = repo_id  # Use extracted repo_id for download
+    else:
         snapshot_path = resolve_hf_snapshot_dir(args.model_path)
-        print(f"Resolved snapshot: {snapshot_path}")
-    except (FileNotFoundError, ValueError):
-        # If resolution fails, try using the path directly (might be a repo_id)
-        print(f"Could not resolve snapshot, using path directly: {args.model_path}")
-        snapshot_path = args.model_path
-
+    
     print(f"Loading model from: {snapshot_path}")
-    try:
+    
+    # Load with local_files_only only if we confirmed it exists locally
+    if model_exists:
+        print("Loading from local cache...")
         processor = AutoImageProcessor.from_pretrained(
             snapshot_path,
             local_files_only=True,
@@ -260,40 +265,23 @@ def main():
             snapshot_path,
             local_files_only=True,
         ).to(device)
-    except (OSError, ValueError) as e:
-        # Fallback: try without local_files_only (in case it's a repo_id)
-        print(f"Failed with local_files_only=True, trying without: {e}")
+    else:
+        print(f"Downloading model from HuggingFace Hub (repo_id: {repo_id})...")
         processor = AutoImageProcessor.from_pretrained(snapshot_path)
         model = Mask2FormerForUniversalSegmentation.from_pretrained(snapshot_path).to(device)
     
     model.eval()
     print("Model loaded successfully")
 
-    # Process each image in range
-    successful = 0
-    failed = 0
-
-    for idx in range(start_idx, end_idx):
-        if idx < 0 or idx >= n_ds:
-            print(f"Index {idx} out of dataset range; skipping.")
-            continue
-
-        print("\n" + "=" * 80)
-        print(f"Processing dataset index {idx}")
-        print("=" * 80)
-
-        row = ds[idx]
-        if process_image(idx, row, model, processor, device, args.output_dir, args.min_area):
-            successful += 1
-        else:
-            failed += 1
-
+    # Process the image
     print("\n" + "=" * 80)
-    print("Processing complete!")
-    print(f"  Successful: {successful}")
-    print(f"  Failed: {failed}")
-    print(f"  Output directory: {args.output_dir}")
+    print(f"Processing image: {args.image_path}")
     print("=" * 80)
+
+    if process_image(args.image_path, args.output_path, model, processor, device, args.min_area):
+        print("Segmentation completed successfully!")
+    else:
+        print("Segmentation failed!")
 
 
 if __name__ == "__main__":

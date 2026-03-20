@@ -6,10 +6,9 @@ import json
 import argparse
 import glob
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import Dict, Any
 
 import torch
-import datasets
 import numpy as np
 from PIL import Image
 
@@ -42,30 +41,29 @@ def resolve_hf_snapshot_dir(model_dir: str) -> str:
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    # Core parameters
+    parser.add_argument(
+        "--images_dir",
+        type=str,
+        default="/mnt/arc/zhaonan2/blind_project/datasets/seed_bench/seed_images",
+        help="Directory containing seed_bench .jpg images",
+    )
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="./naturalbench_segmentation_results",
+        default="/mnt/arc/mjojic/causal-patch-selection/segment_patches/seed_bench",
         help="Directory to save masks and metadata",
-    )
-    parser.add_argument(
-        "--split",
-        type=str,
-        default="test",
-        help="Dataset split to process",
     )
     parser.add_argument(
         "--start_idx",
         type=int,
         default=0,
-        help="Inclusive start index of NaturalBench to process",
+        help="Inclusive start index of image list to process",
     )
     parser.add_argument(
         "--end_idx",
         type=int,
         default=-1,
-        help="Exclusive end index of NaturalBench to process (-1 = until end)",
+        help="Exclusive end index of image list to process (-1 = until end)",
     )
     parser.add_argument(
         "--model_path",
@@ -90,14 +88,6 @@ def parse_args():
 
 
 # ---------------------------------------------------------------------
-# Dataset loading – NaturalBench (lmms-eval format)
-# ---------------------------------------------------------------------
-def load_naturalbench_dataset(split: str = "test"):
-    ds = datasets.load_dataset("BaiqiL/NaturalBench-lmms-eval", split=split)
-    return ds
-
-
-# ---------------------------------------------------------------------
 # Visualization helpers
 # ---------------------------------------------------------------------
 def save_segmentation_map(seg_map: np.ndarray, out_path: str):
@@ -106,14 +96,11 @@ def save_segmentation_map(seg_map: np.ndarray, out_path: str):
     seg_map: H x W, integer segment id per pixel.
     """
     h, w = seg_map.shape
-    # Simple pseudo-color: hash segment id to RGB
     ids = np.unique(seg_map)
-    # avoid id == 0 always black; we still color it
     rng = np.random.default_rng(1234)
 
     id2color = {}
     for seg_id in ids:
-        # random bright-ish color
         color = rng.integers(low=64, high=255, size=3, dtype=np.uint8)
         id2color[int(seg_id)] = color
 
@@ -126,25 +113,27 @@ def save_segmentation_map(seg_map: np.ndarray, out_path: str):
 
 
 # ---------------------------------------------------------------------
-# Process single image
+# Process single image (path + stem)
 # ---------------------------------------------------------------------
-def process_image(idx: int, row: Dict[str, Any], model, processor, device: str, out_dir: str, min_area: int) -> bool:
+def process_image_path(
+    image_path: str,
+    base_name: str,
+    model,
+    processor,
+    device: str,
+    out_dir: str,
+    min_area: int,
+) -> bool:
     """
-    Process a single image from the dataset:
-    - Extract image
+    Process a single image from path:
+    - Load image
     - Run segmentation
-    - Save masks, metadata, and visualizations
-    
-    Returns True if successful, False otherwise
+    - Save masks, metadata, and visualizations using base_name (e.g. stem).
+
+    Returns True if successful, False otherwise.
     """
     try:
-        # Load the image
-        image = row["Image"]
-        if not isinstance(image, Image.Image):
-            image = Image.open(image).convert("RGB")
-        else:
-            image = image.convert("RGB")
-
+        image = Image.open(image_path).convert("RGB")
         width, height = image.size
 
         # Run segmentation
@@ -191,26 +180,22 @@ def process_image(idx: int, row: Dict[str, Any], model, processor, device: str, 
         else:
             masks_np = np.zeros((0, height, width), dtype=bool)
 
-        # Save results
-        base = f"nb_{idx}"
+        # Save results using base_name (filename stem)
+        masks_path = os.path.join(out_dir, f"{base_name}_masks.npz")
+        meta_path = os.path.join(out_dir, f"{base_name}_meta.json")
+        segmap_path = os.path.join(out_dir, f"{base_name}_segmap.png")
 
-        masks_path = os.path.join(out_dir, f"{base}_masks.npz")
-        meta_path = os.path.join(out_dir, f"{base}_meta.json")
-        segmap_path = os.path.join(out_dir, f"{base}_segmap.png")
-
-        # Save masks + metadata
         np.savez_compressed(masks_path, masks=masks_np)
         with open(meta_path, "w") as f:
             json.dump(meta, f, indent=2)
 
-        # Save segmentation map visualization
         save_segmentation_map(seg_map, segmap_path)
 
-        print(f"[{idx}] Saved {masks_np.shape[0]} masks ({width}x{height})")
+        print(f"[{base_name}] Saved {masks_np.shape[0]} masks ({width}x{height})")
         return True
 
     except Exception as e:
-        print(f"[{idx}] ERROR: {e}")
+        print(f"[{base_name}] ERROR: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -223,22 +208,20 @@ def main():
     args = parse_args()
     device = args.device
 
-    # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
 
-    # Load dataset
-    print("Loading NaturalBench dataset...")
-    ds = load_naturalbench_dataset(split=args.split)
-    n_ds = len(ds)
-    print(f"Dataset size: {n_ds}")
+    # Discover .jpg images and sort for deterministic order
+    image_paths = sorted(glob.glob(os.path.join(args.images_dir, "*.jpg")))
+    n_total = len(image_paths)
+    print(f"Found {n_total} images in {args.images_dir}")
 
-    # Resolve end_idx
     start_idx = max(0, args.start_idx)
-    end_idx = n_ds if args.end_idx < 0 else min(args.end_idx, n_ds)
+    end_idx = n_total if args.end_idx < 0 else min(args.end_idx, n_total)
     if start_idx >= end_idx:
         print(f"Empty index range: start_idx={start_idx}, end_idx={end_idx}")
         return
-    print(f"Processing dataset indices in range [{start_idx}, {end_idx})")
+    image_paths = image_paths[start_idx:end_idx]
+    print(f"Processing image indices [{start_idx}, {end_idx}) ({len(image_paths)} images)")
 
     # Resolve model path and load segmentation model
     print(f"Resolving model path: {args.model_path}")
@@ -246,7 +229,6 @@ def main():
         snapshot_path = resolve_hf_snapshot_dir(args.model_path)
         print(f"Resolved snapshot: {snapshot_path}")
     except (FileNotFoundError, ValueError):
-        # If resolution fails, try using the path directly (might be a repo_id)
         print(f"Could not resolve snapshot, using path directly: {args.model_path}")
         snapshot_path = args.model_path
 
@@ -261,29 +243,32 @@ def main():
             local_files_only=True,
         ).to(device)
     except (OSError, ValueError) as e:
-        # Fallback: try without local_files_only (in case it's a repo_id)
         print(f"Failed with local_files_only=True, trying without: {e}")
         processor = AutoImageProcessor.from_pretrained(snapshot_path)
         model = Mask2FormerForUniversalSegmentation.from_pretrained(snapshot_path).to(device)
-    
+
     model.eval()
     print("Model loaded successfully")
 
-    # Process each image in range
     successful = 0
     failed = 0
 
-    for idx in range(start_idx, end_idx):
-        if idx < 0 or idx >= n_ds:
-            print(f"Index {idx} out of dataset range; skipping.")
-            continue
+    for image_path in image_paths:
+        base_name = Path(image_path).stem
 
         print("\n" + "=" * 80)
-        print(f"Processing dataset index {idx}")
+        print(f"Processing {base_name}")
         print("=" * 80)
 
-        row = ds[idx]
-        if process_image(idx, row, model, processor, device, args.output_dir, args.min_area):
+        if process_image_path(
+            image_path,
+            base_name,
+            model,
+            processor,
+            device,
+            args.output_dir,
+            args.min_area,
+        ):
             successful += 1
         else:
             failed += 1
